@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { BsPlus } from 'react-icons/Bs';
+import { BsPlus } from 'react-icons/bs';
 import Icon from '../Icon';
 import '../../app/styles/bounceAnim.css';
 
