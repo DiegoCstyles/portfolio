@@ -6,6 +6,14 @@ import { useMediaQuery } from 'react-responsive';
 
 const Navbar = () => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+
+  const handleLanguageChange = (language) => {
+    // Set the current language when the user selects a different language
+    setCurrentLanguage(language);
+
+  };
+  
     return (
       <nav >
         <div className="border bg-black/50 rounded-b-md border-black dark:border-white max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 sm:p-3 md:p-4 lg:p-4">
@@ -27,7 +35,14 @@ const Navbar = () => {
           {/* Pages */}
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-            <li className='text-black dark:text-white text-sm'>EN</li>
+            <li
+              className={`cursor-pointer text-sm ${
+                currentLanguage === 'en' ? 'text-black dark:text-white' : 'text-gray-500 dark:text-gray-400'
+              }`}
+              onClick={() => handleLanguageChange('en')}
+            >
+              EN
+            </li>
               <NavbarPage page={"about"}/>
               <NavbarPage page={"projects"}/>
               <NavbarPage page={"contact"}/>
