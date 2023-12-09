@@ -66,7 +66,7 @@ const Section = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="text-xs w-full zoom-effect ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
+                    className="text-xs w-full zoom-effect-input ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
@@ -79,7 +79,7 @@ const Section = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="text-xs w-full zoom-effect ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
+                    className="text-xs w-full zoom-effect-input ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
@@ -89,7 +89,7 @@ const Section = () => {
                 <textarea
                   id="message"
                   name="message"
-                  className="text-xs w-full zoom-effect px-10 py-1.5 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-20 resize-none"
+                  className="text-xs w-full zoom-effect-input px-10 py-1.5 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-20 resize-none"
                   required
                 ></textarea>
 
