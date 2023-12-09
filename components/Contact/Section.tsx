@@ -25,9 +25,7 @@ const Section = () => {
       ${message}
       
       ---
-    
-      <hr style="border: 0; border-top: 2px solid black; margin: 16px 0;">
-    
+
       This message was sent via the contact form on Diego Costa Portfolio. Please respond promptly.
     `;
 
