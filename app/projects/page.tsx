@@ -10,6 +10,13 @@ const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function Projects() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+
+  const handleLanguageChange = () => {
+    // Toggle between 'en' and 'pt-br'
+    const newLanguage = currentLanguage === 'en' ? 'pt-br' : 'en';
+    setCurrentLanguage(newLanguage);
+  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     setCursorPosition({ x: e.pageX, y: e.pageY });
@@ -42,7 +49,7 @@ export default function Projects() {
       <div className="circular-cursor absolute w-12 h-12 rounded-full bg-white bg-opacity-70 pointer-events-none"
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
       </div>
-      {Navbar && <Navbar />}
+      {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
       {ProjectsSection && <ProjectsSection />}
       {Footer && <Footer />}
     </div>
