@@ -15,8 +15,13 @@ const Section = () => {
     const email = (formElements.namedItem('email') as HTMLInputElement)?.value;
     const message = (formElements.namedItem('message') as HTMLTextAreaElement)?.value;
 
-    const subject = 'Hello!!';
-    const body = `Name: ${name} Email: ${email} Message: ${message}`;
+   const subject = 'Contact Form Submission';
+    const body = `
+      Name: ${name}
+      Email: ${email}
+      Message:
+      ${message}
+    `;
 
     // Create the mailto link
     const mailtoLink = `mailto:Diegoe.r.c07@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
