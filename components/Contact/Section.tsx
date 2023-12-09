@@ -59,7 +59,7 @@ const Section = () => {
             <div className='flex'>
               <div className=" justify-between">
                 <div className="flex justify-start mb-2">
-                  <label htmlFor="name" className="block text-center p-1 h-8 text-black dark:text-black uppercase bg-white text-sm font-medium mb-2">
+                  <label htmlFor="name" className="block text-center p-1 h-8 text-black dark:text-black uppercase bg-white text-xs font-medium mb-2">
                     Name
                   </label>
                   <input
@@ -72,7 +72,7 @@ const Section = () => {
                 </div>
 
                 <div className="flex">
-                  <label htmlFor="email" className="block text-center p-1 h-8 text-black dark:text-black uppercase bg-white text-sm font-medium mb-2">
+                  <label htmlFor="email" className="block text-center p-1 h-8 text-black dark:text-black uppercase bg-white text-xs font-medium mb-2">
                     Email
                   </label>
                   <input
