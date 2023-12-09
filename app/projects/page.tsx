@@ -13,17 +13,21 @@ export default function Projects() {
   useEffect(() => {
     // Set up event listener when component mounts
     const mouseMoveListener = (e: MouseEvent) => {
-      const event = e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>;
-      handleMouseMove(event);
+      if (typeof window !== 'undefined') {
+        const event = e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>;
+        handleMouseMove(event);
+      }
     };
-    window.addEventListener('mousemove', mouseMoveListener);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('mousemove', mouseMoveListener);
 
-    // Clean up event listener when component unmounts
-    return () => {
-      window.removeEventListener('mousemove', mouseMoveListener);
-    };
+      // Clean up event listener when component unmounts
+      return () => {
+        window.removeEventListener('mousemove', mouseMoveListener);
+      };
+    }
   }, []); // Empty dependency array ensures the effect runs only once on mount
-  
+
   return (
     <div style={{
       backgroundImage: 'linear-gradient(45deg, #000000, #000000, #9CBBE2)',
