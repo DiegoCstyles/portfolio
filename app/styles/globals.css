@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;        
+@import url('https://fonts.googleapis.com/css2?family=Futura+PT:wght@400;700&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --dark-theme: rgba(0, 0, 0);
+  --light-theme: #eee7e1;
+  --scrollbar: rgba(155, 155, 155, 0.95);
+}
+
+/* -- Light-Theme -- */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--light-theme);
+  overflow-x: hidden;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--light-theme);
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 3px solid var(--scrollbar);
+}
+
+/* Horizontal Scrollbar */
+*::-webkit-scrollbar-thumb:horizontal {
+  border: 3px solid var(--scrollbar);
+}
+
+/* -- Dark-Theme -- */
+
+.dark body {
+  background: var(--dark-theme);
+}
+
+/* Firefox */
+.dark * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-theme);
+}
+
+/* Chrome, Edge, and Safari */
+.dark *::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: var(--dark-theme);
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  border: 3px solid var(--light-theme);
+}
+
+/* Horizontal Scrollbar for Dark Theme */
+.dark *::-webkit-scrollbar-thumb:horizontal {
+  border: 3px solid var(--light-theme);
+}
+
+::selection {
+  background-color: #9CBBE2;
+}
+

@@ -1,0 +1,54 @@
+import ContactIcons from "./ContactIcons";
+import { useMediaQuery } from 'react-responsive';
+import { memo, useEffect } from 'react';
+import '../../app/styles/fadeIn.css';
+
+const Hero = () => {
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the vertical scroll position
+      const scrollPosition = window.scrollY;
+      
+      // Calculate the amount of offset for the image (inverted direction)
+      const offsetSection = scrollPosition * 0.1;
+
+      // Apply the offset to the image using CSS variables
+      document.documentElement.style.setProperty('--section-offset', `${offsetSection}px`);
+    };
+
+    // Attach the event listener for scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
+      <div className="mx-auto max-w-[44rem] text-center">
+        {/* Heading and Contact Icons */}
+        <div className="flex  flex-auto">
+          <h1 className="flex-1 glitch-effect1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl leading-[4rem] tracking-tight text-text-cyan-300 dark:text-cyan-300">
+            Frontend developer.
+            <span className="glitch-effect2 text-red-600" data-text="Frontend developer."></span>
+            <span className="glitch-effect3 text-lime-400" data-text="Frontend developer."></span>
+          </h1>
+          
+          {!isMobile && (<ContactIcons />)}
+        </div>
+
+        {/* Description */}
+        <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">Passionate about building responsive and dynamic web applications with React, Next.js, and Tailwind CSS.</p>
+        {/* Contact Icons - Mobile Version */}
+        {isMobile && (<div className="mt-2 flex justify-center"> <ContactIcons /> </div>)}
+      </div>
+      
+    </section>
+  );
+};
+
+export default memo(Hero);
