@@ -9,7 +9,7 @@ const Navbar = () => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
   const [currentLanguage, setCurrentLanguage] = useState('en');
 
-  const handleLanguageChange = (language) => {
+  const handleLanguageChange = (language: string) => {
     // Set the current language when the user selects a different language
     setCurrentLanguage(language);
 
