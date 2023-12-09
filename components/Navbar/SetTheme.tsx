@@ -1,5 +1,5 @@
 import { useTheme } from 'next-themes';
-import { CgDarkMode } from 'react-icons/CG';
+import { CgDarkMode } from 'react-icons/cg';
 import '../../app/styles/fadeIn.css';
 
 const SetTheme = () => {

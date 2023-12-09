@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { TbPhoneCalling } from 'react-icons/Tb';
-import { TfiEmail } from 'react-icons/Tfi';
+import { TbPhoneCalling } from 'react-icons/tb';
+import { TfiEmail } from 'react-icons/tfi';
 import React, { memo } from 'react';
 import { RiFileCopyFill } from 'react-icons/ri';
 import '../../app/styles/fadeIn.css';
