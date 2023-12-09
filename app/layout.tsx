@@ -1,4 +1,4 @@
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './styles/globals.css'
 import { Orbitron } from 'next/font/google'
 import Head from 'next/head'
