@@ -13,10 +13,8 @@ export default function Home() {
   useEffect(() => {
     // Set up event listener when component mounts
     const mouseMoveListener = (e: MouseEvent) => {
-      if (typeof window !== 'undefined') {
         const event = e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>;
-        handleMouseMove(event);
-      }
+        handleMouseMove(event); 
     };
     if (typeof window !== 'undefined') {
       window.addEventListener('mousemove', mouseMoveListener);
