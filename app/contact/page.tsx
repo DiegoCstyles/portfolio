@@ -1,14 +1,29 @@
 "use client"
 import { Navbar, Footer, ContactSection} from '@/components'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/fadeIn.css';
 
 export default function Contact() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     setCursorPosition({ x: e.pageX, y: e.pageY });
   };
+
+  useEffect(() => {
+    // Set up event listener when component mounts
+    const mouseMoveListener = (e: MouseEvent) => {
+      const event = e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>;
+      handleMouseMove(event);
+    };
+    window.addEventListener('mousemove', mouseMoveListener);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener('mousemove', mouseMoveListener);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
   return (
     <div style={{
       backgroundImage: 'linear-gradient(45deg, #000000, #000000, #9CBBE2)',
