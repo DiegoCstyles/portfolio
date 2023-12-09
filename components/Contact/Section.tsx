@@ -9,9 +9,11 @@ const Section = () => {
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const name = event.target.elements.name.value;
-    const email = event.target.elements.email.value;
-    const message = event.target.elements.message.value;
+    const formElements = (event.target as HTMLFormElement).elements;
+  
+    const name = (formElements.namedItem('name') as HTMLInputElement)?.value;
+    const email = (formElements.namedItem('email') as HTMLInputElement)?.value;
+    const message = (formElements.namedItem('message') as HTMLTextAreaElement)?.value;
 
     const subject = 'Contact from Your Website';
     const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
