@@ -42,9 +42,9 @@ const Navbar = () => {
             >
               {currentLanguage.toUpperCase()}
             </li>
-              <NavbarPage page={"about"}/>
-              <NavbarPage page={"projects"}/>
-              <NavbarPage page={"contact"}/>
+              <NavbarPage page={"about"} currentLanguage={currentLanguage}/>
+              <NavbarPage page={"projects"} currentLanguage={currentLanguage}/>
+              <NavbarPage page={"contact"} currentLanguage={currentLanguage}/>
               <SetTheme />
             </ul>
           </div>
