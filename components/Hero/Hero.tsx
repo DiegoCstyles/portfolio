@@ -3,7 +3,27 @@ import { useMediaQuery } from 'react-responsive';
 import { memo, useEffect } from 'react';
 import '../../app/styles/fadeIn.css';
 
-const Hero = () => {
+interface HeroProps {
+  currentLanguage: string;
+}
+
+interface HeroTranslations {
+  title: string;
+  description: string;
+}
+
+const translations: { [language: string]: HeroTranslations } = {
+  en: {
+    title: 'Frontend developer.',
+    description: 'Passionate about building responsive and dynamic web applications with React, Next.js, and Tailwind CSS.',
+  },
+  'pt-br': {
+    title: 'Desenvolvedor Frontend.',
+    description: 'Apaixonado por construir aplicações web responsivas e dinâmicas com React, Next.js e Tailwind CSS.',
+  },
+};
+
+const Hero = ({ currentLanguage }: HeroProps) => {
   const isMobile = useMediaQuery({ maxWidth: 1024 });
 
   useEffect(() => {
@@ -33,16 +53,18 @@ const Hero = () => {
         {/* Heading and Contact Icons */}
         <div className="flex  flex-auto">
           <h1 className="flex-1 glitch-effect1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl leading-[4rem] tracking-tight text-text-cyan-300 dark:text-cyan-300">
-            Frontend developer.
-            <span className="glitch-effect2 text-red-600" data-text="Frontend developer."></span>
-            <span className="glitch-effect3 text-lime-400" data-text="Frontend developer."></span>
+            {translations[currentLanguage].title}
+            <span className="glitch-effect2 text-red-600" data-text={translations[currentLanguage].title}></span>
+            <span className="glitch-effect3 text-lime-400" data-text={translations[currentLanguage].title}></span>
           </h1>
           
           {!isMobile && (<ContactIcons />)}
         </div>
 
         {/* Description */}
-        <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">Passionate about building responsive and dynamic web applications with React, Next.js, and Tailwind CSS.</p>
+        <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+          {translations[currentLanguage].description}
+        </p>
         {/* Contact Icons - Mobile Version */}
         {isMobile && (<div className="mt-2 flex justify-center"> <ContactIcons /> </div>)}
       </div>
