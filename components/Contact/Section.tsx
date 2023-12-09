@@ -6,7 +6,7 @@ import ContactImage from './ContactImage.png';
 import Image from 'next/image';
 
 const Section = () => {
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const name = event.target.elements.name.value;
