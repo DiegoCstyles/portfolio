@@ -6,8 +6,16 @@ interface NavbarProps {
     currentLanguage: string;
 }
 
+interface Translations {
+  [language: string]: {
+    about: string;
+    projects: string;
+    contact: string;
+  };
+}
+
 const NavbarPage = ({ page, currentLanguage }: NavbarProps) => {
-    const translations = {
+    const translations: Translations = {
     en: {
       about: 'About',
       projects: 'Projects',
