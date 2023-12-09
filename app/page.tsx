@@ -4,9 +4,9 @@ import './styles/fadeIn.css';
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
-const Navbar = isBrowser ? require('@/components/Navbar').Navbar : null;
-const Hero = isBrowser ? require('@/components/Hero').Hero : null;
-const Footer = isBrowser ? require('@/components/Footer').Footer : null;
+const Navbar = isBrowser ? require('@/components').Navbar : null;
+const Hero = isBrowser ? require('@/components').Hero : null;
+const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function Home() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
