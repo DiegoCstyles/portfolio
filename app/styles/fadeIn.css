@@ -244,7 +244,7 @@ animation-duration: 1s;
   }
   
   .zoom-effect-input:hover {
-    transform: scale(0.999); /* Increase the scale value for zoom-in effect */
+    transform: scale(0.995); /* Increase the scale value for zoom-in effect */
   }
 
   @keyframes gradientAnimation {
