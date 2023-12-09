@@ -26,11 +26,11 @@ const projects = [
   },
   {
     title: 'BeachLord',
-    year: 'Work in Progress..',
-    description: 'Based on a game for resort tycoon',
+    year: '2023',
+    description: 'Based on a game for resort tycoon (Work in Progress..)',
     technologies: ['Unreal Engine', 'C++'],
-    githubLink: '',
-    linkedinLink: '',
+    githubLink: 'https://github.com/DiegoCstyles/Beachlord',
+    linkedinLink: 'https://www.linkedin.com/in/diegoerc/',
   },
 ];
 
