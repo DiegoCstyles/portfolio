@@ -1,8 +1,12 @@
 "use client"
-import { Navbar, AboutSection, Footer} from '@/components'
 import { useState, useEffect } from 'react';
 import '../styles/fadeIn.css';
 
+// Check if 'window' is defined before importing components that may use it
+const isBrowser = typeof window !== 'undefined';
+const Navbar = isBrowser ? require('@/components').Navbar : null;
+const AboutSection = isBrowser ? require('@/components').AboutSection : null;
+const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function About() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -20,7 +24,7 @@ export default function About() {
         handleMouseMove(event);
      
     };
-    if (typeof window !== 'undefined') {
+    if (isBrowser) {
       window.addEventListener('mousemove', mouseMoveListener);
 
       // Clean up event listener when component unmounts
@@ -41,9 +45,9 @@ export default function About() {
       <div className="circular-cursor absolute w-12 h-12 rounded-full bg-white bg-opacity-70 pointer-events-none"
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
       </div>
-      <Navbar/>
-      <AboutSection/>
-      <Footer/>
+      {Navbar && <Navbar />}
+      {AboutSection && <AboutSection />}
+      {Footer && <Footer />}
     </div>
   )
 }
