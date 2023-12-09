@@ -5,15 +5,12 @@ import { SetTheme } from '@/components'
 import { memo } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-const Navbar = () => {
-  const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
-  const [currentLanguage, setCurrentLanguage] = useState('en');
+interface NavbarProps {
+  currentLanguage: string;
+}
 
-  const handleLanguageChange = () => {
-    // Toggle between 'en' and 'pt-br'
-    const newLanguage = currentLanguage === 'en' ? 'pt-br' : 'en';
-    setCurrentLanguage(newLanguage);
-  };
+const Navbar = ({ currentLanguage }: NavbarProps) => {
+  const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
   
     return (
       <nav >
