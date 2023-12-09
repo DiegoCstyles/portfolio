@@ -59,27 +59,27 @@ const Section = () => {
             <div className='flex'>
               <div className=" justify-between">
                 <div className="flex justify-start mb-4">
-                  <label htmlFor="name" className="block text-center mt-1 text-black dark:text-black uppercase bg-white text-sm font-medium mb-2">
+                  <label htmlFor="name" className="block text-center mt-1 px-1 py-2 text-black dark:text-black uppercase bg-white text-sm font-medium mb-2">
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="text-xs w-full zoom-effect-input ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
+                    className="text-xs w-full zoom-effect-input ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
 
                 <div className="flex mb-4">
-                  <label htmlFor="email" className="block text-center mt-1 text-black dark:text-black uppercase bg-white text-sm font-medium mb-2">
+                  <label htmlFor="email" className="block text-center mt-1 px-1 py-2 text-black dark:text-black uppercase bg-white text-sm font-medium mb-2">
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="text-xs w-full zoom-effect-input ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-t-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
+                    className="text-xs w-full zoom-effect-input ml-2 px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white rounded-md focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
