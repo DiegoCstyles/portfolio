@@ -16,11 +16,19 @@ const Section = () => {
     const message = (formElements.namedItem('message') as HTMLTextAreaElement)?.value;
 
    const subject = 'Contact Form Submission';
-    const body = `
-      Name: ${name}
-      Email: ${email}
-      Message:
+   const body = `
+      **Name:** ${name}
+      
+      **Email:** ${email}
+      
+      **Message:**
       ${message}
+      
+      ---
+    
+      <div style="background-color: black; height: 2px; margin: 16px 0;"></div>
+    
+      This message was sent via the contact form on Diego Costa Portfolio. Please respond promptly.
     `;
 
     // Create the mailto link
