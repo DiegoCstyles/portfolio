@@ -9,10 +9,10 @@ const Navbar = () => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
   const [currentLanguage, setCurrentLanguage] = useState('en');
 
-  const handleLanguageChange = (language: string) => {
-    // Set the current language when the user selects a different language
-    setCurrentLanguage(language);
-
+  const handleLanguageChange = () => {
+    // Toggle between 'en' and 'pt-br'
+    const newLanguage = currentLanguage === 'en' ? 'pt-br' : 'en';
+    setCurrentLanguage(newLanguage);
   };
   
     return (
@@ -37,12 +37,10 @@ const Navbar = () => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li
-              className={`cursor-pointer text-sm ${
-                currentLanguage === 'en' ? 'text-black dark:text-white' : 'text-gray-500 dark:text-gray-400'
-              }`}
-              onClick={() => handleLanguageChange('en')}
+              className={`cursor-pointer text-sm`}
+              onClick={handleLanguageChange}
             >
-              EN
+              {currentLanguage.toUpperCase()}
             </li>
               <NavbarPage page={"about"}/>
               <NavbarPage page={"projects"}/>
