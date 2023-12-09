@@ -6,6 +6,23 @@ import ContactImage from './ContactImage.png';
 import Image from 'next/image';
 
 const Section = () => {
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    const name = event.target.elements.name.value;
+    const email = event.target.elements.email.value;
+    const message = event.target.elements.message.value;
+
+    const subject = 'Contact from Your Website';
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+
+    // Create the mailto link
+    const mailtoLink = `mailto:Diegoe.r.c07@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open the user's default email client
+    window.location.href = mailtoLink;
+  };
+  
   useEffect(() => {
     const handleScroll = () => {
       // Get the vertical scroll position
@@ -55,7 +72,7 @@ const Section = () => {
 
         {/* Contact Form */}
         <div className="mt-1 border-black dark:border-white rounded-b-md p-4">
-          <form>
+          <form onSubmit={handleFormSubmit}>
             <div className='flex'>
               <div className=" justify-between">
                 <div className="flex justify-center item-center text-center mb-2">
