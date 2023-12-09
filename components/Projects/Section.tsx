@@ -98,13 +98,13 @@ const Section = () => {
                         <p className="text-xs mt-1">{project.year}</p>
                         <div className="flex justify-end mt-1 ml-1">
                           {project.steamLink && (
-                            <Icon href={project.steamLink} target='_blank' label='Steam' classNameIcon='dark:bg-white bg-white' classNameLink='group' icon={FaSteamSquare}></Icon>
+                            <Icon href={project.steamLink} target='_blank' label='Steam' classNameLink='group' icon={FaSteamSquare}></Icon>
                           )}
                           {project.githubLink && (
-                            <Icon href={project.githubLink} target='_blank' label='Github' classNameIcon='ml-2 dark:bg-white bg-white' classNameLink='group' icon={FaGithub}></Icon>
+                            <Icon href={project.githubLink} target='_blank' label='Github' classNameIcon='ml-2' classNameLink='group' icon={FaGithub}></Icon>
                           )}
                           {project.linkedinLink && (
-                            <Icon href={project.linkedinLink} target='_blank' label='Code' classNameIcon='ml-2 dark:bg-white bg-white' classNameLink='group' icon={FaLinkedin}></Icon>
+                            <Icon href={project.linkedinLink} target='_blank' label='Code' classNameIcon='ml-2' classNameLink='group' icon={FaLinkedin}></Icon>
                           )}
                         </div>
                       </div>
