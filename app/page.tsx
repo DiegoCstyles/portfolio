@@ -40,7 +40,7 @@ export default function Home() {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-      <main className="main-container overflow-hidden" onMouseMove={handleMouseMove}>
+      <main className="background dark:background-dark overflow-hidden" onMouseMove={handleMouseMove}>
         {/* Circular Cursor */}
         <div className="circular-cursor absolute w-12 h-12 rounded-full bg-white bg-opacity-70 pointer-events-none"
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
