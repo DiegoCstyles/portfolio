@@ -7,14 +7,23 @@ currentLanguage: string;
 
 interface AboutTranslations {
   h1: string;
+  journey: string;
+  career: string;
+  freeTime: string;
 }
 
 const translations: { [language: string]: AboutTranslations } = {
-en: {
-    h1: 'Create. Learn. Repeat.',
+  en: {
+      h1: 'Create. Learn. Repeat.',
+      journey: 'I&apos;m Diego Costa, a software engineer. <strong className="text-black dark:text-white uppercase">My journey</strong> in programming began with a curiosity to explore various technologies and languages. I dived into the world of coding by creating games, and during my time at university and technical school, I delved into a plethora of languages.',
+      career: 'As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.', 
+      freeTime: 'Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.',  
   },
   'pt-br': {
-    h1: 'Criar. Aprender. Repita.',
+      h1: 'Criar. Aprender. Repitir.',
+      journey: 'Eu sou Diego Costa, um engenheiro de software. <strong className="text-black dark:text-white uppercase">Minha jornada</strong> na programação começou com uma curiosidade para explorar várias tecnologias e linguagens. Eu mergulhei no mundo da codificação criando jogos, e durante meu tempo na universidade e na escola técnica, me aprofundei em várias linguagens.',
+      career: 'As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.',
+      freeTime: 'Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.',  
   },
 };
 
@@ -61,9 +70,9 @@ const Section = ({ currentLanguage }: AboutProps) => {
 
 
             {/* about */}
-            <p className="mt-10 text-sm leading-relaxed text-slate-600 dark:text-slate-400">I&apos;m Diego Costa, a software engineer. <strong className="text-black dark:text-white uppercase">My journey</strong> in programming began with a curiosity to explore various technologies and languages. I dived into the world of coding by creating games, and during my time at university and technical school, I delved into a plethora of languages.</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.</p>
+            <p className="mt-10 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{translations[currentLanguage].journey} </p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{translations[currentLanguage].career}</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400"{translations[currentLanguage].freeTime}></p>
 
             {/* timeline */}
             <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36">
