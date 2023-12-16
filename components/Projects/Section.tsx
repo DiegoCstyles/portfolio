@@ -66,10 +66,10 @@ const Section = () => {
         {/* Heading */}
         
         <div className="flex flex-auto">
-          <h1 className=" text-lime-600 glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+          <h1 className=" text-green-600 dark:text-cyan-300 glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             Work. Hobby. Discovery.
-            <span className="glitch-effect2 text-red-600" data-text="Work. Hobby. Discovery."></span>
-            <span className="glitch-effect3 text-lime-400" data-text="Work. Hobby. Discovery."></span>
+            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text="Work. Hobby. Discovery."></span>
+            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text="Work. Hobby. Discovery."></span>
           </h1>
           
         </div>
@@ -86,7 +86,7 @@ const Section = () => {
               
               <Link href={""} key={index} className="mt-3 text-sm justify-center items-center ">
                 <ol className="relative border-l border-gray-200 dark:border-gray-700 ">
-                  <span className="absolute flex items-center justify-center w-6 h-6 bg-lime-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900/5 dark:bg-lime-900">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-green-700 dark:bg-lime-900 rounded-full -left-3 ring-8 ring-white/5 dark:ring-gray-900/5">
                       <svg className="w-2.5 h-2.5 text-blendedCyan dark:text-blendedCyan" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                       </svg>
@@ -114,7 +114,7 @@ const Section = () => {
                       {project.technologies.length > 0 && (
                         <div className='flex mt-2'>
                           {project.technologies.map((technology, index) => (
-                            <div className='m-1 ml-0 text-xs rounded-sm p-1 border hover:bg-white/10 text-blendedCyan' key={index}>{technology}</div>
+                            <div className='m-1 ml-0 text-xs rounded-sm p-1 border light:border-white dark:border-black hover:bg-black/10 dark:hover:bg-white/10 text-green-500 dark:text-blendedCyan' key={index}>{technology}</div>
                           ))}
                         </div>
                       )}
