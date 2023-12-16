@@ -48,7 +48,7 @@ export default function About() {
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
       </div>
       {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
-      {AboutSection && <AboutSection />}
+      {AboutSection && <AboutSection currentLanguage={currentLanguage}/>}
       {Footer && <Footer currentLanguage={currentLanguage}/>}
     </div>
   )
