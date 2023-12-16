@@ -27,9 +27,9 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
       mail: 'Mail',
     },
     'pt-br': {
-      copyMessage: 'Me mande um DM',
+      copyMessage: 'Mande um DM',
       copyValue: 'Copiado',
-      phone: 'Tell',
+      phone: 'Telefone',
       mail: 'Email',
     },
   };
