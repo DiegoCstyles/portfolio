@@ -31,7 +31,7 @@ const Footer = ({ currentLanguage }: FooterProps) => {
       <span className="flex-grow"></span>
       
       <div className="justify-center" >
-        <FooterIcons />
+        <FooterIcons currentLanguage={currentLanguage}/>
       </div>
 
       <div className="ml-auto"  style={{ flexBasis: 'min-content' }}>
