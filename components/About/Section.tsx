@@ -60,7 +60,7 @@
                 <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80 "> • VBA Developer</p>
+                      <p className=" border-white dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80 "> • VBA Developer</p>
                     </div>
                     <p className="mt-1 text-xs text-center">AtendeiTi</p>
                     <p className="mt-1 text-xs text-center">2022 - 2023</p>
@@ -72,7 +72,7 @@
                 <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className="border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • IT auxiliary</p>
+                      <p className="border-white dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • IT auxiliary</p>
                       
                     </div>
                       <p className="mt-1 text-xs text-center">Objetivo Lorena</p>
@@ -90,7 +90,7 @@
                 <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Computer Engineering </p>
+                      <p className=" border-white dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Computer Engineering </p>
                     </div>
                     <p className="mt-1 text-xs text-center">Unisal - Salesian University Center of Sao Paulo</p>
                     <p className="mt-1 text-xs text-center">2019 - 2023</p>
@@ -101,7 +101,7 @@
                 <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 $ {hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Internet IT Technician </p>
+                      <p className=" border-white dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Internet IT Technician </p>
 
                     </div>
                     <p className="mt-1 text-xs text-center">Etec - State Technical School</p>
