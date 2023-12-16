@@ -49,6 +49,20 @@ const Hero = ({ currentLanguage }: HeroProps) => {
 
   return (
     <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
+      <style>{`
+        :root {
+          --section-offset: 0;
+        }
+
+        .ltBackground {
+          transform: translateY(var(--section-offset));
+        }
+
+        .dkBackground {
+          transform: translateY(var(--section-offset));
+        }
+      `}</style>
+      
       <div className="mx-auto max-w-[44rem] text-center">
         {/* Heading and Contact Icons */}
         <div className="flex  flex-auto">
