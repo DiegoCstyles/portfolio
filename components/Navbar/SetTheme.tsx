@@ -8,9 +8,9 @@ const SetTheme = () => {
         <li>
             <span className="dark:text-white cursor-pointer zoom-effect" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
                 {theme === 'light' ? (
-                    <CgDarkMode className=" inline-block w-7 h-5 mr-1 hover:text-lime-600 transition delay-100 duration-200 ease-in" />
+                    <CgDarkMode className=" inline-block w-7 h-5 mr-1 hover:text-green-500 dark:hover:text-lime-600 transition delay-100 duration-200 ease-in" />
                   ) : (
-                    <CgDarkMode className=" inline-block w-7 h-5 mr-1 dark:hover:text-blendedCyan transition delay-100 duration-200 ease-in" />
+                    <CgDarkMode className=" inline-block w-7 h-5 mr-1 hover:text-green-500 dark:hover:text-blendedCyan transition delay-100 duration-200 ease-in" />
                   )}
             </span>
         </li>     
