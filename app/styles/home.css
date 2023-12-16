@@ -1,17 +1,19 @@
-.ltBackground{
+.ltBackground {
+  --section-offset: 0;
   background-image: linear-gradient(45deg, #000000, #000000, #9CBBE2);
   background-size: 200% 200%;
   animation: gradientAnimation 15s ease infinite;
   transform: translateY(var(--section-offset));
 }
 
-
 .dkBackground {
+  --section-offset: 0;
   background-image: linear-gradient(45deg, #eee7e1, #eee7e1, #eee7e1);
   background-size: 200% 200%;
   animation: gradientAnimation 15s ease infinite;
   transform: translateY(var(--section-offset));
 }
+
 
 @keyframes gradientAnimation {
     0% {
