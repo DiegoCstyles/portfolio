@@ -14,7 +14,7 @@ en: {
     h1: 'Create. Learn. Repeat.',
   },
   'pt-br': {
-    h1: 'Create. Learn. Repeat.',
+    h1: 'Criar. Aprender. Repita.',
   },
 };
 
