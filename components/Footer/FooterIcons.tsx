@@ -5,7 +5,35 @@ import React, { memo } from 'react';
 import { RiFileCopyFill } from 'react-icons/ri';
 import '../../app/styles/fadeIn.css';
 
-const FooterIcons = () => {
+interface FooterIconsProps {
+    currentLanguage: string;
+}
+
+interface Translations {
+  [language: string]: {
+    copyMessage: string;
+    copyValue: string;
+    phone: string;
+    mail: string;
+  };
+}
+
+const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
+  const translations: Translations = {
+    en: {
+      copyMessage: 'Send me a DM',
+      copyValue: 'Copied',
+      phone: 'Phone',
+      mail: 'Mail',
+    },
+    'pt-br': {
+      copyMessage: 'Me mande um DM',
+      copyValue: 'Copiado',
+      phone: 'Tell',
+      mail: 'Email',
+    },
+  };
+  
   const [copySuccess, setCopySuccess] = useState(false);
   const [copiedValue, setCopiedValue] = useState("");
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -42,8 +70,8 @@ const FooterIcons = () => {
       <div className={`${!copySuccess && shouldApplyWidthClass ? 'w-[15.8rem]' : ''}`}>
         {copySuccess && (
           <p className={`${shouldApplyWidthClass ? 'flex-grow flex dark:text-blendedCyan w-[17.5rem] h-full light:text-black border bg-white/80 dark:bg-black/80 rounded-t-md border-primary px-6 pb-[2px] pt-1 text-xs leading-normal transition duration-150 ease-in-out hover:bg-opacity-10 focus:outline-none border-green-500 dark:border-blendedCyan focus:ring-0 dark:hover:bg-opacity-10' : 'flex-grow dark:text-blendedCyan w-[8rem] rounded-t-md h-full text-green-500 border bg-white/80 dark:bg-black/80 border-primary px-3 pb-[2px] pt-1 text-xs leading-normal transition duration-150 ease-in-out hover:bg-opacity-10 focus:outline-none border-green-500 dark:border-blendedCyan focus:ring-0 dark:hover:bg-opacity-10'}`}>
-            <span className={`${shouldApplyWidthClass ? 'text-black dark:text-white text-xs' : 'hidden'}`}>Send me a DM😎</span>
-            <span className="ml-1 flex text-xs">{copiedValue} Copied<RiFileCopyFill className={`${shouldApplyWidthClass ? 'ml-1 visible w-4 h-4 text-xs' : 'hidden'}`} /></span>
+            <span className={`${shouldApplyWidthClass ? 'text-black dark:text-white text-xs' : 'hidden'}`}>{translations[currentLanguage].copyMessage}😎</span>
+            <span className="ml-1 flex text-xs">{copiedValue} {translations[currentLanguage].copyValue}<RiFileCopyFill className={`${shouldApplyWidthClass ? 'ml-1 visible w-4 h-4 text-xs' : 'hidden'}`} /></span>
           </p>
         )}
       </div>
@@ -52,14 +80,14 @@ const FooterIcons = () => {
         onClick={() => handleCopyToClipboard("+55(12)997263748", "Phone")}
       >
         <TbPhoneCalling className="lg:w-[1.2rem] lg:h-[1.2rem] md:w-[1.2rem] md:h-[1.2rem] sm:w-[1.2rem] sm:h-[1.2rem] w-[1.2rem] h-[1.2rem] transition-colors duration-200" />
-        <span className="ml-1">Phone</span>
+        <span className="ml-1">{translations[currentLanguage].phone}</span>
       </button>
       <button
         className={'flex bg-white/80 dark:bg-black/80  border hover:border-green-500 hover:dark:border-blendedCyan rounded-t-md hover:underline overline dark:text-white  hover:decoration-green-500 dark:hover:decoration-blendedCyan hover:underline-offset-4 border-black dark:border-white hover:visible px-4 pb-[2px] pt-1 text-xs font-thin  uppercase leading-normal transition delay-100 duration-200 ease-in  focus:outline-none focus:ring-0 active:text-gray-400 '}
         onClick={() => handleCopyToClipboard("diegoe.r.c07@gmail.com", "Mail")}
       >
         <TfiEmail className="lg:w-[1rem] lg:h-[1rem] md:w-[1rem] md:h-[1rem] sm:w-[1rem] sm:h-[1rem] w-[1rem] h-[1rem] transition-colors duration-200" />
-        <span className="ml-1">Mail</span>
+        <span className="ml-1">{translations[currentLanguage].mail}</span>
       </button>
     </div>
   );
