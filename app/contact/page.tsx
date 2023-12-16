@@ -39,12 +39,7 @@ export default function Contact() {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div style={{
-      backgroundImage: 'linear-gradient(45deg, #000000, #000000, #9CBBE2)',
-      backgroundSize: '200% 200%',
-      animation: 'gradientAnimation 15s ease infinite',
-      transform: 'translateY(var(--section-offset))'
-    }} className='gradient-background' onMouseMove={handleMouseMove}>
+    <div className="main-container light:ltBackground dark:dkBackground gradient-background' onMouseMove={handleMouseMove}>
       {/* Circular Cursor */}
       <div className="circular-cursor absolute w-12 h-12 rounded-full bg-white bg-opacity-70 pointer-events-none"
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
