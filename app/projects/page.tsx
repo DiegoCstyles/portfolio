@@ -46,7 +46,7 @@ export default function Projects() {
       </div>
       {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
       {ProjectsSection && <ProjectsSection />}
-      {Footer && <Footer />}
+      {Footer && <Footer currentLanguage={currentLanguage}/>}
     </div>
   )
 }
