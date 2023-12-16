@@ -96,7 +96,7 @@ const Section = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="text-xs w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
@@ -109,7 +109,7 @@ const Section = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="text-xs w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
@@ -119,7 +119,7 @@ const Section = () => {
                 <textarea
                   id="message"
                   name="message"
-                  className="text-xs w-full zoom-effect-input px-10 py-2 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-20 resize-none"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-20 resize-none"
                   required
                 ></textarea>
 
