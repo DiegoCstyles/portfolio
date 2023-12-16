@@ -65,10 +65,10 @@ const Section = () => {
         {/* Geometric Wave Background */}
         {/* Heading */}
         <div className="flex flex-auto">
-          <h1 className="text-blendedCyan glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+          <h1 className="text-green-600 dark:text-blendedCyan glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             Reach. Me. Out.
-            <span className="glitch-effect2 text-red-600" data-text="Reach. Me. Out."></span>
-            <span className="glitch-effect3 text-lime-400" data-text="Reach. Me. Out."></span>
+            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text="Reach. Me. Out."></span>
+            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text="Reach. Me. Out."></span>
           </h1>
         </div>
 
@@ -89,27 +89,27 @@ const Section = () => {
             <div className='flex'>
               <div className=" justify-between">
                 <div className="flex justify-center item-center text-center mb-2">
-                  <label htmlFor="name" className="block p-1 h-8 text-black dark:text-black uppercase bg-white text-xs font-medium mb-2">
+                  <label htmlFor="name" className="block p-1 h-8 text-white dark:text-black uppercase bg-black dark:bg-white text-xs font-medium mb-2">
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="text-xs w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
+                    className="text-xs w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
 
                 <div className="flex justify-center item-center text-center">
-                  <label htmlFor="email" className="block p-1 h-8 text-black dark:text-black uppercase bg-white text-xs font-medium mb-2">
+                  <label htmlFor="email" className="block p-1 h-8 text-white dark:text-black uppercase bg-black dark:bg-white text-xs font-medium mb-2">
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="text-xs w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan"
+                    className="text-xs w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
@@ -123,7 +123,7 @@ const Section = () => {
                   required
                 ></textarea>
 
-                <button type="submit" className="flex float-right zoom-effect border bg-blendedCyan/60 text-black dark:text-white hover:decoration-white dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-sm uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-blendedCyan/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-4 font-lg focus:outline-none">
+                <button type="submit" className="flex float-right zoom-effect border dark:bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-sm uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-4 font-lg focus:outline-none">
                   <span>Send Message</span>
                 </button>
               </div>
