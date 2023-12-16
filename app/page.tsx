@@ -47,7 +47,7 @@ export default function Home() {
         </div>
         {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
         {Hero && <Hero currentLanguage={currentLanguage}/>}
-        {Footer && <Footer />}
+        {Footer && <Footer currentLanguage={currentLanguage}/>}
       </main>
   )
 }
