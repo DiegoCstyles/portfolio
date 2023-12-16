@@ -70,9 +70,9 @@ const Section = ({ currentLanguage }: AboutProps) => {
 
 
             {/* about */}
-            <p className="mt-10 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{translations[currentLanguage].journey} </p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{translations[currentLanguage].career}</p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{translations[currentLanguage].freeTime}</p>
+            <p className="mt-10 text-sm leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].journey }}></p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].career }}></p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].freeTime }}></p>
 
             {/* timeline */}
             <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36">
