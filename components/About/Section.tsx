@@ -36,10 +36,10 @@
           <div className="mx-auto max-w-[44rem] text-center">
               {/* Heading */}
               <div className="flex flex-auto">
-                <h1 className=" text-lime-600 glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+                <h1 className=" text-green-600 dark:text-lime-600 glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
                   Create. Learn. Repeat.
-                  <span className="glitch-effect2 text-red-600" data-text="Create. Learn. Repeat."></span>
-                  <span className="glitch-effect3 text-lime-400" data-text="Create. Learn. Repeat."></span>
+                  <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text="Create. Learn. Repeat."></span>
+                  <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text="Create. Learn. Repeat."></span>
                 </h1>
               </div>
 
@@ -60,7 +60,7 @@
                 <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border rounded-md text-blendedCyan text-center w-80 "> • VBA Developer</p>
+                      <p className=" border dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80 "> • VBA Developer</p>
                     </div>
                     <p className="mt-1 text-xs text-center">AtendeiTi</p>
                     <p className="mt-1 text-xs text-center">2022 - 2023</p>
@@ -72,7 +72,7 @@
                 <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border rounded-md text-blendedCyan text-center w-80"> • IT auxiliary</p>
+                      <p className=" border dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • IT auxiliary</p>
                       
                     </div>
                       <p className="mt-1 text-xs text-center">Objetivo Lorena</p>
@@ -90,7 +90,7 @@
                 <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border rounded-md text-blendedCyan text-center w-80"> • Computer Engineering </p>
+                      <p className=" border dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Computer Engineering </p>
                     </div>
                     <p className="mt-1 text-xs text-center">Unisal - Salesian University Center of Sao Paulo</p>
                     <p className="mt-1 text-xs text-center">2019 - 2023</p>
@@ -101,7 +101,7 @@
                 <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 $ {hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border rounded-md text-blendedCyan text-center w-80"> • Internet IT Technician </p>
+                      <p className=" border dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Internet IT Technician </p>
 
                     </div>
                     <p className="mt-1 text-xs text-center">Etec - State Technical School</p>
