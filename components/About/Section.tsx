@@ -22,8 +22,8 @@ const translations: { [language: string]: AboutTranslations } = {
   'pt-br': {
       h1: 'Criar. Aprender. Repitir.',
       journey: 'Eu sou Diego Costa, um engenheiro de software. <strong className="text-black dark:text-white uppercase">Minha jornada</strong> na programação começou com uma curiosidade para explorar várias tecnologias e linguagens. Eu mergulhei no mundo da codificação criando jogos, e durante meu tempo na universidade e na escola técnica, me aprofundei em várias linguagens.',
-      career: 'As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.',
-      freeTime: 'Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.',  
+      career: 'À medida que avanço na <strong className="text-black dark:text-white uppercase">minha carreira</strong>, aprendi a valorizar a importância de me especializar e construir uma base sólida. Então, decidi focar em JavaScript usando frameworks e bibliotecas como React, Vue e Angular, com o objetivo de criar produtos notáveis.',
+      freeTime: 'Além da programação, sou amante de esportes e, no <strong className="text-black dark:text-white uppercase">meu tempo livre</strong>, você pode me encontrar aproveitando projetos pessoais, assistindo filmes e jogando com amigos.',
   },
 };
 
