@@ -8,8 +8,7 @@ interface FooterProps {
 }
 
 interface FooterTranslations {
-  title: string;
-  description: string;
+  h1: string;
 }
 
 const translations: { [language: string]: FooterTranslations } = {
