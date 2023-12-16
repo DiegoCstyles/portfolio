@@ -66,10 +66,10 @@ const Hero = ({ currentLanguage }: HeroProps) => {
       <div className="mx-auto max-w-[44rem] text-center">
         {/* Heading and Contact Icons */}
         <div className="flex  flex-auto">
-          <h1 className="flex-1 glitch-effect1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl leading-[4rem] tracking-tight text-text-cyan-300 dark:text-cyan-300">
+          <h1 className="text-green-600 dark:text-cyan-300 flex-1 glitch-effect1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].title}
-            <span className="glitch-effect2 text-red-600" data-text={translations[currentLanguage].title}></span>
-            <span className="glitch-effect3 text-lime-400" data-text={translations[currentLanguage].title}></span>
+            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].title}></span>
+            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].title}></span>
           </h1>
           
           {!isMobile && (<ContactIcons />)}
