@@ -46,7 +46,7 @@ export default function Contact() {
       </div>
       {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
       {ContactSection && <ContactSection />}
-      {Footer && <Footer />}
+      {Footer && <Footer currentLanguage={currentLanguage}/>}
     </div>
   )
 }
