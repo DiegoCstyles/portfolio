@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import '../styles/fadeIn.css';
-import './styles/home.css';
+import '../styles/home.css';
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
