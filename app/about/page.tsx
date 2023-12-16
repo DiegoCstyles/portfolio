@@ -49,7 +49,7 @@ export default function About() {
       </div>
       {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
       {AboutSection && <AboutSection />}
-      {Footer && <Footer />}
+      {Footer && <Footer currentLanguage={currentLanguage}/>}
     </div>
   )
 }
