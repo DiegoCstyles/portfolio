@@ -123,7 +123,7 @@ const Section = () => {
                   required
                 ></textarea>
 
-                <button type="submit" className="flex float-right zoom-effect border dark:bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-sm uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-4 font-lg focus:outline-none">
+                <button type="submit" className="flex float-right zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-sm uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-4 font-lg focus:outline-none">
                   <span>Send Message</span>
                 </button>
               </div>
