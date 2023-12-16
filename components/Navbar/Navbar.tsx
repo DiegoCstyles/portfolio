@@ -35,7 +35,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li
-              className={`cursor-pointer text-sm text-white dark:text-white`}
+              className={`cursor-pointer text-sm text-black dark:text-white`}
               onClick={onLanguageChange}
             >
               {currentLanguage.toUpperCase()}
