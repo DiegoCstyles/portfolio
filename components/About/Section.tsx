@@ -72,7 +72,7 @@
                 <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
                   <div className='text-left'>
                     <div className='flex'>
-                      <p className=" border light:border-white dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • IT auxiliary</p>
+                      <p className="border-white dark:border-black rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • IT auxiliary</p>
                       
                     </div>
                       <p className="mt-1 text-xs text-center">Objetivo Lorena</p>
