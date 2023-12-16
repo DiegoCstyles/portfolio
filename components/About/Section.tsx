@@ -36,7 +36,7 @@
           <div className="mx-auto max-w-[44rem] text-center">
               {/* Heading */}
               <div className="flex flex-auto">
-                <h1 className=" text-green-600 dark:text-blendedCyan glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+                <h1 className=" text-green-600 dark:text-cyan-300 glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
                   Create. Learn. Repeat.
                   <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text="Create. Learn. Repeat."></span>
                   <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text="Create. Learn. Repeat."></span>
