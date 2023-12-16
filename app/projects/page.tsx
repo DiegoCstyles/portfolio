@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import '../styles/fadeIn.css';
+import './styles/home.css';
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
@@ -39,24 +40,13 @@ export default function Projects() {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div  className="light:ltBackground dark:dkBackground overflow-hidden" onMouseMove={handleMouseMove}>
-      <style>
-        {`
-          .ltBackground {
-            background-image: linear-gradient(45deg, #000000, #000000, #9CBBE2);
-            background-size: 200% 200%;
-            animation: gradientAnimation 15s ease infinite;
-            transform: translateY(var(--section-offset));
-          }
-
-          .dkBackground {
-            background-image: linear-gradient(45deg, #eee7e1, #eee7e1, #eee7e1);
-            background-size: 200% 200%;
-            animation: gradientAnimation 15s ease infinite;
-            transform: translateY(var(--section-offset));
-          }
-        `}
-      </style>
+    <div style={{
+      backgroundImage: 'linear-gradient(45deg, #000000, #000000, #9CBBE2)',
+      backgroundSize: '200% 200%',
+      animation: 'gradientAnimation 15s ease infinite',
+      transform: 'translateY(var(--section-offset))'
+    }}
+      className="light:ltBackground dark:dkBackground overflow-hidden" onMouseMove={handleMouseMove}>     
       {/* Circular Cursor */}
       <div className="circular-cursor absolute w-12 h-12 rounded-full bg-white bg-opacity-70 pointer-events-none"
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
