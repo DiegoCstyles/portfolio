@@ -10,8 +10,8 @@ interface AboutTranslations {
   journey: string;
   career: string;
   freeTime: string;
-  CareerP1: string,
-  CareerP2: string,
+  careerP1: string,
+  careerP2: string,
 }
 
 const translations: { [language: string]: AboutTranslations } = {
