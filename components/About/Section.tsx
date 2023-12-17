@@ -10,6 +10,8 @@ interface AboutTranslations {
   journey: string;
   career: string;
   freeTime: string;
+  CareerP1: string,
+  CareerP2: string,
 }
 
 const translations: { [language: string]: AboutTranslations } = {
@@ -18,12 +20,16 @@ const translations: { [language: string]: AboutTranslations } = {
       journey: 'I&apos;m Diego Costa, a software engineer. <strong className="text-black dark:text-white uppercase">My journey</strong> in programming began with a curiosity to explore various technologies and languages. I dived into the world of coding by creating games, and during my time at university and technical school, I delved into a plethora of languages.',
       career: 'As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.', 
       freeTime: 'Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.',  
+      CareerP1: 'Create, develop and maintain automation processes',
+      CareerP2: 'that accelerate the execution of complex tasks and business routines, saving time for the system user.',
   },
   'pt-br': {
       h1: 'Criar. Aprender. Repitir.',
       journey: 'Eu sou Diego Costa, um engenheiro de software. <strong className="text-black dark:text-white uppercase">Minha jornada</strong> na programação começou com uma curiosidade para explorar várias tecnologias e linguagens. Eu mergulhei no mundo da codificação criando jogos, e durante meu tempo na universidade e na escola técnica, me aprofundei em várias linguagens.',
       career: 'À medida que avanço na <strong className="text-black dark:text-white uppercase">minha carreira</strong>, aprendi a valorizar a importância de me especializar e construir uma base sólida. Então, decidi focar em JavaScript usando frameworks e bibliotecas como React, Vue e Angular, com o objetivo de criar produtos notáveis.',
       freeTime: 'Além da programação, sou amante de esportes e, no <strong className="text-black dark:text-white uppercase">meu tempo livre</strong>, você pode me encontrar aproveitando projetos pessoais, assistindo filmes e jogando com amigos.',
+      CareerP1: 'Criar, desenvolver e manter processos de automação',
+      CareerP2: 'que aceleram a execução de tarefas e rotinas de negócios complexas, economizando tempo do usuário do sistema.',
   },
 };
 
@@ -90,8 +96,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">AtendeiTi</p>
                   <p className="mt-1 text-xs text-center">2022 - 2023</p>
                 </div>
-                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify'><strong className="text-black dark:text-blendedCyan">Create, develop and maintain automation processes</strong> that accelerate the execution of 
-                complex tasks and business routines, saving time for the system user.
+                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify'><strong className="text-black dark:text-blendedCyan">{translations[currentLanguage].careerP1}</strong>{translations[currentLanguage].careerP2} 
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
