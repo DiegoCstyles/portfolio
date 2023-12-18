@@ -5,7 +5,29 @@ import '../../app/styles/fadeIn.css';
 import ContactImage from './ContactImage.png';
 import Image from 'next/image';
 
-const Section = () => {
+interface ContactProps {
+currentLanguage: string;
+}
+
+interface AboutTranslations {
+  p1: string;
+  p2: string;
+
+}
+
+const translations: { [language: string]: AboutTranslations } = {
+  en: {
+      p1: 'I love chatting with interesting people. Get in touch with me ',
+      p2: 'via social media or email',
+  },
+  'pt-br': {
+      p1: 'I love chatting with interesting people. Get in touch with me ',
+      p2: 'via social media or email',
+      
+  },
+};
+
+const Section = ({ currentLanguage }: ContactProps) => {
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -75,7 +97,7 @@ const Section = () => {
         {/* about */}
         <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
           <p className="text-sm text-justify leading-relaxed text-slate-600 dark:text-slate-400">
-            I love chatting with interesting people. Get in touch with me <strong className="text-sm text-black dark:text-white">via social media or email</strong>.
+            {translations[currentLanguage].p1}<strong className="text-sm text-black dark:text-white">{translations[currentLanguage].p2}</strong>.
           </p>
           <div className="flex mt-2">
             <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameLink="group" icon={FaInstagram}></Icon>
