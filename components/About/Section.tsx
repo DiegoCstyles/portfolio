@@ -23,8 +23,10 @@ interface AboutTranslations {
   secondCareerP5: string,
 
   h2Education: string,
+  firstCareerTitle: string,
   firstAcademict: string,
   firstAcademic: string,
+  secondCareerTitle: string,
   secondAcademic: string,
   secondAcademicP1: string,
   secondAcademicP2: string,
@@ -52,10 +54,12 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP5: ' to users of two company units.',
     
       h2Education: 'Education',
+      firstAcademicTitle: 'Computer Engineering',
       firstAcademict: 'Unisal - Salesian University Center of Sao Paulo',
       firstAcademic: ' With knowledge in hardware, software, computer networks and embedded systems. <strong className="text-black dark:text-blendedCyan">analytical and problem solving skills</strong>, I am always <strong className="text-black dark:text-blendedCyan">up to date on new technologies and market trends</strong>.',
+      secondAcademicTitle: 'Internet IT Technician',   
       secondAcademic: 'Etec - State Technical School',  
-      secondAcademicP1: 'Skills in',
+      secondAcademicP1: 'Skills in ',
       secondAcademicP2: 'web development, responsive design, SEO, usability',
       secondAcademicP3: ' and knowledge in programming languages. Work is focused on ',
       secondAcademicP4: 'quality, performance and safety ',
@@ -79,10 +83,12 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP5: ' para usuários de duas unidades da empresa.',
     
       h2Education: 'Educação',
-      firstAcademict: 'Unisal - Centro Universitário Salesiano de São Paulo',
+      firstAcademicTitle: 'Engenharia da Computação',
+      firstAcademict: 'Unisal - Centro Universitário Salesiano de SP',
       firstAcademic: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados. <strong className="text-black dark:text-blendedCyan">Habilidades analíticas e de resolução de problemas</strong>, estou sempre <strong className="text-black dark:text-blendedCyan">atualizado(a) sobre novas tecnologias e tendências de mercado</strong>.',
+      secondAcademicTitle: 'Técnico de TI em Internet',  
       secondAcademic: 'Etec - Escola Técnica Estadual',
-      secondAcademicP1: 'Habilidades em',
+      secondAcademicP1: 'Habilidades em ',
       secondAcademicP2: 'desenvolvimento web, design responsivo, SEO, usabilidade',
       secondAcademicP3: ' e conhecimento em linguagens de programação. O trabalho é focado em ',
       secondAcademicP4: 'qualidade, desempenho e segurança ',
@@ -186,7 +192,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Computer Engineering </p>
+                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • {translations[currentLanguage].firstAcademicTitle}Computer Engineering </p>
                   </div>
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs text-center">2019 - 2023</p>
@@ -197,7 +203,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 $ {hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Internet IT Technician </p>
+                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • {translations[currentLanguage].secondAcademicTitle}Internet IT Technician </p>
 
                   </div>
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
