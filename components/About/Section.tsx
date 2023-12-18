@@ -40,7 +40,7 @@ const translations: { [language: string]: AboutTranslations } = {
       career: 'As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.', 
       freeTime: 'Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.',  
 
-      career: 'Career',
+      h2Career: 'Career',
       firstCareerTitle: 'VBA Developer',
       firstCareerP1: 'Create, develop and maintain automation processes ',
       firstCareerP2: 'that accelerate the execution of complex tasks and business routines, saving time for the system user.',
@@ -51,7 +51,7 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP4: 'providing support',
       secondCareerP5: ' to users of two company units.',
     
-      education: 'Education',
+      h2Education: 'Education',
       firstAcademict: 'Unisal - Salesian University Center of Sao Paulo',
       firstAcademic: ' With knowledge in hardware, software, computer networks and embedded systems. <strong className="text-black dark:text-blendedCyan">analytical and problem solving skills</strong>, I am always <strong className="text-black dark:text-blendedCyan">up to date on new technologies and market trends</strong>.',
       secondAcademic: 'Etec - State Technical School',  
