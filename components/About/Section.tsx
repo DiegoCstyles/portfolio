@@ -23,7 +23,7 @@ interface AboutTranslations {
   secondCareerP5: string,
 
   h2Education: string,
-  firstCareerTitle: string,
+  firstAcademicTitle: string,
   firstAcademict: string,
   firstAcademic: string,
   secondCareerTitle: string,
