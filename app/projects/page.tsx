@@ -45,7 +45,7 @@ export default function Projects() {
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
       </div>
       {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
-      {ProjectsSection && <ProjectsSection />}
+      {ProjectsSection && <ProjectsSection currentLanguage={currentLanguage}/>}
       {Footer && <Footer currentLanguage={currentLanguage}/>}
     </div>
   )
