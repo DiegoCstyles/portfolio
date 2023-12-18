@@ -10,6 +10,7 @@ interface AboutTranslations {
   journey: string;
   career: string;
   freeTime: string;
+  
   firstCareerP1: string,
   firstCareerP2: string,
   secondCareerP1: string,
@@ -17,6 +18,8 @@ interface AboutTranslations {
   secondCareerP3: string,
   secondCareerP4: string,
   secondCareerP5: string,
+
+  education: string,
   firstAcademict: string,
   firstAcademic: string,
   secondAcademic: string,
@@ -24,6 +27,7 @@ interface AboutTranslations {
   secondAcademicP2: string,
   secondAcademicP3: string,
   secondAcademicP4: string,
+  
 } 
 
 const translations: { [language: string]: AboutTranslations } = {
@@ -32,6 +36,7 @@ const translations: { [language: string]: AboutTranslations } = {
       journey: 'I&apos;m Diego Costa, a software engineer. <strong className="text-black dark:text-white uppercase">My journey</strong> in programming began with a curiosity to explore various technologies and languages. I dived into the world of coding by creating games, and during my time at university and technical school, I delved into a plethora of languages.',
       career: 'As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.', 
       freeTime: 'Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.',  
+      
       firstCareerP1: 'Create, develop and maintain automation processes ',
       firstCareerP2: 'that accelerate the execution of complex tasks and business routines, saving time for the system user.',
       secondCareerP1: 'Work on ',
@@ -39,6 +44,8 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP3: ' computers, installing software and ',
       secondCareerP4: 'providing support',
       secondCareerP5: ' to users of two company units.',
+    
+      education: 'Education',
       firstAcademict: 'Unisal - Salesian University Center of Sao Paulo',
       firstAcademic: ' With knowledge in hardware, software, computer networks and embedded systems. <strong className="text-black dark:text-blendedCyan">analytical and problem solving skills</strong>, I am always <strong className="text-black dark:text-blendedCyan">up to date on new technologies and market trends</strong>.',
       secondAcademic: 'Etec - State Technical School',  
@@ -52,6 +59,7 @@ const translations: { [language: string]: AboutTranslations } = {
       journey: 'Eu sou Diego Costa, um engenheiro de software. <strong className="text-black dark:text-white uppercase">Minha jornada</strong> na programação começou com uma curiosidade para explorar várias tecnologias e linguagens. Eu mergulhei no mundo da codificação criando jogos, e durante meu tempo na universidade e na escola técnica, me aprofundei em várias linguagens.',
       career: 'À medida que avanço na <strong className="text-black dark:text-white uppercase">minha carreira</strong>, aprendi a valorizar a importância de me especializar e construir uma base sólida. Então, decidi focar em JavaScript usando frameworks e bibliotecas como React, Vue e Angular, com o objetivo de criar produtos notáveis.',
       freeTime: 'Além da programação, sou amante de esportes e, no <strong className="text-black dark:text-white uppercase">meu tempo livre</strong>, você pode me encontrar aproveitando projetos pessoais, assistindo filmes e jogando com amigos.',
+      
       firstCareerP1: 'Criar, desenvolver e manter processos de automação ',
       firstCareerP2: 'que aceleram a execução de tarefas e rotinas de negócios complexas, economizando tempo do usuário do sistema.',
       secondCareerP1: 'Trabalho em ',
@@ -59,6 +67,8 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP3: ' de computadores, instalação de software e ',
       secondCareerP4: 'fornecendo suporte',
       secondCareerP5: ' para usuários de duas unidades da empresa.',
+    
+      education: 'Educação',
       firstAcademict: 'Unisal - Centro Universitário Salesiano de São Paulo',
       firstAcademic: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados. <strong className="text-black dark:text-blendedCyan">Habilidades analíticas e de resolução de problemas</strong>, estou sempre <strong className="text-black dark:text-blendedCyan">atualizado(a) sobre novas tecnologias e tendências de mercado</strong>.',
       secondAcademic: 'Etec - Escola Técnica Estadual',
@@ -159,7 +169,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
 
               <div className=" flex items-start mt-20 text-base leading-relaxed text-slate-600 dark:text-slate-400">
                 <div>
-                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">Education /&gt;</h2>
+                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].education} /&gt;</h2>
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
