@@ -27,7 +27,7 @@ interface AboutTranslations {
   secondAcademicP2: string,
   secondAcademicP3: string,
   secondAcademicP4: string,
-  
+  secondAcademicP5: string,
 } 
 
 const translations: { [language: string]: AboutTranslations } = {
@@ -52,7 +52,8 @@ const translations: { [language: string]: AboutTranslations } = {
       secondAcademicP1: 'Skills in',
       secondAcademicP2: 'web development, responsive design, SEO, usability',
       secondAcademicP3: ' and knowledge in programming languages. Work is focused on ',
-      secondAcademicP4: 'quality, performance and safety</strong> of the projects developed.',
+      secondAcademicP4: 'quality, performance and safety ',
+      secondAcademicP5: 'of the projects developed.',
   },
   'pt-br': {
       h1: 'Criar. Aprender. Repitir.',
@@ -75,7 +76,8 @@ const translations: { [language: string]: AboutTranslations } = {
       secondAcademicP1: 'Skills in',
       secondAcademicP2: 'web development, responsive design, SEO, usability',
       secondAcademicP3: ' and knowledge in programming languages. Work is focused on ',
-      secondAcademicP4: 'quality, performance and safety</strong> of the projects developed.',
+      secondAcademicP4: 'quality, performance and safety ',
+      secondAcademicP5: 'of the projects developed.',
   },
 };
 
@@ -192,7 +194,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
                   <p className="mt-1 text-xs text-center">2016 - 2018</p>
                 </div>
-                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify'>{translations[currentLanguage].secondAcademicP1}<strong className="text-black dark:text-blendedCyan">{translations[currentLanguage].secondAcademicP2}</strong>{translations[currentLanguage].secondAcademicP3}<strong className="text-black dark:text-blendedCyan">{translations[currentLanguage].secondAcademicP4}
+                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify'>{translations[currentLanguage].secondAcademicP1}<strong className="text-black dark:text-blendedCyan">{translations[currentLanguage].secondAcademicP2}</strong>{translations[currentLanguage].secondAcademicP3}<strong className="text-black dark:text-blendedCyan">{translations[currentLanguage].secondAcademicP4}</strong>{translations[currentLanguage].secondAcademicP5}
                 </span>}
               </div>
             </div>
