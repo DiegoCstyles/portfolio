@@ -21,7 +21,7 @@ const translations: { [language: string]: ProjectsTranslations } = {
       h2: 'Featured Projects',
   },
   'pt-br': {
-      h1: 'Trabalhar. Passatempo. Descoberta.',
+      h1: 'Trabalhar. Hobby. Descoberta.',
       h2: 'Projetos em destaque',
   },
 };
