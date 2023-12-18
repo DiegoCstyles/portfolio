@@ -10,20 +10,24 @@ currentLanguage: string;
 }
 
 interface ContactTranslations {
+  h1: string;
   p1: string;
   p2: string;
-
+  send: string;
 }
 
 const translations: { [language: string]: ContactTranslations } = {
   en: {
+      h1: 'Reach. Me. Out.',
       p1: 'I love chatting with interesting people. Get in touch with me ',
       p2: 'via social media or email',
+      send: 'Send Message',
   },
   'pt-br': {
-      p1: 'I love chatting with interesting people. Get in touch with me ',
-      p2: 'via social media or email',
-      
+      h1: 'Entre. Em Contato. Comigo.',
+      p1: 'Adoro conversar com pessoas interessantes. Entre em contato comigo ',
+      p2: 'via mídia social ou email',
+      send: 'Send Message',
   },
 };
 
@@ -88,9 +92,9 @@ const Section = ({ currentLanguage }: ContactProps) => {
         {/* Heading */}
         <div className="flex flex-auto">
           <h1 className="text-green-600 dark:text-blendedCyan glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
-            Reach. Me. Out.
-            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text="Reach. Me. Out."></span>
-            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text="Reach. Me. Out."></span>
+            {translations[currentLanguage].h1}
+            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].h1}"Reach. Me. Out."></span>
+            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].h1}"Reach. Me. Out."></span>
           </h1>
         </div>
 
@@ -146,7 +150,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 ></textarea>
 
                 <button type="submit" className="flex float-right zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-sm uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-4 font-lg focus:outline-none">
-                  <span>Send Message</span>
+                  <span>{translations[currentLanguage].send}</span>
                 </button>
               </div>
             </div>
