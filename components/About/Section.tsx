@@ -67,7 +67,7 @@ const translations: { [language: string]: AboutTranslations } = {
       career: 'À medida que avanço na <strong className="text-black dark:text-white uppercase">minha carreira</strong>, aprendi a valorizar a importância de me especializar e construir uma base sólida. Então, decidi focar em JavaScript usando frameworks e bibliotecas como React, Vue e Angular, com o objetivo de criar produtos notáveis.',
       freeTime: 'Além da programação, sou amante de esportes e, no <strong className="text-black dark:text-white uppercase">meu tempo livre</strong>, você pode me encontrar aproveitando projetos pessoais, assistindo filmes e jogando com amigos.',
 
-      career: 'Carreira',
+      h2Career: 'Carreira',
       firstCareerTitle: 'Desenvolvedor VBA',
       firstCareerP1: 'Criar, desenvolver e manter processos de automação ',
       firstCareerP2: 'que aceleram a execução de tarefas e rotinas de negócios complexas, economizando tempo do usuário do sistema.',
@@ -78,7 +78,7 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP4: 'fornecendo suporte',
       secondCareerP5: ' para usuários de duas unidades da empresa.',
     
-      education: 'Educação',
+      h2Education: 'Educação',
       firstAcademict: 'Unisal - Centro Universitário Salesiano de São Paulo',
       firstAcademic: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados. <strong className="text-black dark:text-blendedCyan">Habilidades analíticas e de resolução de problemas</strong>, estou sempre <strong className="text-black dark:text-blendedCyan">atualizado(a) sobre novas tecnologias e tendências de mercado</strong>.',
       secondAcademic: 'Etec - Escola Técnica Estadual',
