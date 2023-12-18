@@ -17,8 +17,14 @@ interface AboutTranslations {
   secondCareerP3: string,
   secondCareerP4: string,
   secondCareerP5: string,
+  firstAcademict: string,
   firstAcademic: string,
-}
+  secondAcademic: string,
+  secondAcademicP1: string,
+  secondAcademicP2: string,
+  secondAcademicP3: string,
+  secondAcademicP4: string,
+} 
 
 const translations: { [language: string]: AboutTranslations } = {
   en: {
@@ -33,7 +39,13 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP3: ' computers, installing software and ',
       secondCareerP4: 'providing support',
       secondCareerP5: ' to users of two company units.',
+      firstAcademict: 'Unisal - Salesian University Center of Sao Paulo',
       firstAcademic: ' With knowledge in hardware, software, computer networks and embedded systems. <strong className="text-black dark:text-blendedCyan">analytical and problem solving skills</strong>, I am always <strong className="text-black dark:text-blendedCyan">up to date on new technologies and market trends</strong>.',
+      secondAcademic: 'Etec - State Technical School',  
+      secondAcademicP1: 'Skills in',
+      secondAcademicP2: 'web development, responsive design, SEO, usability',
+      secondAcademicP3: ' and knowledge in programming languages. Work is focused on ',
+      secondAcademicP4: 'quality, performance and safety</strong> of the projects developed.',
   },
   'pt-br': {
       h1: 'Criar. Aprender. Repitir.',
@@ -47,7 +59,13 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP3: ' de computadores, instalação de software e ',
       secondCareerP4: 'fornecendo suporte',
       secondCareerP5: ' para usuários de duas unidades da empresa.',
+      firstAcademict: 'Unisal - Centro Universitário Salesiano de São Paulo',
       firstAcademic: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados. <strong className="text-black dark:text-blendedCyan">Habilidades analíticas e de resolução de problemas</strong>, estou sempre <strong className="text-black dark:text-blendedCyan">atualizado(a) sobre novas tecnologias e tendências de mercado</strong>.',
+      secondAcademic: 'Etec - Escola Técnica Estadual',
+      secondAcademicP1: 'Skills in',
+      secondAcademicP2: 'web development, responsive design, SEO, usability',
+      secondAcademicP3: ' and knowledge in programming languages. Work is focused on ',
+      secondAcademicP4: 'quality, performance and safety</strong> of the projects developed.',
   },
 };
 
@@ -149,7 +167,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Computer Engineering </p>
                   </div>
-                  <p className="mt-1 text-xs text-center">Unisal - Salesian University Center of Sao Paulo</p>
+                  <p className="mt-1 text-xs text-center">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs text-center">2019 - 2023</p>
                 </div>
                 {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
@@ -161,10 +179,10 @@ const Section = ({ currentLanguage }: AboutProps) => {
                     <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • Internet IT Technician </p>
 
                   </div>
-                  <p className="mt-1 text-xs text-center">Etec - State Technical School</p>
+                  <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
                   <p className="mt-1 text-xs text-center">2016 - 2018</p>
                 </div>
-                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify'>Skills in <strong className="text-black dark:text-blendedCyan">web development, responsive design, SEO, usability</strong> and knowledge in programming languages. Work is focused on <strong className="text-black dark:text-blendedCyan">quality, performance and safety</strong> of the projects developed.
+                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify'>{translations[currentLanguage].secondAcademicP1}<strong className="text-black dark:text-blendedCyan">{translations[currentLanguage].secondAcademicP2}</strong>{translations[currentLanguage].secondAcademicP3}<strong className="text-black dark:text-blendedCyan">{translations[currentLanguage].secondAcademicP4}
                 </span>}
               </div>
             </div>
