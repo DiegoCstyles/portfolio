@@ -11,6 +11,7 @@ currentLanguage: string;
 
 interface ContactTranslations {
   h1: string;
+  name: string;
   p1: string;
   p2: string;
   send: string;
@@ -19,15 +20,17 @@ interface ContactTranslations {
 const translations: { [language: string]: ContactTranslations } = {
   en: {
       h1: 'Reach. Me. Out.',
+      name: 'Name',
       p1: 'I love chatting with interesting people. Get in touch with me ',
       p2: 'via social media or email',
       send: 'Send Message',
   },
   'pt-br': {
       h1: 'Entre. Em. Comigo.',
+      name: 'Nome',
       p1: 'Adoro conversar com pessoas interessantes. Entre em contato comigo ',
       p2: 'via mídia social ou email',
-      send: 'Send Message',
+      send: 'Enviar Mensagem',
   },
 };
 
@@ -116,7 +119,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
               <div className=" justify-between">
                 <div className="flex justify-center item-center text-center mb-2">
                   <label htmlFor="name" className="block p-1 h-8 text-white dark:text-black uppercase bg-black dark:bg-white text-xs font-medium mb-2">
-                    Name
+                    {translations[currentLanguage].name}
                   </label>
                   <input
                     type="text"
