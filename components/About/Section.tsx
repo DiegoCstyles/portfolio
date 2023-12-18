@@ -192,7 +192,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • {translations[currentLanguage].firstAcademicTitle}Computer Engineering </p>
+                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • {translations[currentLanguage].firstAcademicTitle}</p>
                   </div>
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs text-center">2019 - 2023</p>
@@ -203,7 +203,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 $ {hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • {translations[currentLanguage].secondAcademicTitle}Internet IT Technician </p>
+                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • {translations[currentLanguage].secondAcademicTitle}</p>
 
                   </div>
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
