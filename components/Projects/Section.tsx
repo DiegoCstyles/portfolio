@@ -12,14 +12,17 @@ currentLanguage: string;
 
 interface ProjectsTranslations {
   h1: string;
+  h2: string;
 }
 
 const translations: { [language: string]: ProjectsTranslations } = {
   en: {
       h1: 'Work. Hobby. Discovery.',
+      h2: 'Featured Projects',
   },
   'pt-br': {
       h1: 'Trabalhar. Passatempo. Descoberta.',
+      h2: 'Projetos em destaque',
   },
 };
 
@@ -95,7 +98,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
         <div  style={{ transform: 'translateY(var(--projects-offset))' }} className="mt-20 justify-center items-center">
           <div className=" mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
             <div>
-              <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">Featured Projects /&gt;</h2>
+              <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2} /&gt;</h2>
             </div>
           </div>
           <div className="group">
