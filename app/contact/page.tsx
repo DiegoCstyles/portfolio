@@ -45,7 +45,7 @@ export default function Contact() {
             style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
       </div>
       {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
-      {ContactSection && <ContactSection />}
+      {ContactSection && <ContactSection currentLanguage={currentLanguage}/>}
       {Footer && <Footer currentLanguage={currentLanguage}/>}
     </div>
   )
