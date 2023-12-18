@@ -17,6 +17,7 @@ interface AboutTranslations {
   secondCareerP3: string,
   secondCareerP4: string,
   secondCareerP5: string,
+  firstAcademic: string,
 }
 
 const translations: { [language: string]: AboutTranslations } = {
@@ -32,6 +33,7 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP3: ' computers, installing software and ',
       secondCareerP4: 'providing support',
       secondCareerP5: ' to users of two company units.',
+      firstAcademic: ' With knowledge in hardware, software, computer networks and embedded systems. <strong className="text-black dark:text-blendedCyan">analytical and problem solving skills</strong>, I am always <strong className="text-black dark:text-blendedCyan">up to date on new technologies and market trends</strong>.',
   },
   'pt-br': {
       h1: 'Criar. Aprender. Repitir.',
@@ -45,7 +47,7 @@ const translations: { [language: string]: AboutTranslations } = {
       secondCareerP3: ' de computadores, instalação de software e ',
       secondCareerP4: 'fornecendo suporte',
       secondCareerP5: ' para usuários de duas unidades da empresa.',
-    
+      firstAcademic: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados. <strong className="text-black dark:text-blendedCyan">Habilidades analíticas e de resolução de problemas</strong>, estou sempre <strong className="text-black dark:text-blendedCyan">atualizado(a) sobre novas tecnologias e tendências de mercado</strong>.',
   },
 };
 
@@ -150,7 +152,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">Unisal - Salesian University Center of Sao Paulo</p>
                   <p className="mt-1 text-xs text-center">2019 - 2023</p>
                 </div>
-                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify'>With knowledge in hardware, software, computer networks and embedded systems. <strong className="text-black dark:text-blendedCyan">analytical and problem solving skills</strong>, I am always <strong className="text-black dark:text-blendedCyan">up to date on new technologies and market trends</strong>.
+                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 $ {hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
