@@ -9,13 +9,13 @@ interface ContactProps {
 currentLanguage: string;
 }
 
-interface AboutTranslations {
+interface ContactTranslations {
   p1: string;
   p2: string;
 
 }
 
-const translations: { [language: string]: AboutTranslations } = {
+const translations: { [language: string]: ContactTranslations } = {
   en: {
       p1: 'I love chatting with interesting people. Get in touch with me ',
       p2: 'via social media or email',
