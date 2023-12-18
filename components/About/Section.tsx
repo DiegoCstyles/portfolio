@@ -10,9 +10,12 @@ interface AboutTranslations {
   journey: string;
   career: string;
   freeTime: string;
-  
+
+  career: string,
+  firstCareerTitle: string,
   firstCareerP1: string,
   firstCareerP2: string,
+  secondCareerTitle: string,
   secondCareerP1: string,
   secondCareerP2: string,
   secondCareerP3: string,
@@ -36,9 +39,12 @@ const translations: { [language: string]: AboutTranslations } = {
       journey: 'I&apos;m Diego Costa, a software engineer. <strong className="text-black dark:text-white uppercase">My journey</strong> in programming began with a curiosity to explore various technologies and languages. I dived into the world of coding by creating games, and during my time at university and technical school, I delved into a plethora of languages.',
       career: 'As I progress in <strong className="text-black dark:text-white uppercase">my career</strong>, I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.', 
       freeTime: 'Besides coding, I&apos;m a lover of sports, and in <strong className="text-black dark:text-white uppercase">my free time</strong>, you can find me enjoying side projects, watching movies, and playing games with friends.',  
-      
+
+      career: 'Career',
+      firstCareerTitle: 'VBA Developer',
       firstCareerP1: 'Create, develop and maintain automation processes ',
       firstCareerP2: 'that accelerate the execution of complex tasks and business routines, saving time for the system user.',
+      secondCareerTitle: 'IT auxiliary',
       secondCareerP1: 'Work on ',
       secondCareerP2: 'assembling and maintaining',
       secondCareerP3: ' computers, installing software and ',
@@ -60,9 +66,12 @@ const translations: { [language: string]: AboutTranslations } = {
       journey: 'Eu sou Diego Costa, um engenheiro de software. <strong className="text-black dark:text-white uppercase">Minha jornada</strong> na programação começou com uma curiosidade para explorar várias tecnologias e linguagens. Eu mergulhei no mundo da codificação criando jogos, e durante meu tempo na universidade e na escola técnica, me aprofundei em várias linguagens.',
       career: 'À medida que avanço na <strong className="text-black dark:text-white uppercase">minha carreira</strong>, aprendi a valorizar a importância de me especializar e construir uma base sólida. Então, decidi focar em JavaScript usando frameworks e bibliotecas como React, Vue e Angular, com o objetivo de criar produtos notáveis.',
       freeTime: 'Além da programação, sou amante de esportes e, no <strong className="text-black dark:text-white uppercase">meu tempo livre</strong>, você pode me encontrar aproveitando projetos pessoais, assistindo filmes e jogando com amigos.',
-      
+
+      career: 'Carreira',
+      firstCareerTitle: 'Desenvolvedor VBA',
       firstCareerP1: 'Criar, desenvolver e manter processos de automação ',
       firstCareerP2: 'que aceleram a execução de tarefas e rotinas de negócios complexas, economizando tempo do usuário do sistema.',
+      secondCareerTitle: 'Auxiliar de TI', 
       secondCareerP1: 'Trabalho em ',
       secondCareerP2: 'montagem e manutenção',
       secondCareerP3: ' de computadores, instalação de software e ',
@@ -73,11 +82,11 @@ const translations: { [language: string]: AboutTranslations } = {
       firstAcademict: 'Unisal - Centro Universitário Salesiano de São Paulo',
       firstAcademic: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados. <strong className="text-black dark:text-blendedCyan">Habilidades analíticas e de resolução de problemas</strong>, estou sempre <strong className="text-black dark:text-blendedCyan">atualizado(a) sobre novas tecnologias e tendências de mercado</strong>.',
       secondAcademic: 'Etec - Escola Técnica Estadual',
-      secondAcademicP1: 'Skills in',
-      secondAcademicP2: 'web development, responsive design, SEO, usability',
-      secondAcademicP3: ' and knowledge in programming languages. Work is focused on ',
-      secondAcademicP4: 'quality, performance and safety ',
-      secondAcademicP5: 'of the projects developed.',
+      secondAcademicP1: 'Habilidades em',
+      secondAcademicP2: 'desenvolvimento web, design responsivo, SEO, usabilidade',
+      secondAcademicP3: ' e conhecimento em linguagens de programação. O trabalho é focado em ',
+      secondAcademicP4: 'qualidade, desempenho e segurança ',
+      secondAcademicP5: 'dos projetos desenvolvidos.',
   },
 };
 
@@ -133,13 +142,13 @@ const Section = ({ currentLanguage }: AboutProps) => {
               
               <div className="flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
                 <div>
-                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">Career /&gt;</h2>
+                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].career} /&gt;</h2>
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80 "> • VBA Developer</p>
+                    <p className=" border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80 "> • {translations[currentLanguage].firstCareerTitle}</p>
                   </div>
                   <p className="mt-1 text-xs text-center">AtendeiTi</p>
                   <p className="mt-1 text-xs text-center">2022 - 2023</p>
@@ -150,7 +159,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className="border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • IT auxiliary</p>
+                    <p className="border border-black dark:border-white rounded-md text-green-500 dark:text-blendedCyan text-center w-80"> • {translations[currentLanguage].secondCareerTitle}</p>
                     
                   </div>
                     <p className="mt-1 text-xs text-center">Objetivo Lorena</p>
