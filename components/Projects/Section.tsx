@@ -6,6 +6,23 @@ import '../../app/styles/fadeIn.css';
 import ContactImage from './code.png';
 import Image from 'next/image';
 
+interface ProjectsProps {
+currentLanguage: string;
+}
+
+interface ProjectsTranslations {
+  h1: string;
+}
+
+const translations: { [language: string]: ProjectsTranslations } = {
+  en: {
+      h1: 'Work. Hobby. Discovery.',
+  },
+  'pt-br': {
+      h1: 'Trabalhar. Passatempo. Descoberta.',
+  },
+};
+
 const projects = [
   {
     title: 'Last Defenders',
@@ -34,7 +51,7 @@ const projects = [
   },
 ];
 
-const Section = () => {
+const Section = ({ currentLanguage }: ProjectsProps) => {
   useEffect(() => {
     const handleScroll = () => {
       // Get the vertical scroll position
@@ -67,9 +84,9 @@ const Section = () => {
         
         <div className="flex flex-auto">
           <h1 className=" text-green-600 dark:text-cyan-300 glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
-            Work. Hobby. Discovery.
-            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text="Work. Hobby. Discovery."></span>
-            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text="Work. Hobby. Discovery."></span>
+            {translations[currentLanguage].h1}
+            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].h1}></span>
+            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].h1}></span>
           </h1>
           
         </div>
