@@ -26,7 +26,7 @@ interface AboutTranslations {
   firstAcademicTitle: string,
   firstAcademict: string,
   firstAcademic: string,
-  secondCareerTitle: string,
+  secondAcademicTitle: string,
   secondAcademic: string,
   secondAcademicP1: string,
   secondAcademicP2: string,
