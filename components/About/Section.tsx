@@ -11,7 +11,7 @@ interface AboutTranslations {
   career: string;
   freeTime: string;
 
-  career: string,
+  h2Career: string,
   firstCareerTitle: string,
   firstCareerP1: string,
   firstCareerP2: string,
@@ -22,7 +22,7 @@ interface AboutTranslations {
   secondCareerP4: string,
   secondCareerP5: string,
 
-  education: string,
+  h2Education: string,
   firstAcademict: string,
   firstAcademic: string,
   secondAcademic: string,
@@ -142,7 +142,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               
               <div className="flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
                 <div>
-                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].career} /&gt;</h2>
+                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2Career} /&gt;</h2>
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
@@ -180,7 +180,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
 
               <div className=" flex items-start mt-20 text-base leading-relaxed text-slate-600 dark:text-slate-400">
                 <div>
-                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].education} /&gt;</h2>
+                  <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2Education} /&gt;</h2>
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
