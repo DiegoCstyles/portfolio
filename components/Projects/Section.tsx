@@ -83,19 +83,15 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
         </div>
       </div>
       <div className="mx-auto max-w-[44rem] text-center">
-        {/* Heading */}
-        
-        <div className="flex flex-auto">
+
+        {/* timeline */}
+        <div  style={{ transform: 'translateY(var(--projects-offset))' }} className="mt-20 justify-center items-center">
           <h1 className=" text-green-600 dark:text-cyan-300 glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].h1}
             <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].h1}></span>
             <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].h1}></span>
           </h1>
           
-        </div>
-
-        {/* timeline */}
-        <div  style={{ transform: 'translateY(var(--projects-offset))' }} className="mt-20 justify-center items-center">
           <div className=" mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
             <div>
               <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2} /&gt;</h2>
