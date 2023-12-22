@@ -1,4 +1,3 @@
-import ContactIcons from "./ContactIcons";
 import { useMediaQuery } from 'react-responsive';
 import { memo, useEffect } from 'react';
 import '../../app/styles/fadeIn.css';
@@ -71,16 +70,12 @@ const Hero = ({ currentLanguage }: HeroProps) => {
             <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].title}></span>
             <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].title}></span>
           </h1>
-          
-          {!isMobile && (<ContactIcons />)}
         </div>
 
         {/* Description */}
         <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
           {translations[currentLanguage].description}
         </p>
-        {/* Contact Icons - Mobile Version */}
-        {isMobile && (<div className="mt-2 flex justify-center"> <ContactIcons /> </div>)}
       </div>
       
     </section>
