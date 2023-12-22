@@ -138,10 +138,12 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
 
             {/* about */}
-            <p className="mt-10 text-sm tracking-tight font-medium leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].journey }}></p>
-            <p className="mt-3 text-sm tracking-tight font-medium leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].career }}></p>
-            <p className="mt-3 text-sm tracking-tight font-medium leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].freeTime }}></p>
-
+            <div className="text-sm tracking-tight font-medium line-clamp-3 leading-relaxed text-slate-600 dark:text-slate-400">
+              <p className="mt-10" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].journey }}></p>
+              <p className="mt-3" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].career }}></p>
+              <p className="mt-3" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].freeTime }}></p>
+            </div>
+          
             {/* timeline */}
             <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36">
               
