@@ -24,7 +24,18 @@ const Icon = ({
   children,
 }: IconProps) => {
   const { theme } = useTheme();
-  const color = theme === 'dark' ? 'rgb(255, 255, 255)' : 'rgb(0, 0, 0)';
+  const darkThemeColor = 'rgb(0, 0, 0)';
+  const lightThemeColor = 'rgb(255, 255, 255)';
+  const color;
+
+  // Validate theme and set color accordingly
+  if (theme === 'dark') {
+    color = darkThemeColor;
+  } else if (theme === 'light') {
+    color = lightThemeColor;
+  } else {
+    color = lightThemeColor; // Default to light theme if the provided theme is invalid
+  }
 
   return (
     <Link href={href} target={target} rel="noopener noreferrer" aria-label={label} className={classNameLink}>
