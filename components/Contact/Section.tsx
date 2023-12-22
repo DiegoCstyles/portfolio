@@ -116,7 +116,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
         {/* Contact Form */}
         <div className="mt-1 border-black dark:border-white rounded-b-md p-4">
           <form onSubmit={handleFormSubmit}>
-            <div className='flex flex-col light:bg-black/80 dark:bg-white/80'>
+            <div className='flex flex-col bg-black dark:bg-white/95'>
               <div className="flex justify-center item-center text-center mb-4">
                 <input
                   type="text"
