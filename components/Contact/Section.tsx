@@ -105,7 +105,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
         {/* about */}
         <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
           <p className="text-xs text-justify leading-relaxed text-slate-600 dark:text-slate-400">
-            {translations[currentLanguage].p1}<strong className="text-sm text-black dark:text-white">{translations[currentLanguage].p2}</strong>.
+            {translations[currentLanguage].p1}<strong className="font-light text-sm text-black dark:text-white">{translations[currentLanguage].p2}</strong>.
           </p>
           <div className="flex mt-1.5">
             <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameLink="group" icon={FaLinkedin}></Icon>
@@ -123,7 +123,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                   id="name"
                   name="name"
                   placeholder={translations[currentLanguage].name}
-                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                   required
                 />
               </div>
@@ -134,7 +134,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                   id="email"
                   name="email"
                   placeholder="Email"
-                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                   required
                 />
               </div>
@@ -143,7 +143,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 id="message"
                 name="message"
                 placeholder={translations[currentLanguage].message}
-                className="mb-4 text-xs light:bg-white w-full zoom-effect-input px-7 py-2 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
+                className="mb-4 text-xs light:bg-white w-full zoom-effect-input px-7 py-2 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
                 required
               ></textarea>
 
