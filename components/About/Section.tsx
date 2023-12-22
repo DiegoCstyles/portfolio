@@ -34,7 +34,7 @@ interface AboutTranslations {
   secondAcademicP4: string,
   secondAcademicP5: string,
 } 
-
+//temporary solution for new languages(not ideal) 
 const translations: { [language: string]: AboutTranslations } = {
   en: {
       h1: 'Create. Learn. Repeat.',
@@ -137,11 +137,10 @@ const Section = ({ currentLanguage }: AboutProps) => {
               </h1>
             </div>
 
-
             {/* about */}
-            <p className="mt-10 text-sm leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].journey }}></p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].career }}></p>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].freeTime }}></p>
+            <p className="mt-10 text-xs font-medium leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].journey }}></p>
+            <p className="mt-3 text-xs font-medium leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].career }}></p>
+            <p className="mt-3 text-xs font-medium leading-relaxed text-slate-600 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: translations[currentLanguage].freeTime }}></p>
 
             {/* timeline */}
             <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36">
