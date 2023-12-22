@@ -93,17 +93,15 @@ const Section = ({ currentLanguage }: ContactProps) => {
     <section style={{ transform: 'translateY(var(--section-offset))' }} className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
       <div  className="mx-auto max-w-[55rem] text-center">
         {/* Geometric Wave Background */}
-        {/* Heading */}
-        <div className="flex flex-auto">
+
+        {/* about */}
+        <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
           <h1 className="text-green-600 dark:text-blendedCyan glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].h1}
             <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].h1}></span>
             <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].h1}></span>
           </h1>
-        </div>
-
-        {/* about */}
-        <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
+          
           <p className="text-xs text-justify leading-relaxed text-slate-600 dark:text-slate-400">
             {translations[currentLanguage].p1}<strong className="font-light text-sm text-black dark:text-white">{translations[currentLanguage].p2}</strong>.
           </p>
