@@ -155,7 +155,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 <textarea
                   id="message"
                   name="message"
-                  className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-24 resize-none"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
                   required
                 ></textarea>
               </div>
