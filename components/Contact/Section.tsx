@@ -12,6 +12,7 @@ currentLanguage: string;
 interface ContactTranslations {
   h1: string;
   name: string;
+  message: string;
   p1: string;
   p2: string;
   send: string;
@@ -21,6 +22,7 @@ const translations: { [language: string]: ContactTranslations } = {
   en: {
       h1: 'Reach. Me. Out.',
       name: 'Name',
+      message: 'Message',
       p1: 'I love chatting with interesting people. Get in touch with me ',
       p2: 'via social media or email',
       send: 'Send Message',
@@ -28,6 +30,7 @@ const translations: { [language: string]: ContactTranslations } = {
   'pt-br': {
       h1: 'Entre. Em. Comigo.',
       name: 'Nome',
+      message: 'Mensagem',
       p1: 'Adoro conversar com pessoas interessantes. Entre em contato comigo ',
       p2: 'via mídia social ou email',
       send: 'Enviar Mensagem',
@@ -116,47 +119,40 @@ const Section = ({ currentLanguage }: ContactProps) => {
         <div className="mt-1 border-black dark:border-white rounded-b-md p-4">
           <form onSubmit={handleFormSubmit}>
             <div className='flex'>
-              {/* - left side - */}
-              <div className=" justify-between">
-                <div className="flex justify-center item-center text-center mb-2">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder={translations[currentLanguage].name}
-                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
-                    required
-                  />
-                </div>
-
-                <div className="flex justify-center item-center text-center mb-2">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
-                    required
-                  />
-                </div>
-
-                <button type="submit" className="flex float-right zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
-                  <span>{translations[currentLanguage].send}</span>
-                </button>
-              </div>
-              {/* - left side - */}
-              
-              {/* - right side - */}
-              <div className="ml-4 mb-6 ">
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Mensagem"
-                  className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border-b bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
+              <div className="flex justify-center item-center text-center mb-2">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder={translations[currentLanguage].name}
+                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                   required
-                ></textarea>
+                />
               </div>
-              {/* - right side - */}
+
+              <div className="flex justify-center item-center text-center mb-2">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                  required
+                />
+              </div>
+
+              <button type="submit" className="flex float-right zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
+                <span>{translations[currentLanguage].send}</span>
+              </button>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder=placeholder={translations[currentLanguage].message}
+                className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
+                required
+              ></textarea>
+
             </div>
             <div className="flex items-center justify-center">
               
