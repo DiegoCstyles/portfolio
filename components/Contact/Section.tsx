@@ -28,7 +28,7 @@ const translations: { [language: string]: ContactTranslations } = {
       send: 'Send Message',
   },
   'pt-br': {
-      h1: 'Entre. Em. Comigo.',
+      h1: 'Entre. Em. Contato.',
       name: 'Nome',
       message: 'Mensagem',
       p1: 'Adoro conversar com pessoas interessantes. Entre em contato comigo ',
