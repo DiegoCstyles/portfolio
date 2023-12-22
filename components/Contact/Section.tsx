@@ -103,7 +103,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
 
         {/* about */}
         <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
-          <p className="text-sm text-justify leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="text-xs text-justify leading-relaxed text-slate-600 dark:text-slate-400">
             {translations[currentLanguage].p1}<strong className="text-sm text-black dark:text-white">{translations[currentLanguage].p2}</strong>.
           </p>
           <div className="flex mt-2">
@@ -116,6 +116,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
         <div className="mt-1 border-black dark:border-white rounded-b-md p-4">
           <form onSubmit={handleFormSubmit}>
             <div className='flex'>
+              {/* - left side - */}
               <div className=" justify-between">
                 <div className="flex justify-center item-center text-center mb-2">
                   <label htmlFor="name" className="block p-1 h-8 text-white dark:text-black uppercase bg-black dark:bg-white text-xs font-medium mb-2">
@@ -142,20 +143,23 @@ const Section = ({ currentLanguage }: ContactProps) => {
                     required
                   />
                 </div>
-              </div>
-              <div className="ml-4 mb-6 ">
-                
-                <textarea
-                  id="message"
-                  name="message"
-                  className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-20 resize-none"
-                  required
-                ></textarea>
 
                 <button type="submit" className="flex float-right zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-sm uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-4 font-lg focus:outline-none">
                   <span>{translations[currentLanguage].send}</span>
                 </button>
               </div>
+              {/* - left side - */}
+              
+              {/* - right side - */}
+              <div className="ml-4 mb-6 ">
+                <textarea
+                  id="message"
+                  name="message"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-24 resize-none"
+                  required
+                ></textarea>
+              </div>
+              {/* - right side - */}
             </div>
             <div className="flex items-center justify-center">
               
