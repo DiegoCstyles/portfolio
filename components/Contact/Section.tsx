@@ -119,32 +119,28 @@ const Section = ({ currentLanguage }: ContactProps) => {
               {/* - left side - */}
               <div className=" justify-between">
                 <div className="flex justify-center item-center text-center mb-2">
-                  <label htmlFor="name" className="block p-1 h-8 text-white dark:text-black uppercase bg-black dark:bg-white text-xs font-medium mb-2">
-                    {translations[currentLanguage].name}
-                  </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                    placeholder={translations[currentLanguage].name}
+                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
 
                 <div className="flex justify-center item-center text-center">
-                  <label htmlFor="email" className="block p-1 h-8 text-white dark:text-black uppercase bg-black dark:bg-white text-xs font-medium mb-2">
-                    Email
-                  </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                    placeholder="Email"
+                    className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent text-gray-700 dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
                     required
                   />
                 </div>
 
-                <button type="submit" className="flex float-right zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-sm uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-4 font-lg focus:outline-none">
+                <button type="submit" className="flex float-right zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
                   <span>{translations[currentLanguage].send}</span>
                 </button>
               </div>
