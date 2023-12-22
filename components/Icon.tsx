@@ -24,8 +24,8 @@ const Icon = ({
   children,
 }: IconProps) => {
   const { theme } = useTheme();
-  const darkThemeColor = 'rgb(0, 0, 0)';
-  const lightThemeColor = 'rgb(255, 255, 255)';
+  const darkThemeColor = 'rgb(255, 255, 255)';
+  const lightThemeColor = 'rgb(0, 0, 0)';
   let color;
 
   // Validate theme and set color accordingly
