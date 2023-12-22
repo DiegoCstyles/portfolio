@@ -116,7 +116,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
         {/* Contact Form */}
         <div className="mt-1 border-black dark:border-white rounded-b-md p-4">
           <form onSubmit={handleFormSubmit}>
-            <div className='flex flex-col bg-black dark:bg-white/95'>
+            <div className='flex flex-col'>
               <div className="flex justify-center item-center text-center mb-4">
                 <input
                   type="text"
@@ -147,8 +147,8 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 required
               ></textarea>
 
-              <button type="submit" className="flex text-center zoom-effect bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
-                <span>{translations[currentLanguage].send}</span>
+              <button type="submit" className="flex zoom-effect bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
+                <span className="flex justify-center item-center">{translations[currentLanguage].send}</span>
               </button>
 
             </div>
