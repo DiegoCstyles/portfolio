@@ -90,7 +90,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
   }, []);
 
   return (
-    <section style={{ transform: 'translateY(var(--section-offset))' }} className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
+    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
       <div  className="mx-auto max-w-[55rem] text-center">
         {/* Geometric Wave Background */}
 
