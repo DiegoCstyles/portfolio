@@ -7,6 +7,9 @@ import './styles/home.css';
 const isBrowser = typeof window !== 'undefined';
 const Navbar = isBrowser ? require('@/components').Navbar : null;
 const Hero = isBrowser ? require('@/components').Hero : null;
+const AboutSection = isBrowser ? require('@/components').AboutSection : null;
+const ProjectsSection = isBrowser ? require('@/components').ProjectsSection : null;
+const ContactSection = isBrowser ? require('@/components').ContactSection : null;
 const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function Home() {
@@ -47,6 +50,9 @@ export default function Home() {
         </div>
         {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
         {Hero && <Hero currentLanguage={currentLanguage}/>}
+        {AboutSection && <AboutSection currentLanguage={currentLanguage}/>}
+        {ProjectsSection && <ProjectsSection currentLanguage={currentLanguage}/>}
+        {ContactSection && <ContactSection currentLanguage={currentLanguage}/>}
         {Footer && <Footer currentLanguage={currentLanguage}/>}
       </main>
   )
