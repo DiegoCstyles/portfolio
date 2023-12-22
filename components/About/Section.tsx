@@ -132,7 +132,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
       const scrollPosition = window.scrollY;
       
       // Calculate the amount of offset for the image (inverted direction)
-      const offsetTimeline = scrollPosition * (-0.12);
+      const offsetTimeline = scrollPosition * (-0.10);
 
       // Apply the offset to the image using CSS variables
       document.documentElement.style.setProperty('--timeline-offset', `${offsetTimeline}px`);
