@@ -149,7 +149,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
   }, []);
 
   return (
-      <section className=" hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
+      <section className=" hero flex-auto py-24 flex items-center justify-center animate-fade-in">
         
         <div className="mx-auto max-w-[44rem] text-center">
             {/* Heading */}
