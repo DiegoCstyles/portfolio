@@ -76,7 +76,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
     };
   }, []);
   return (
-    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in bg-purple-300">
+    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in bg-purple-600">
       <div className="zoom-effect mx-auto ">
         <div className=" w-full h-full relative rounded-md overflow-hidden">
             <Image style={{ transform: 'translateY(var(--image-offset))' }} src={ContactImage} alt="me" className="object-cover inset-0 bg-transparent opacity-70 dark:opacity-40" width={400} height={300} />
@@ -85,7 +85,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
       <div className="mx-auto max-w-[44rem] text-center">
 
         {/* timeline */}
-        <div  style={{ transform: 'translateY(var(--projects-offset))' }} className="mt-20 justify-center items-center">
+        <div className="mt-20 justify-center items-center">
           <h1 className=" text-green-600 dark:text-cyan-300 glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].h1}
             <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].h1}></span>
