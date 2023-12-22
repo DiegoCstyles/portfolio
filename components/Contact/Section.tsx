@@ -91,7 +91,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
 
   return (
     <section style={{ transform: 'translateY(var(--section-offset))' }} className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
-      <div  className="mx-auto max-w-[44rem] text-center">
+      <div  className="mx-auto max-w-[55rem] text-center">
         {/* Geometric Wave Background */}
         {/* Heading */}
         <div className="flex flex-auto">
@@ -107,7 +107,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
           <p className="text-xs text-justify leading-relaxed text-slate-600 dark:text-slate-400">
             {translations[currentLanguage].p1}<strong className="text-sm text-black dark:text-white">{translations[currentLanguage].p2}</strong>.
           </p>
-          <div className="flex mt-2">
+          <div className="flex mt-1.5">
             <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameLink="group" icon={FaLinkedin}></Icon>
             <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="ml-2  " classNameLink="group" icon={FaGithub}></Icon>
           </div>
