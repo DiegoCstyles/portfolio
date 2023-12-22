@@ -148,7 +148,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
               <textarea
                 id="message"
                 name="message"
-                placeholder=placeholder={translations[currentLanguage].message}
+                placeholder={translations[currentLanguage].message}
                 className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
                 required
               ></textarea>
