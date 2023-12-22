@@ -1,5 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
 import { memo, useEffect } from 'react';
+import ContactImage from './ContactImage.png';
+import Image from 'next/image';
 import '../../app/styles/fadeIn.css';
 
 interface HeroProps {
@@ -76,6 +78,12 @@ const Hero = ({ currentLanguage }: HeroProps) => {
         <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
           {translations[currentLanguage].description}
         </p>
+      </div>
+
+      <div className="zoom-effect mx-auto ">
+        <div className=" w-full h-full relative rounded-md overflow-hidden">
+            <Image style={{ transform: 'translateY(var(--image-offset))' }} src={ContactImage} alt="me" className="object-cover inset-0 bg-transparent opacity-70 dark:opacity-40" width={400} height={300} />
+        </div>
       </div>
       
     </section>
