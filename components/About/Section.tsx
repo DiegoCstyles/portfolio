@@ -46,7 +46,7 @@ const translations: { [language: string]: AboutTranslations } = {
   en: {
       h1: 'Create. Learn. Repeat.',
       journeyP1: 'I\'m Diego Costa, a software engineer.',
-      journeyP2: 'My journey',
+      journeyP2: ' My journey',
       journeyP3: ' in programming began with a curiosity to explore various technologies and languages. I dived into the world of coding by creating games, and during my time at university and technical school, I delved into a plethora of languages.',
       
       careerP1: 'As I progress in ', 
