@@ -1,5 +1,4 @@
 import { memo, useEffect, useState  } from 'react';
-import '../../app/styles/fadeIn.css';
 
 interface AboutProps {
 currentLanguage: string;
