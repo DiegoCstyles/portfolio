@@ -76,7 +76,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
     };
   }, []);
   return (
-    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in bg-purple">
+    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in bg-purple-300">
       <div className="zoom-effect mx-auto ">
         <div className=" w-full h-full relative rounded-md overflow-hidden">
             <Image style={{ transform: 'translateY(var(--image-offset))' }} src={ContactImage} alt="me" className="object-cover inset-0 bg-transparent opacity-70 dark:opacity-40" width={400} height={300} />
