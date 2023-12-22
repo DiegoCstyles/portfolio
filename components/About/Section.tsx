@@ -46,15 +46,15 @@ interface AboutTranslations {
 const translations: { [language: string]: AboutTranslations } = {
   en: {
       h1: 'Create. Learn. Repeat.',
-      journeyP1: 'I&apos;m Diego Costa, a software engineer.',
+      journeyP1: 'I''m Diego Costa, a software engineer.',
       journeyP2: 'My journey',
       journeyP3: ' in programming began with a curiosity to explore various technologies and languages. I dived into the world of coding by creating games, and during my time at university and technical school, I delved into a plethora of languages.',
       
       careerP1: 'As I progress in ', 
-      careerP2: 'my career', 
-      careerP3: ', I&apos;ve come to appreciate the value of specializing and building a strong foundation. So, I&apos;ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.', 
+      careerP2: ' my career', 
+      careerP3: ', I''ve come to appreciate the value of specializing and building a strong foundation. So, I''ve decided to focus on JavaScript using frameworks and libraries like React, Vue, and Angular, aiming to create remarkable products.', 
       
-      freeTimeP1: 'Besides coding, I&apos;m a lover of sports, and in ',  
+      freeTimeP1: 'Besides coding, I''m a lover of sports, and in ',  
       freeTimeP2: 'my free time',  
       freeTimeP3: ', you can find me enjoying side projects, watching movies, and playing games with friends.',  
 
