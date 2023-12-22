@@ -49,7 +49,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
   }, []);
 
   return (
-    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in bg-purple-600">
+    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center bg-purple-600">
       <style>{`
         :root {
           --section-offset: 0;
@@ -64,7 +64,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
         }
       `}</style>
       
-      <div className="mx-auto max-w-[44rem] text-center">
+      <div className="mx-auto max-w-[44rem] text-center animate-fade-in">
         {/* Heading and Contact Icons */}
         <div className="flex  flex-auto">
           <h1 className="text-green-600 dark:text-cyan-300 flex-1 glitch-effect1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl leading-[4rem] tracking-tight">
