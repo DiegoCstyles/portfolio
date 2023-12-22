@@ -6,7 +6,6 @@ import SetTheme from "./Navbar/SetTheme";
 
 {/* Hero and subcomponents */}
 import Hero from "./Hero/Hero";
-import ContactIcons from "./Hero/ContactIcons";
 
 {/* Section and subcomponents */}
 import AboutSection from "./About/Section";
@@ -30,7 +29,6 @@ export{
     AboutSection,
     ProjectsSection,
     ContactSection,
-    ContactIcons,
     Footer,
     FooterIcons, 
     FooterActions,
