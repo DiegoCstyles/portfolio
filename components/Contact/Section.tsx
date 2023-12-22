@@ -1,5 +1,5 @@
 import { memo, useEffect  } from 'react';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import Icon from '../Icon';
 import '../../app/styles/fadeIn.css';
 import ContactImage from './ContactImage.png';
@@ -107,8 +107,8 @@ const Section = ({ currentLanguage }: ContactProps) => {
             {translations[currentLanguage].p1}<strong className="text-sm text-black dark:text-white">{translations[currentLanguage].p2}</strong>.
           </p>
           <div className="flex mt-2">
-            <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameLink="group" icon={FaInstagram}></Icon>
-            <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="ml-2  " classNameLink="group" icon={FaLinkedin}></Icon>
+            <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameLink="group" icon={FaLinkedin}></Icon>
+            <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="ml-2  " classNameLink="group" icon={FaGithub}></Icon>
           </div>
         </div>
 
