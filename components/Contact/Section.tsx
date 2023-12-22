@@ -119,7 +119,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
         <div className="mt-1 border-black dark:border-white rounded-b-md p-4">
           <form onSubmit={handleFormSubmit}>
             <div className='flex flex-col'>
-              <div className="flex justify-center item-center text-center mb-2">
+              <div className="flex justify-center item-center text-center mb-4">
                 <input
                   type="text"
                   id="name"
@@ -130,7 +130,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 />
               </div>
 
-              <div className="flex justify-center item-center text-center mb-2">
+              <div className="flex justify-center item-center text-center mb-4">
                 <input
                   type="email"
                   id="email"
@@ -145,11 +145,11 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 id="message"
                 name="message"
                 placeholder={translations[currentLanguage].message}
-                className="text-xs light:bg-white w-full zoom-effect-input px-10 py-2 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
+                className="mb-4 text-xs light:bg-white w-full zoom-effect-input px-7 py-2 border-b bg-transparent text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
                 required
               ></textarea>
 
-              <button type="submit" className="flex float-center zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-blendedCyan/60 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
+              <button type="submit" className="flex float-center zoom-effect border bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 dark:border-green-500/60 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 border-green-500/60 hover:dark:border-blendedCyan/60 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
                 <span>{translations[currentLanguage].send}</span>
               </button>
 
