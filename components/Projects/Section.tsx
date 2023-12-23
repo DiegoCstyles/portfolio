@@ -76,7 +76,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
     };
   }, []);
   return (
-    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in bg-purple-600">
+    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
       <div className="zoom-effect mx-auto ">
         <div className=" w-full h-full relative rounded-md overflow-hidden">
             <Image src={ContactImage} alt="me" className="object-cover bg-transparent opacity-70 dark:opacity-40" width={400} height={300} />
@@ -86,10 +86,10 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
 
         {/* timeline */}
         <div className="mt-20 justify-center items-center">
-          <h1 className=" text-green-600 dark:text-cyan-300 glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+          <h1 className=" text-white dark:text-white glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].h1}
-            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].h1}></span>
-            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].h1}></span>
+            <span className="glitch-effect2 text-black dark:text-black" data-text={translations[currentLanguage].h1}></span>
+            <span className="glitch-effect3 text-white dark:text-white" data-text={translations[currentLanguage].h1}></span>
           </h1>
           
           <div className=" mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
@@ -103,14 +103,14 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
               <div key={index} className="mt-3 text-sm justify-center items-center ">
                 <ol className="relative border-l border-black dark:border-gray-700">
                   <span className="absolute flex items-center justify-center w-6 h-6 bg-green-700 dark:bg-lime-900 rounded-full -left-3 ring-8 ring-white/5 dark:ring-gray-900/5">
-                      <svg className="w-2.5 h-2.5 text-blendedCyan dark:text-blendedCyan" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-2.5 h-2.5 text-fuchsia-500 dark:text-fuchsia-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                       </svg>
                   </span>
-                  <div className='zoom-effect text-start  flex  p-2 w-80 dark:hover:bg-opacity-5 dark:hover:bg-white dark:border-white leading-relaxed text-slate-600 dark:text-slate-400'>
+                  <div className='zoom-effect text-start flex p-2 w-80 dark:hover:bg-opacity-5 dark:hover:bg-white dark:border-white leading-relaxed text-slate-600 dark:text-slate-400'>
                     <div className='p-5 flex flex-col'>
                       <div className='flex  justify-between'>
-                        <p className="text-base text-black hover:underline overline hover:decoration-lime-600 dark:text-white dark:hover:decoration-blendedCyan hover:underline-offset-8 transition delay-100 duration-200 ease-in">{project.title}</p>
+                        <p className="text-base text-black dark:text-white transition delay-100 duration-200 ease-in">{project.title}</p>
                         <p className="text-xs mt-1">{project.year}</p>
                         <div className="flex justify-end mt-1 ml-1">
                           {project.steamLink && (
@@ -130,7 +130,9 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
                       {project.technologies.length > 0 && (
                         <div className='flex mt-2'>
                           {project.technologies.map((technology, index) => (
-                            <div className='m-1 ml-0 text-xs rounded-sm p-1 border light:border-black dark:border-white hover:bg-black/10 dark:hover:bg-white/10 text-green-500 dark:text-blendedCyan' key={index}>{technology}</div>
+                            <div className='m-1 ml-0 text-xs rounded-sm p-1 border light:border-black dark:border-white hover:bg-black/10 dark:hover:bg-white/10 text-fuchsia-500 dark:text-fuchsia-500' key={index}>
+                              {technology}
+                            </div>
                           ))}
                         </div>
                       )}
