@@ -196,12 +196,12 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-80 "> • {translations[currentLanguage].firstCareerTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-1/2 "> • {translations[currentLanguage].firstCareerTitle}</p>
                   </div>
                   <p className="mt-1 text-xs text-center">AtendeiTi</p>
                   <p className="mt-1 text-xs text-center">2022 - 2023</p>
                 </div>
-                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify bg-black/30 rounded-md p-2'>
+                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
                   <strong className="text-white dark:text-white">
                     {translations[currentLanguage].firstCareerP1}
                   </strong>
@@ -211,13 +211,13 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className="border border-black dark:border-white rounded-md text-white dark:text-white text-center w-80"> • {translations[currentLanguage].secondCareerTitle}</p>
+                    <p className="border border-black dark:border-white rounded-md text-white dark:text-white text-center w-1/2"> • {translations[currentLanguage].secondCareerTitle}</p>
                     
                   </div>
                     <p className="mt-1 text-xs text-center">Objetivo Lorena</p>
                     <p className="mt-1 text-xs text-center">2021 - 2022</p>                 
                 </div> 
-                {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify bg-black/30 rounded-md p-2'>
+                {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
                   {translations[currentLanguage].secondCareerP1}
                   <strong className="text-white dark:text-white">
                     {translations[currentLanguage].secondCareerP2}
@@ -238,24 +238,24 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-80"> • {translations[currentLanguage].firstAcademicTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-1/2"> • {translations[currentLanguage].firstAcademicTitle}</p>
                   </div>
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs text-center">2019 - 2023</p>
                 </div>
-                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-black/30 rounded-md p-2' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
+                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-80"> • {translations[currentLanguage].secondAcademicTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-1/2"> • {translations[currentLanguage].secondAcademicTitle}</p>
 
                   </div>
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
                   <p className="mt-1 text-xs text-center">2016 - 2018</p>
                 </div>
-                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify bg-black/30  rounded-md p-2'>
+                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify bg-white/30  rounded-md p-2'>
                   {translations[currentLanguage].secondAcademicP1}
                   
                   <strong className="text-white dark:text-white">
