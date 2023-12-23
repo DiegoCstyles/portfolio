@@ -209,7 +209,7 @@ animation-duration: 1s;
   }
   .typewriter h1{
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(34, 197, 94); /* The typwriter cursor */
+    border-right: .15em solid rgb(214, 99, 228); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     padding-right: 1em;
