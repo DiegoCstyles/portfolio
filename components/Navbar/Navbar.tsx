@@ -14,8 +14,8 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
   
     return (
-      <nav className="bg-purple-600">
-        <div className="border bg-purple-600 rounded-b-md border-black dark:border-white max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 sm:p-3 md:p-4 lg:p-4 ">
+      <nav>
+        <div className="border rounded-b-md border-black dark:border-white max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
           <NavbarTitle />
 
           <div className="flex md:hidden">
