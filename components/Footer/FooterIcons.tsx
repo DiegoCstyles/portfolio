@@ -75,20 +75,23 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
           </p>
         )}
       </div>
+        
       <button
-        className={'flex bg-white/80 dark:bg-black/80 border hover:border-green-500 hover:dark:border-blendedCyan rounded-t-md hover:underline overline dark:text-white hover:decoration-green-500 dark:hover:decoration-blendedCyan hover:underline-offset-4 border-black dark:border-white px-4 pb-[2px] pt-1 text-xs font-thin  uppercase leading-normal transition delay-100 duration-200 ease-in  focus:outline-none focus:ring-0 active:text-gray-400'}
+        className={'flex hover:bg-fuchsia-600/50 text-white p-3 text-xs font-thin  uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400'}
         onClick={() => handleCopyToClipboard("+55(12)997263748", "Phone")}
       >
         <TbPhoneCalling className="lg:w-[1.2rem] lg:h-[1.2rem] md:w-[1.2rem] md:h-[1.2rem] sm:w-[1.2rem] sm:h-[1.2rem] w-[1.2rem] h-[1.2rem] transition-colors duration-200" />
         <span className="ml-1">{translations[currentLanguage].phone}</span>
       </button>
+        
       <button
-        className={'flex bg-white/80 dark:bg-black/80  border hover:border-green-500 hover:dark:border-blendedCyan rounded-t-md hover:underline overline dark:text-white  hover:decoration-green-500 dark:hover:decoration-blendedCyan hover:underline-offset-4 border-black dark:border-white hover:visible px-4 pb-[2px] pt-1 text-xs font-thin  uppercase leading-normal transition delay-100 duration-200 ease-in  focus:outline-none focus:ring-0 active:text-gray-400 '}
+        className={'flex hover:bg-fuchsia-600/50 text-white p-3 text-xs font-thin uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400 '}
         onClick={() => handleCopyToClipboard("diegoe.r.c07@gmail.com", "Mail")}
       >
         <TfiEmail className="lg:w-[1rem] lg:h-[1rem] md:w-[1rem] md:h-[1rem] sm:w-[1rem] sm:h-[1rem] w-[1rem] h-[1rem] transition-colors duration-200" />
         <span className="ml-1">{translations[currentLanguage].mail}</span>
       </button>
+        
     </div>
   );
 };
