@@ -148,7 +148,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
   }, []);
 
   return (
-      <section className=" hero flex-auto py-24 flex items-center justify-center animate-fade-in bg-purple-500">
+      <section className=" hero flex-auto py-24 flex items-center justify-center animate-fade-in bg-fuchsia-500">
         
         <div className="mx-auto max-w-[55rem] text-center">
             {/* Heading */}
