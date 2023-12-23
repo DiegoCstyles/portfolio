@@ -201,7 +201,11 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">AtendeiTi</p>
                   <p className="mt-1 text-xs text-center">2022 - 2023</p>
                 </div>
-                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify'><strong className="text-black dark:text-fuchsia-500">{translations[currentLanguage].firstCareerP1}</strong>{translations[currentLanguage].firstCareerP2} 
+                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify'>
+                  <strong className="text-white dark:text-white">
+                    {translations[currentLanguage].firstCareerP1}
+                  </strong>
+                  {translations[currentLanguage].firstCareerP2} 
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
@@ -215,11 +219,11 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </div>
                 {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify'>
                   {translations[currentLanguage].secondCareerP1}
-                  <strong className="text-black dark:text-fuchsia-500">
+                  <strong className="text-white dark:text-white">
                     {translations[currentLanguage].secondCareerP2}
                   </strong>
                   {translations[currentLanguage].secondCareerP3}
-                  <strong className="text-black dark:text-fuchsia-500 mr-1">
+                  <strong className="text-white dark:text-white mr-1">
                     {translations[currentLanguage].secondCareerP4}
                   </strong> 
                   {translations[currentLanguage].secondCareerP5}
@@ -242,7 +246,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
                 </span>}
               </div>
-              <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black $ {hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
+              <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-80"> • {translations[currentLanguage].secondAcademicTitle}</p>
@@ -251,7 +255,18 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
                   <p className="mt-1 text-xs text-center">2016 - 2018</p>
                 </div>
-                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify'>{translations[currentLanguage].secondAcademicP1}<strong className="text-black dark:text-fuchsia-500">{translations[currentLanguage].secondAcademicP2}</strong>{translations[currentLanguage].secondAcademicP3}<strong className="text-black dark:text-fuchsia-500">{translations[currentLanguage].secondAcademicP4}</strong>{translations[currentLanguage].secondAcademicP5}
+                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify'>
+                  {translations[currentLanguage].secondAcademicP1}
+                  
+                  <strong className="text-white dark:text-white">
+                    {translations[currentLanguage].secondAcademicP2}
+                  </strong>
+                  {translations[currentLanguage].secondAcademicP3}
+                  
+                  <strong className="text-white dark:text-white">
+                    {translations[currentLanguage].secondAcademicP4}
+                  </strong>
+                  {translations[currentLanguage].secondAcademicP5}
                 </span>}
               </div>
             </div>
