@@ -69,8 +69,8 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
     <div className="flex h-full">
       <div className={`${!copySuccess && shouldApplyWidthClass ? 'w-[15.8rem]' : ''}`}>
         {copySuccess && (
-          <p className={`${shouldApplyWidthClass ? 'flex-grow flex dark:text-blendedCyan w-[17.5rem] h-full light:text-black border bg-white/80 dark:bg-black/80 rounded-t-md border-primary px-6 pb-[2px] pt-1 text-xs leading-normal transition duration-150 ease-in-out hover:bg-opacity-10 focus:outline-none border-green-500 dark:border-blendedCyan focus:ring-0 dark:hover:bg-opacity-10' : 'flex-grow dark:text-blendedCyan w-[8rem] rounded-t-md h-full text-green-500 border bg-white/80 dark:bg-black/80 border-primary px-3 pb-[2px] pt-1 text-xs leading-normal transition duration-150 ease-in-out hover:bg-opacity-10 focus:outline-none border-green-500 dark:border-blendedCyan focus:ring-0 dark:hover:bg-opacity-10'}`}>
-            <span className={`${shouldApplyWidthClass ? 'text-black dark:text-white text-xs' : 'hidden'}`}>{translations[currentLanguage].copyMessage}😎</span>
+          <p className={`${shouldApplyWidthClass ? 'flex-grow flex text-fuchsia-500 w-[17.5rem] h-full bg-white p-3 text-xs leading-normal transition duration-150 ease-in-out' : 'flex-grow text-fuchsia-500 w-[8rem] h-full bg-white p-3 text-xs leading-normal transition duration-150 ease-in-out'}`}>
+            <span className={`${shouldApplyWidthClass ? 'text-black text-xs' : 'hidden'}`}>{translations[currentLanguage].copyMessage}😎</span>
             <span className="ml-1 flex text-xs">{copiedValue} {translations[currentLanguage].copyValue}<RiFileCopyFill className={`${shouldApplyWidthClass ? 'ml-1 visible w-4 h-4 text-xs' : 'hidden'}`} /></span>
           </p>
         )}
