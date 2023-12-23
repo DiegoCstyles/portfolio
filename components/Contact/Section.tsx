@@ -96,10 +96,10 @@ const Section = ({ currentLanguage }: ContactProps) => {
 
         {/* about */}
         <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
-          <h1 className="text-green-600 dark:text-blendedCyan glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+          <h1 className="text-fuchsia-600 dark:text-fuchsia-600 glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].h1}
-            <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].h1}></span>
-            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].h1}></span>
+            <span className="glitch-effect2 text-white dark:text-white" data-text={translations[currentLanguage].h1}></span>
+            <span className="glitch-effect3 text-fuchsia-400 dark:text-fuchsia-400" data-text={translations[currentLanguage].h1}></span>
           </h1>
           
           <p className="text-xs text-justify leading-relaxed text-slate-600 dark:text-slate-400">
@@ -121,7 +121,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                   id="name"
                   name="name"
                   placeholder={translations[currentLanguage].name}
-                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-fuchsia-500 dark:focus:border-fuchsia-500"
                   required
                 />
               </div>
@@ -132,7 +132,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                   id="email"
                   name="email"
                   placeholder="Email"
-                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-green-500 dark:focus:border-blendedCyan"
+                  className="text-xs light:bg-white w-full zoom-effect-input px-7 py-2 h-8 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-fuchsia-500 dark:focus:border-fuchsia-500"
                   required
                 />
               </div>
@@ -141,11 +141,11 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 id="message"
                 name="message"
                 placeholder={translations[currentLanguage].message}
-                className="mb-4 text-xs light:bg-white w-full zoom-effect-input px-7 py-2 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-blendedCyan dark:focus:border-blendedCyan h-28 resize-none"
+                className="mb-4 text-xs light:bg-white w-full zoom-effect-input px-7 py-2 border-b bg-transparent bg-black/5 text-black dark:text-white border-black dark:border-white focus:outline-none focus:border-fuchsia-500 dark:focus:border-fuchsia-500 h-28 resize-none"
                 required
               ></textarea>
 
-              <button type="submit" className="flex flex-col items-center justify-center zoom-effect bg-green-500/60 dark:bg-blendedCyan/60 text-black dark:text-white hover:decoration-black dark:hover:decoration-white hover:underline-offset-4 hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in focus:ring-0 active:text-gray-400 overline hover:underline underline-offset-8 px-6 py-3 font-lg focus:outline-none">
+              <button type="submit" className="flex flex-col items-center justify-center zoom-effect bg-fuchsia-500/60 dark:bg-fuchsia-500/60 text-black dark:text-white hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400 px-6 py-3 font-lg">
                 <span className="text-center">{translations[currentLanguage].send}</span>
               </button>
 
