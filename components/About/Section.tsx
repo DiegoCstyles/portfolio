@@ -155,7 +155,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
             <div className="flex flex-auto">
               <h1 className=" text-white dark:text-white glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
                 {translations[currentLanguage].h1}
-                <span className="glitch-effect2 text-fuchsia-600 dark:text-fuchsia-600" data-text={translations[currentLanguage].h1}></span>
+                <span className="glitch-effect2 text-black dark:text-black" data-text={translations[currentLanguage].h1}></span>
                 <span className="glitch-effect3 text-white dark:text-white" data-text={translations[currentLanguage].h1}></span>
               </h1>
             </div>
@@ -201,7 +201,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">AtendeiTi</p>
                   <p className="mt-1 text-xs text-center">2022 - 2023</p>
                 </div>
-                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify bg-black/30'>
+                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify bg-black/30 rounded-md p-1.5'>
                   <strong className="text-white dark:text-white">
                     {translations[currentLanguage].firstCareerP1}
                   </strong>
@@ -216,8 +216,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   </div>
                     <p className="mt-1 text-xs text-center">Objetivo Lorena</p>
                     <p className="mt-1 text-xs text-center">2021 - 2022</p>                 
-                </div>
-                {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify bg-black/30'>
+                </div> 
+                {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify bg-black/30 rounded-md p-1.5'>
                   {translations[currentLanguage].secondCareerP1}
                   <strong className="text-white dark:text-white">
                     {translations[currentLanguage].secondCareerP2}
@@ -243,7 +243,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs text-center">2019 - 2023</p>
                 </div>
-                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-black/30' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
+                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-black/30 rounded-md p-1.5' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
@@ -255,7 +255,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
                   <p className="mt-1 text-xs text-center">2016 - 2018</p>
                 </div>
-                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify bg-black/30'>
+                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify bg-black/30  rounded-md p-1.5'>
                   {translations[currentLanguage].secondAcademicP1}
                   
                   <strong className="text-white dark:text-white">
