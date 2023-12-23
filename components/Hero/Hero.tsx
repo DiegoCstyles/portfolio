@@ -78,11 +78,11 @@ const Hero = ({ currentLanguage }: HeroProps) => {
         <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
           {translations[currentLanguage].description}
         </p>
-      </div>
 
-      <div className="zoom-effect mx-auto animate-fade-in">
-        <div className=" w-full h-full relative rounded-md overflow-hidden">
-            <Image style={{ transform: 'translateY(var(--image-offset))' }} src={HeroImage} alt="me" className="object-cover inset-0 bg-transparent opacity-70 dark:opacity-40" width={400} height={300} />
+        <div className="zoom-effect mx-auto animate-fade-in">
+          <div className=" w-full h-full relative rounded-md overflow-hidden">
+              <Image style={{ transform: 'translateY(var(--image-offset))' }} src={HeroImage} alt="me" className="object-cover inset-0 bg-transparent opacity-60 dark:opacity-50" width={400} height={300} />
+          </div>
         </div>
       </div>
       
