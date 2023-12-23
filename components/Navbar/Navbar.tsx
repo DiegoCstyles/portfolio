@@ -15,7 +15,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   
     return (
       <nav>
-        <div className="border rounded-b-md border-black dark:border-white max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
           <NavbarTitle />
 
           <div className="flex md:hidden">
