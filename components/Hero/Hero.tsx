@@ -64,7 +64,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
         }
       `}</style>
       
-      <div className="mx-auto max-w-[44rem] text-center animate-fade-in">
+      <div className="mx-auto max-w-[80rem] text-center animate-fade-in">
         {/* Heading and Contact Icons */}
         <div className="flex  flex-auto">
           <h1 className="text-fuchsia-600 dark:text-fuchsia-600 flex-1 glitch-effect1 mt-3 text-9xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight uppercase font-black">
