@@ -34,12 +34,12 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
           {/* Pages */}
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
-            <li
-              className={`cursor-pointer text-sm text-black dark:text-white`}
-              onClick={onLanguageChange}
-            >
-              {currentLanguage.toUpperCase()}
-            </li>
+              <li
+                className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600/50`}
+                onClick={onLanguageChange}
+              >
+                {currentLanguage.toUpperCase()}
+              </li>
               <NavbarPage page={"about"} currentLanguage={currentLanguage}/>
               <NavbarPage page={"projects"} currentLanguage={currentLanguage}/>
               <NavbarPage page={"contact"} currentLanguage={currentLanguage}/>
