@@ -67,23 +67,17 @@ const Hero = ({ currentLanguage }: HeroProps) => {
       <div className="mx-auto max-w-[44rem] text-center animate-fade-in">
         {/* Heading and Contact Icons */}
         <div className="flex  flex-auto">
-          <h1 className="text-green-600 dark:text-cyan-300 flex-1 glitch-effect1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl leading-[4rem] tracking-tight">
+          <h1 className="text-fuchsia-500 dark:text-fuchsia-300 flex-1 glitch-effect1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].title}
             <span className="glitch-effect2 text-red-500 dark:text-red-600" data-text={translations[currentLanguage].title}></span>
-            <span className="glitch-effect3 text-green-400 dark:text-lime-400" data-text={translations[currentLanguage].title}></span>
+            <span className="glitch-effect3 text-fuchsia-400 dark:text-fuchsia-400" data-text={translations[currentLanguage].title}></span>
           </h1>
         </div>
 
         {/* Description */}
-        <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="mt-3 text-base leading-relaxed text-gray-50 dark:text-gray-50">
           {translations[currentLanguage].description}
         </p>
-
-        <div className="zoom-effect mx-auto animate-fade-in">
-          <div className=" w-full h-full relative rounded-md overflow-hidden">
-              <Image style={{ transform: 'translateY(var(--image-offset))' }} src={HeroImage} alt="me" className="object-cover inset-0 bg-transparent opacity-60 dark:opacity-50" width={400} height={300} />
-          </div>
-        </div>
       </div>
       
     </section>
