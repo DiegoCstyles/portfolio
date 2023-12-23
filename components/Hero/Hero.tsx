@@ -49,7 +49,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
   }, []);
 
   return (
-    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center bg-purple-600">
+    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center bg-black">
       <style>{`
         :root {
           --section-offset: 0;
