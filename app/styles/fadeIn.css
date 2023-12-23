@@ -228,7 +228,7 @@ animation-duration: 1s;
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: rgb(34, 197, 94);}
+    50% { border-color: rgb(214, 99, 228);}
   }
 
   .zoom-effect {
