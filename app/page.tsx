@@ -43,10 +43,7 @@ export default function Home() {
 
   return (
       <main className="light:ltBackground dark:dkBackground overflow-hidden" onMouseMove={handleMouseMove}>
-        {/* Circular Cursor */}
-        <div className="circular-cursor absolute w-12 h-12 rounded-full bg-white bg-opacity-70 pointer-events-none"
-            style={{ left: cursorPosition.x-22, top: cursorPosition.y-22 }}>
-        </div>
+        {/* Sections */}
         {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
         {Hero && <Hero currentLanguage={currentLanguage}/>}
         {AboutSection && <AboutSection currentLanguage={currentLanguage}/>}
