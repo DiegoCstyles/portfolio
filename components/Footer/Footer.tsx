@@ -34,7 +34,7 @@ const Footer = ({ currentLanguage }: FooterProps) => {
         <FooterIcons currentLanguage={currentLanguage}/>
       </div>
 
-      <div className="p-3">
+      <div className="p-3 bg-fuchsia-500">
         <FooterActions></FooterActions>
       </div>
 
