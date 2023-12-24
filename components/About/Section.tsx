@@ -161,7 +161,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
 
             {/* about */}
-            <div className="text-sm tracking-tight font-medium leading-relaxed text-black dark:text-black">
+            <div className="text-sm tracking-tight font-medium leading-relaxed text-black dark:text-black bg-white/30 rounded-md">
               <p className="mt-10">
                 {translations[currentLanguage].journeyP1}
                 <strong className="text-black dark:text-white uppercase">
