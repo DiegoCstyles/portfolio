@@ -34,7 +34,7 @@ const Footer = ({ currentLanguage }: FooterProps) => {
         <FooterIcons currentLanguage={currentLanguage}/>
       </div>
 
-      <div className="ml-auto"  style={{ flexBasis: 'min-content' }}>
+      <div>
         <FooterActions></FooterActions>
       </div>
 
