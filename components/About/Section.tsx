@@ -164,21 +164,21 @@ const Section = ({ currentLanguage }: AboutProps) => {
             <div className="text-sm tracking-tight font-medium leading-relaxed text-white dark:text-white">
               <p className="mt-10">
                 {translations[currentLanguage].journeyP1}
-                <strong className="text-black dark:text-white uppercase">
+                <strong className="text-fuchsia-600 uppercase">
                   {translations[currentLanguage].journeyP2}
                 </strong>
                 {translations[currentLanguage].journeyP3}
               </p>
               <p className="mt-3">
                 {translations[currentLanguage].careerP1}
-                <strong className="text-black dark:text-white uppercase">
+                <strong className="text-fuchsia-600 uppercase">
                   {translations[currentLanguage].careerP2}
                 </strong>
                 {translations[currentLanguage].careerP3}
               </p>
               <p className="mt-3">
                 {translations[currentLanguage].freeTimeP1}
-                <strong className="text-black dark:text-white uppercase">
+                <strong className="text-fuchsia-600 uppercase">
                   {translations[currentLanguage].freeTimeP2}
                 </strong>
                 {translations[currentLanguage].freeTimeP3}
