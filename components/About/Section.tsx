@@ -161,7 +161,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
 
             {/* about */}
-            <div className="text-sm tracking-tight font-medium leading-relaxed text-slate-600 dark:text-slate-600">
+            <div className="text-sm tracking-tight font-bold leading-relaxed text-black dark:text-black">
               <p className="mt-10">
                 {translations[currentLanguage].journeyP1}
                 <strong className="text-black dark:text-white uppercase">
@@ -198,8 +198,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96 "> • {translations[currentLanguage].firstCareerTitle}</p>
                   </div>
-                  <p className="mt-1 text-xs text-center">AtendeiTi</p>
-                  <p className="mt-1 text-xs text-center">2022 - 2023</p>
+                  <p className="mt-1 text-xs font-bold text-center">AtendeiTi</p>
+                  <p className="mt-1 text-xs font-bold text-center">2022 - 2023</p>
                 </div>
                 {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
                   <strong className="text-white dark:text-white">
@@ -214,8 +214,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                     <p className="border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96"> • {translations[currentLanguage].secondCareerTitle}</p>
                     
                   </div>
-                    <p className="mt-1 text-xs text-center">Objetivo Lorena</p>
-                    <p className="mt-1 text-xs text-center">2021 - 2022</p>                 
+                    <p className="mt-1 text-xs font-bold text-center">Objetivo Lorena</p>
+                    <p className="mt-1 text-xs font-bold text-center">2021 - 2022</p>                 
                 </div> 
                 {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
                   {translations[currentLanguage].secondCareerP1}
@@ -240,8 +240,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96"> • {translations[currentLanguage].firstAcademicTitle}</p>
                   </div>
-                  <p className="mt-1 text-xs text-center">{translations[currentLanguage].firstAcademict}</p>
-                  <p className="mt-1 text-xs text-center">2019 - 2023</p>
+                  <p className="mt-1 text-xs font-bold text-center">{translations[currentLanguage].firstAcademict}</p>
+                  <p className="mt-1 text-xs font-bold text-center">2019 - 2023</p>
                 </div>
                 {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
                 </span>}
@@ -252,8 +252,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                     <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96"> • {translations[currentLanguage].secondAcademicTitle}</p>
 
                   </div>
-                  <p className="mt-1 text-xs text-center">{translations[currentLanguage].secondAcademic}</p>
-                  <p className="mt-1 text-xs text-center">2016 - 2018</p>
+                  <p className="mt-1 text-xs font-bold text-center">{translations[currentLanguage].secondAcademic}</p>
+                  <p className="mt-1 text-xs font-bold text-center">2016 - 2018</p>
                 </div>
                 {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify bg-white/30  rounded-md p-2'>
                   {translations[currentLanguage].secondAcademicP1}
