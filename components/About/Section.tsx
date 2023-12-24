@@ -150,7 +150,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
   return (
       <section className=" hero flex-auto py-24 flex items-center justify-center animate-fade-in bg-fuchsia-950">
         
-        <div className="mx-auto max-w-[55rem] text-center bg-white/30 ">
+        <div className="mx-auto max-w-[55rem] text-center">
             {/* Heading */}
             <div className="flex flex-auto">
               <h1 className=" text-white dark:text-white glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
