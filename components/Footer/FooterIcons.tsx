@@ -69,7 +69,7 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
     <div className="flex h-full">
       <div className={`${!copySuccess && shouldApplyWidthClass ? 'w-[15.8rem]' : ''}`}>
         {copySuccess && (
-          <p className={`${shouldApplyWidthClass ? 'flex-grow flex text-fuchsia-500 w-[17.5rem] h-full bg-white/50 p-3 text-xs leading-normal transition duration-150 ease-in-out' : 'flex-grow text-fuchsia-500 w-[8rem] h-full bg-white/50 p-3 text-xs leading-normal transition duration-150 ease-in-out'}`}>
+          <p className={`${shouldApplyWidthClass ? 'flex-grow flex text-fuchsia-500 w-[17.5rem] h-full bg-gray-200/20 p-3 text-xs leading-normal transition duration-150 ease-in-out' : 'flex-grow text-fuchsia-500 w-[8rem] h-full bg-gray-200/20 p-3 text-xs leading-normal transition duration-150 ease-in-out'}`}>
             <span className={`${shouldApplyWidthClass ? 'text-black text-xs' : 'hidden'}`}>{translations[currentLanguage].copyMessage}😎</span>
             <span className="ml-1 flex text-xs">{copiedValue} {translations[currentLanguage].copyValue}<RiFileCopyFill className={`${shouldApplyWidthClass ? 'ml-1 visible w-4 h-4 text-xs' : 'hidden'}`} /></span>
           </p>
