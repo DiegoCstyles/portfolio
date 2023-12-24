@@ -16,7 +16,7 @@ const ReturnButton = () => {
       <Icon
         href="#top"
         label="return"
-        classNameIcon="hover:bounce bg-fuchsia-500/50 dark:bg-fuchsia-500/50 lg:w-[1.5rem] lg:h-[1.7rem] md:w-[1.5rem] md:h-[1.7rem] w-[1.5rem] h-[1.7rem] p-3"
+        classNameIcon="hover:bounce lg:w-[1.5rem] lg:h-[1.7rem] md:w-[1.5rem] md:h-[1.7rem] w-[1.5rem] h-[1.7rem] p-3"
         classNameLink="group"
         icon={MdOutlineArrowDropUp}
         onClick={handleReturnButtonClick}
