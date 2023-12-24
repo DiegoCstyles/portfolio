@@ -161,7 +161,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
 
             {/* about */}
-            <div className="text-sm tracking-tight font-bold leading-relaxed text-black dark:text-black">
+            <div className="text-sm tracking-tight font-medium leading-relaxed text-white dark:text-white">
               <p className="mt-10">
                 {translations[currentLanguage].journeyP1}
                 <strong className="text-black dark:text-white uppercase">
@@ -194,12 +194,12 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
-                <div className='text-left'>
+                <div className='text-left text-white'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96 "> • {translations[currentLanguage].firstCareerTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-center w-96 "> • {translations[currentLanguage].firstCareerTitle}</p>
                   </div>
-                  <p className="mt-1 text-xs font-bold text-center">AtendeiTi</p>
-                  <p className="mt-1 text-xs font-bold text-center">2022 - 2023</p>
+                  <p className="mt-1 text-xs font-medium text-center">AtendeiTi</p>
+                  <p className="mt-1 text-xs font-medium text-center">2022 - 2023</p>
                 </div>
                 {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
                   <strong className="text-white dark:text-white">
@@ -209,13 +209,13 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
-                <div className='text-left'>
+                <div className='text-left text-white'>
                   <div className='flex'>
-                    <p className="border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96"> • {translations[currentLanguage].secondCareerTitle}</p>
+                    <p className="border border-black dark:border-white rounded-md text-center w-96"> • {translations[currentLanguage].secondCareerTitle}</p>
                     
                   </div>
-                    <p className="mt-1 text-xs font-bold text-center">Objetivo Lorena</p>
-                    <p className="mt-1 text-xs font-bold text-center">2021 - 2022</p>                 
+                    <p className="mt-1 text-xs font-medium text-center">Objetivo Lorena</p>
+                    <p className="mt-1 text-xs font-medium text-center">2021 - 2022</p>                 
                 </div> 
                 {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
                   {translations[currentLanguage].secondCareerP1}
@@ -236,24 +236,24 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
-                <div className='text-left'>
+                <div className='text-left text-white'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96"> • {translations[currentLanguage].firstAcademicTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-center w-96"> • {translations[currentLanguage].firstAcademicTitle}</p>
                   </div>
-                  <p className="mt-1 text-xs font-bold text-center">{translations[currentLanguage].firstAcademict}</p>
-                  <p className="mt-1 text-xs font-bold text-center">2019 - 2023</p>
+                  <p className="mt-1 text-xs font-medium text-center">{translations[currentLanguage].firstAcademict}</p>
+                  <p className="mt-1 text-xs font-medium text-center">2019 - 2023</p>
                 </div>
                 {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
-                <div className='text-left'>
+                <div className='text-left text-white'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-white dark:text-white text-center w-96"> • {translations[currentLanguage].secondAcademicTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-center w-96"> • {translations[currentLanguage].secondAcademicTitle}</p>
 
                   </div>
-                  <p className="mt-1 text-xs font-bold text-center">{translations[currentLanguage].secondAcademic}</p>
-                  <p className="mt-1 text-xs font-bold text-center">2016 - 2018</p>
+                  <p className="mt-1 text-xs font-medium text-center">{translations[currentLanguage].secondAcademic}</p>
+                  <p className="mt-1 text-xs font-medium text-center">2016 - 2018</p>
                 </div>
                 {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify bg-white/30  rounded-md p-2'>
                   {translations[currentLanguage].secondAcademicP1}
