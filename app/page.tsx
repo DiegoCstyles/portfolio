@@ -12,7 +12,6 @@ const ContactSection = isBrowser ? require('@/components').ContactSection : null
 const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function Home() {
-  const router = useRouter();
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [currentLanguage, setCurrentLanguage] = useState('en');
 
