@@ -44,7 +44,6 @@ export default function Home() {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   const scrollTo = (section: string) => {
-    animateScroll.scrollToTop(); // Scroll to top to avoid conflicts with existing scroll position
     const targetElement = document.getElementById(section);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
