@@ -32,7 +32,7 @@ const NavbarPage = ({ page, currentLanguage }: NavbarProps) => {
         <li>
             <Link className="block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600/50" 
                 aria-current="page" 
-                href={"/"+ page}>
+                href={"#"}>
                 {(translations[currentLanguage] as any)[page].toUpperCase()}
             </Link>
         </li>
