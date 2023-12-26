@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
 import './styles/home.css';
-import { Link as ScrollLink, animateScroll } from 'react-scroll';
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
