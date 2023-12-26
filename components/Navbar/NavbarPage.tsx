@@ -47,7 +47,7 @@ const NavbarPage = ({ page, currentLanguage }: NavbarProps) => {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-70} // Adjust the offset as needed
+                  offset={0} // Adjust the offset as needed
                 >
                   {(translations[currentLanguage] as any)[page].toUpperCase()}
                 </ScrollLink>
