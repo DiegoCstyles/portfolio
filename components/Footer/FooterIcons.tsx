@@ -77,7 +77,7 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
       </div>
         
       <button
-        className={'flex hover:bg-fuchsia-600/50 text-white p-3 text-xs font-thin  uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400'}
+        className={'flex hover:bg-fuchsia-600/50 light:text-black dark:text-white p-3 text-xs font-thin  uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400'}
         onClick={() => handleCopyToClipboard("+55(12)997263748", "Phone")}
       >
         <TbPhoneCalling className="lg:w-[1.2rem] lg:h-[1.2rem] md:w-[1.2rem] md:h-[1.2rem] sm:w-[1.2rem] sm:h-[1.2rem] w-[1.2rem] h-[1.2rem] transition-colors duration-200" />
@@ -85,7 +85,7 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
       </button>
         
       <button
-        className={'flex hover:bg-fuchsia-600/50 text-white p-3 text-xs font-thin uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400 '}
+        className={'flex hover:bg-fuchsia-600/50 light:text-black dark:text-white p-3 text-xs font-thin uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400 '}
         onClick={() => handleCopyToClipboard("diegoe.r.c07@gmail.com", "Mail")}
       >
         <TfiEmail className="lg:w-[1rem] lg:h-[1rem] md:w-[1rem] md:h-[1rem] sm:w-[1rem] sm:h-[1rem] w-[1rem] h-[1rem] transition-colors duration-200" />
