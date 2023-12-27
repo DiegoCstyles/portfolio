@@ -5,6 +5,7 @@ import Icon from '../Icon';
 import '../../app/styles/fadeIn.css';
 import ContactImage from './code.png';
 import Image from 'next/image';
+import translations from './Translations';
 
 interface ProjectsProps {
   currentLanguage: string;
