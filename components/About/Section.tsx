@@ -32,7 +32,10 @@ interface AboutTranslations {
   h2Education: string,
   firstAcademicTitle: string,
   firstAcademict: string,
-  firstAcademic: string,
+  firstAcademicP1: string,
+  firstAcademicP2: string,
+  firstAcademicP3: string,
+  firstAcademicP4: string,
   secondAcademicTitle: string,
   secondAcademic: string,
   secondAcademicP1: string,
@@ -71,7 +74,10 @@ const translations: { [language: string]: AboutTranslations } = {
       h2Education: 'Education',
       firstAcademicTitle: 'Computer Engineering',
       firstAcademict: 'Unisal - Salesian University Center of Sao Paulo',
-      firstAcademic: ' With knowledge in hardware, software, computer networks and embedded systems. <strong className="text-black dark:text-blendedCyan">analytical and problem solving skills</strong>, I am always <strong className="text-black dark:text-blendedCyan">up to date on new technologies and market trends</strong>.',
+      firstAcademicP1: ' With knowledge in hardware, software, computer networks and embedded systems.',
+      firstAcademicP2: 'analytical and problem solving skills',
+      firstAcademicP3: ', I am always ',
+      firstAcademicP4: 'up to date on new technologies and market trends.',
       secondAcademicTitle: 'Internet IT Technician',   
       secondAcademic: 'Etec - State Technical School',  
       secondAcademicP1: 'Skills in ',
@@ -108,7 +114,10 @@ const translations: { [language: string]: AboutTranslations } = {
       h2Education: 'Educação',
       firstAcademicTitle: 'Engenharia da Computação',
       firstAcademict: 'Unisal - Centro Universitário Salesiano de SP',
-      firstAcademic: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados. <strong className="text-black dark:text-blendedCyan">Habilidades analíticas e de resolução de problemas</strong>, estou sempre <strong className="text-black dark:text-blendedCyan">atualizado(a) sobre novas tecnologias e tendências de mercado</strong>.',
+      firstAcademicP1: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados.',
+      firstAcademicP2: 'Habilidades analíticas e de resolução de problemas', 
+      firstAcademicP3: ', estou sempre ', 
+      firstAcademicP4: 'atualizado(a) sobre novas tecnologias e tendências de mercado.', 
       secondAcademicTitle: 'Técnico de TI em Internet',  
       secondAcademic: 'Etec - Escola Técnica Estadual',
       secondAcademicP1: 'Habilidades em ',
@@ -243,8 +252,18 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs font-medium text-center">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs font-medium text-center">2019 - 2023</p>
                 </div>
-                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2' dangerouslySetInnerHTML={{ __html: translations[currentLanguage].firstAcademic }}>
-                </span>}
+                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-white/30  rounded-md p-2'>
+                  {translations[currentLanguage].firstAcademicP1}
+                  
+                  <strong className="text-white dark:text-white">
+                    {translations[currentLanguage].firstAcademicP2}
+                  </strong>
+                  {translations[currentLanguage].firstAcademicP3}
+                  
+                  <strong className="text-white dark:text-white">
+                    {translations[currentLanguage].firstAcademicP4}
+                  </strong>
+              </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                 <div className='text-left text-white'>
