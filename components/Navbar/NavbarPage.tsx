@@ -42,12 +42,12 @@ const NavbarPage = ({ page, currentLanguage }: NavbarProps) => {
             <Link href="#">
                 {/* Wrap Link content in ScrollLink for smooth scrolling */}
                 <ScrollLink
-                  className="block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600/50"
+                  className="block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600"
                   to={page.toLowerCase()} // Assumes that your sections have the same IDs as page names
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={60} // Adjust the offset as needed
+                  offset={60} 
                 >
                   {(translations[currentLanguage] as any)[page].toUpperCase()}
                 </ScrollLink>
