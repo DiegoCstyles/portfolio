@@ -69,10 +69,8 @@ const Section = ({ currentLanguage }: ContactProps) => {
 
         {/* about */}
         <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
-          <h1 className="light:text-black dark:text-fuchsia-600 glitch-effect1 dark:text-cyan-300 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+          <h1 className="light:text-black dark:text-fuchsia-600 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].h1}
-            <span className="glitch-effect2 light:text-white dark:text-white" data-text={translations[currentLanguage].h1}></span>
-            <span className="glitch-effect3 light:text-black dark:text-fuchsia-400" data-text={translations[currentLanguage].h1}></span>
           </h1>
           
           <p className="text-xs text-justify leading-relaxed text-slate-600 dark:text-slate-400">
