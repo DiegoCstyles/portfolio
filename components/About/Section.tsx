@@ -87,9 +87,9 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs font-medium text-center text-white">2022 - 2023</p>
                 </div>
                 {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify p-2'>
-                  <div className="text-black dark:text-white">
+                  <strong className="text-black dark:text-white">
                     {translations[currentLanguage].firstCareerP1}
-                  </div>
+                  </strong>
                   {translations[currentLanguage].firstCareerP2} 
                 </span>}
               </div>
@@ -104,13 +104,13 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </div> 
                 {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].secondCareerP1}
-                  <div className="text-black dark:text-white">
+                  <strong className="text-black dark:text-white">
                     {translations[currentLanguage].secondCareerP2}
-                  </div>
+                  </strong>
                   {translations[currentLanguage].secondCareerP3}
-                  <div className="text-black dark:text-white mr-1">
+                  <strong className="text-black dark:text-white mr-1">
                     {translations[currentLanguage].secondCareerP4}
-                  </div> 
+                  </strong> 
                   {translations[currentLanguage].secondCareerP5}
                 </span>}
               </div>
@@ -131,14 +131,14 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].firstAcademicP1}
                   
-                  <div className="text-black dark:text-white">
+                  <strong className="text-black dark:text-white">
                     {translations[currentLanguage].firstAcademicP2}
-                  </div>
+                  </strong>
                   {translations[currentLanguage].firstAcademicP3}
                   
-                  <div className="text-black dark:text-white">
+                  <strong className="text-black dark:text-white">
                     {translations[currentLanguage].firstAcademicP4}
-                  </div>
+                  </strong>
               </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
@@ -153,14 +153,14 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].secondAcademicP1}
                   
-                  <div className="text-black dark:text-white">
+                  <strong className="text-black dark:text-white">
                     {translations[currentLanguage].secondAcademicP2}
-                  </div>
+                  </strong>
                   {translations[currentLanguage].secondAcademicP3}
                   
-                  <div className="text-black dark:text-white">
+                  <strong className="text-black dark:text-white">
                     {translations[currentLanguage].secondAcademicP4}
-                  </div>
+                  </strong>
                   {translations[currentLanguage].secondAcademicP5}
                 </span>}
               </div>
