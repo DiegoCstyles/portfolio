@@ -2,24 +2,11 @@ import FooterIcons from "./FooterIcons";
 import FooterActions from "./FooterActions";
 import React, { memo } from 'react';
 import '../../app/styles/fadeIn.css';
+import translations from './Translations';
 
 interface FooterProps {
   currentLanguage: string;
 }
-
-interface FooterTranslations {
-  h1: string;
-}
-
-const translations: { [language: string]: FooterTranslations } = {
-  en: {
-      h1: 'crafting delightful web experiences',
-    },
-    'pt-br': {
-      h1: 'criando experiências web magníficas',
-    },
-};
-
 
 const Footer = ({ currentLanguage }: FooterProps) => {
   
