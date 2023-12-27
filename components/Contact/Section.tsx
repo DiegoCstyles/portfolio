@@ -64,12 +64,12 @@ const Section = ({ currentLanguage }: ContactProps) => {
 
   return (
     <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
-      <div  className="mx-auto max-w-[55rem] text-center">
+      <div  className="mx-auto max-w-[80rem] text-center">
         {/* Geometric Wave Background */}
 
         {/* about */}
         <div className="border-black  dark:border-white rounded-t-md mt-10 p-4">
-          <h1 className="light:text-black dark:text-fuchsia-600 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+          <h1 className="light:text-black dark:text-fuchsia-600 mt-3 text-9xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight uppercase font-black">
             {translations[currentLanguage].h1}
           </h1>
           
