@@ -38,10 +38,10 @@ const Section = ({ currentLanguage }: AboutProps) => {
         <div className="mx-auto max-w-[55rem] text-center">
             {/* Heading */}
             <div className="flex flex-auto">
-              <h1 className=" text-black dark:text-black glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+              <h1 className="light:text-black dark:text-white glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
                 {translations[currentLanguage].h1}
-                <span className="glitch-effect2 text-white dark:text-white" data-text={translations[currentLanguage].h1}></span>
-                <span className="glitch-effect3 text-black dark:text-black" data-text={translations[currentLanguage].h1}></span>
+                <span className="glitch-effect2 light:text-white dark:text-black" data-text={translations[currentLanguage].h1}></span>
+                <span className="glitch-effect3 light:text-black dark:text-white" data-text={translations[currentLanguage].h1}></span>
               </h1>
             </div>
 
@@ -79,7 +79,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
-                <div className='text-left text-white'>
+                <div className='text-left'>
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].firstCareerTitle}</p>
                   </div>
@@ -94,7 +94,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
-                <div className='text-left text-white'>
+                <div className='text-left'>
                   <div className='flex'>
                     <p className="border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].secondCareerTitle}</p>
                     
@@ -121,7 +121,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </div>
               </div>
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
-                <div className='text-left text-white'>
+                <div className='text-left'>
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].firstAcademicTitle}</p>
                   </div>
@@ -142,7 +142,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
-                <div className='text-left text-white'>
+                <div className='text-left'>
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].secondAcademicTitle}</p>
 
