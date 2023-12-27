@@ -1,5 +1,5 @@
 import { memo, useEffect, useState  } from 'react';
-import translations, { AboutTranslations } from './Translations';
+import translations from './Translations';
 
 interface AboutProps {
   currentLanguage: string;
