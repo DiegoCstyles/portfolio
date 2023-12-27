@@ -38,7 +38,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
         <div className="mx-auto max-w-[55rem] text-center">
             {/* Heading */}
             <div className="flex flex-auto">
-              <h1 className="light:text-black dark:text-white mt-3 text-9xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight uppercase">
+              <h1 className="light:text-black dark:text-white mt-3 text-9xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight uppercase font-black">
                 {translations[currentLanguage].h1}
               </h1>
             </div>
