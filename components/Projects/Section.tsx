@@ -13,16 +13,50 @@ currentLanguage: string;
 interface ProjectsTranslations {
   h1: string;
   h2: string;
+  projects: {
+    [key: string]: {
+      title: string;
+      description: string;
+    }[];
+  };
 }
 
 const translations: { [language: string]: ProjectsTranslations } = {
   en: {
-      h1: 'Work. Hobby. Discovery.',
-      h2: 'Featured Projects',
+    h1: 'Work. Hobby. Discovery.',
+    h2: 'Featured Projects',
+    projects: {
+      'Last Defenders': {
+        title: 'Last Defenders',
+        description: 'Classic game style with modern features',
+      },
+      'Check System': {
+        title: 'Check System',
+        description: 'Risk Management with Integrated Management System - IMS',
+      },
+      'BeachLord': {
+        title: 'BeachLord',
+        description: 'Based on a game for resort tycoon (Work in Progress..)',
+      },
+    },
   },
   'pt-br': {
-      h1: 'Trabalhar. Hobby. Descoberta.',
-      h2: 'Projetos em destaque',
+    h1: 'Trabalhar. Hobby. Descoberta.',
+    h2: 'Projetos em destaque',
+    projects: {
+      'Last Defenders': {
+        title: 'Last Defenders',
+        description: 'Estilo clássico de jogo com recursos modernos',
+      },
+      'Check System': {
+        title: 'Check System',
+        description: 'Gestão de riscos com Sistema de Gestão Integrado - SGI',
+      },
+      'BeachLord': {
+        title: 'BeachLord',
+        description: 'Baseado em um jogo para resort tycoon (Trabalho em andamento..)',
+      },
+    },
   },
 };
 
@@ -110,7 +144,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
                   <div className='zoom-effect text-start flex p-2 w-80 dark:hover:bg-opacity-5 dark:hover:bg-white dark:border-white leading-relaxed text-slate-600 dark:text-slate-400'>
                     <div className='p-5 flex flex-col'>
                       <div className='flex  justify-between'>
-                        <p className="text-base text-black dark:text-white transition delay-100 duration-200 ease-in">{project.title}</p>
+                        <p className="text-base text-black dark:text-white transition delay-100 duration-200 ease-in">{translations[currentLanguage].projects[project.title].title}</p>
                         <p className="text-xs mt-1">{project.year}</p>
                         <div className="flex justify-end mt-1 ml-1">
                           {project.steamLink && (
@@ -125,7 +159,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
                         </div>
                       </div>
                       {project.description && (
-                        <p className=" text-xs mt-1"> • {project.description}</p>
+                        <p className=" text-xs mt-1"> • {translations[currentLanguage].projects[project.title].description}</p>
                       )}
                       {project.technologies.length > 0 && (
                         <div className='flex mt-2'>
