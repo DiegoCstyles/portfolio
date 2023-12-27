@@ -73,7 +73,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
             {/* timeline */}
             <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36 font-medium">
               
-              <div className="flex items-start mt-3 text-base leading-relaxed text-black dark:text-black">
+              <div className="flex items-start mt-3 text-base leading-relaxed text-black dark:text-white">
                 <div>
                   <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2Career} /&gt;</h2>
                 </div>
@@ -115,7 +115,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 </span>}
               </div>
 
-              <div className=" flex items-start mt-20 text-base leading-relaxed text-black dark:text-black">
+              <div className=" flex items-start mt-20 text-base leading-relaxed text-black dark:text-white">
                 <div>
                   <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2Education} /&gt;</h2>
                 </div>
