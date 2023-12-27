@@ -1,34 +1,14 @@
 import Link from "next/link"
 import '../../app/styles/fadeIn.css';
 import { Link as ScrollLink, animateScroll } from "react-scroll";
+import translations from './Translations';
 
 interface NavbarProps {
     page: string;
     currentLanguage: string;
 }
 
-interface Translations {
-  [language: string]: {
-    about: string;
-    projects: string;
-    contact: string;
-  };
-}
-
 const NavbarPage = ({ page, currentLanguage }: NavbarProps) => {
-    const translations: Translations = {
-        en: {
-          about: 'About',
-          projects: 'Projects',
-          contact: 'Contact',
-        },
-        'pt-br': {
-          about: 'Sobre',
-          projects: 'Projetos',
-          contact: 'Contato',
-        },
-      };
-
      const scrollTo = (section: string) => {
         animateScroll.scrollToTop(); // Scroll to top to avoid conflicts with existing scroll position
         const targetElement = document.getElementById(section);
