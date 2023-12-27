@@ -38,10 +38,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
         <div className="mx-auto max-w-[55rem] text-center">
             {/* Heading */}
             <div className="flex flex-auto">
-              <h1 className="light:text-black dark:text-white glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+              <h1 className="light:text-black dark:text-white mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
                 {translations[currentLanguage].h1}
-                <span className="glitch-effect2 light:text-white dark:text-black" data-text={translations[currentLanguage].h1}></span>
-                <span className="glitch-effect3 light:text-black dark:text-white" data-text={translations[currentLanguage].h1}></span>
               </h1>
             </div>
 
