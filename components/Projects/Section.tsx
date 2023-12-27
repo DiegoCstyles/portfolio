@@ -10,58 +10,6 @@ interface ProjectsProps {
   currentLanguage: string;
 }
 
-interface ProjectTranslation {
-  title: string;
-  description: string;
-}
-
-interface ProjectsTranslations {
-  h1: string;
-  h2: string;
-  projects: {
-    [key: string]: ProjectTranslation;
-  };
-}
-
-const translations: { [language: string]: ProjectsTranslations } = {
-  en: {
-    h1: 'Work. Hobby. Discovery.',
-    h2: 'Featured Projects',
-    projects: {
-      'Last Defenders': {
-        title: 'Last Defenders',
-        description: 'Classic game style with modern features',
-      },
-      'Check System': {
-        title: 'Check System',
-        description: 'Risk Management with Integrated Management System - IMS',
-      },
-      'BeachLord': {
-        title: 'BeachLord',
-        description: 'Based on a game for resort tycoon (Work in Progress..)',
-      },
-    },
-  },
-  'pt-br': {
-    h1: 'Trabalhar. Hobby. Descoberta.',
-    h2: 'Projetos em destaque',
-    projects: {
-      'Last Defenders': {
-        title: 'Last Defenders',
-        description: 'Estilo clássico de jogo com recursos modernos',
-      },
-      'Check System': {
-        title: 'Check System',
-        description: 'Gestão de riscos com Sistema de Gestão Integrado - SGI',
-      },
-      'BeachLord': {
-        title: 'BeachLord',
-        description: 'Baseado em um jogo para resort tycoon (Trabalho em andamento..)',
-      },
-    },
-  },
-};
-
 const projects = [
   {
     title: 'Last Defenders',
@@ -119,10 +67,8 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
 
         {/* timeline */}
         <div className="mt-20 justify-center items-center">
-          <h1 className="light:text-black dark:text-white glitch-effect1 flex-1 mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
+          <h1 className="light:text-black dark:text-white mt-3 text-7xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight">
             {translations[currentLanguage].h1}
-            <span className="glitch-effect2 light:text-white dark:text-black" data-text={translations[currentLanguage].h1}></span>
-            <span className="glitch-effect3 light:text-black dark:text-white" data-text={translations[currentLanguage].h1}></span>
           </h1>
           
           <div className=" mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
