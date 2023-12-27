@@ -111,7 +111,7 @@ const translations: { [language: string]: AboutTranslations } = {
       firstAcademicP1: ' Com conhecimento em hardware, software, redes de computadores e sistemas embarcados.',
       firstAcademicP2: 'Habilidades analíticas e de resolução de problemas', 
       firstAcademicP3: ', estou sempre ', 
-      firstAcademicP4: 'atualizado(a) sobre novas tecnologias e tendências de mercado.', 
+      firstAcademicP4: 'atualizado sobre novas tecnologias e tendências de mercado.', 
       secondAcademicTitle: 'Técnico de TI em Internet',  
       secondAcademic: 'Etec - Escola Técnica Estadual',
       secondAcademicP1: 'Habilidades em ',
