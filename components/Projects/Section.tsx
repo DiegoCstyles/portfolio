@@ -10,14 +10,16 @@ interface ProjectsProps {
 currentLanguage: string;
 }
 
+interface ProjectTranslation {
+  title: string;
+  description: string;
+}
+
 interface ProjectsTranslations {
   h1: string;
   h2: string;
   projects: {
-    [key: string]: {
-      title: string;
-      description: string;
-    }[];
+    [key: string]: ProjectTranslation;
   };
 }
 
