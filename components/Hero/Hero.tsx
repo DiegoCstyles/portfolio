@@ -3,26 +3,11 @@ import { memo, useEffect } from 'react';
 import HeroImage from './HeroImage.png';
 import Image from 'next/image';
 import '../../app/styles/fadeIn.css';
+import translations from './Translations';
 
 interface HeroProps {
   currentLanguage: string;
 }
-
-interface HeroTranslations {
-  title: string;
-  description: string;
-}
-
-const translations: { [language: string]: HeroTranslations } = {
-  en: {
-    title: 'Frontend developer.',
-    description: 'Passionate about building responsive and dynamic web applications with React, Next.js, and Tailwind CSS.',
-  },
-  'pt-br': {
-    title: 'Desenvolvedor Frontend.',
-    description: 'Apaixonado por construir aplicações web responsivas e dinâmicas com React, Next.js e Tailwind CSS.',
-  },
-};
 
 const Hero = ({ currentLanguage }: HeroProps) => {
   const isMobile = useMediaQuery({ maxWidth: 1024 });
