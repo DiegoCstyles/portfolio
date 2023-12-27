@@ -86,10 +86,10 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs font-medium text-center text-white">AtendeiTi</p>
                   <p className="mt-1 text-xs font-medium text-center text-white">2022 - 2023</p>
                 </div>
-                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
-                  <strong className="text-white dark:text-white">
+                {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify p-2'>
+                  <p className="text-black dark:text-white">
                     {translations[currentLanguage].firstCareerP1}
-                  </strong>
+                  </p>
                   {translations[currentLanguage].firstCareerP2} 
                 </span>}
               </div>
@@ -102,15 +102,15 @@ const Section = ({ currentLanguage }: AboutProps) => {
                     <p className="mt-1 text-xs font-medium text-center text-white">Objetivo Lorena</p>
                     <p className="mt-1 text-xs font-medium text-center text-white">2021 - 2022</p>                 
                 </div> 
-                {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify bg-white/30 rounded-md p-2'>
+                {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].secondCareerP1}
-                  <strong className="text-white dark:text-white">
+                  <p className="text-black dark:text-white">
                     {translations[currentLanguage].secondCareerP2}
-                  </strong>
+                  </p>
                   {translations[currentLanguage].secondCareerP3}
-                  <strong className="text-white dark:text-white mr-1">
+                  <p className="text-black dark:text-white mr-1">
                     {translations[currentLanguage].secondCareerP4}
-                  </strong> 
+                  </p> 
                   {translations[currentLanguage].secondCareerP5}
                 </span>}
               </div>
@@ -128,17 +128,17 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs font-medium text-center text-white">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs font-medium text-center text-white">2019 - 2023</p>
                 </div>
-                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify bg-white/30  rounded-md p-2'>
+                {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].firstAcademicP1}
                   
-                  <strong className="text-white dark:text-white">
+                  <p className="text-black dark:text-white">
                     {translations[currentLanguage].firstAcademicP2}
-                  </strong>
+                  </p>
                   {translations[currentLanguage].firstAcademicP3}
                   
-                  <strong className="text-white dark:text-white">
+                  <p className="text-black dark:text-white">
                     {translations[currentLanguage].firstAcademicP4}
-                  </strong>
+                  </p>
               </span>}
               </div>
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
@@ -153,14 +153,14 @@ const Section = ({ currentLanguage }: AboutProps) => {
                 {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify bg-white/30  rounded-md p-2'>
                   {translations[currentLanguage].secondAcademicP1}
                   
-                  <strong className="text-white dark:text-white">
+                  <p className="text-black dark:text-white">
                     {translations[currentLanguage].secondAcademicP2}
-                  </strong>
+                  </p>
                   {translations[currentLanguage].secondAcademicP3}
                   
-                  <strong className="text-white dark:text-white">
+                  <p className="text-black dark:text-white">
                     {translations[currentLanguage].secondAcademicP4}
-                  </strong>
+                  </p>
                   {translations[currentLanguage].secondAcademicP5}
                 </span>}
               </div>
