@@ -49,7 +49,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
   }, []);
 
   return (
-    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center bg-black">
+    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center light:bg-white dark:bg-black">
       <style>{`
         :root {
           --section-offset: 0;
@@ -75,7 +75,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
         </div>
 
         {/* Description */}
-        <p className="mt-3 text-base leading-relaxed text-gray-50 dark:text-gray-50">
+        <p className="mt-3 text-base leading-relaxed light:text-black dark:text-white">
           {translations[currentLanguage].description}
         </p>
       </div>
