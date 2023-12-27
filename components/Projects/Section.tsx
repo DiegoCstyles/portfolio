@@ -7,7 +7,7 @@ import ContactImage from './code.png';
 import Image from 'next/image';
 
 interface ProjectsProps {
-currentLanguage: string;
+  currentLanguage: string;
 }
 
 interface ProjectTranslation {
@@ -70,7 +70,6 @@ const projects = [
     technologies: ['Unity', 'C#', 'Photoshop', 'Azure'],
     steamLink: 'https://store.steampowered.com/app/1750690/Last_Defenders/',
     githubLink: 'https://github.com/DiegoCstyles',
-    linkedinLink: 'https://www.linkedin.com/in/diegoerc/',
   },
   {
     title: 'Check System',
@@ -78,7 +77,6 @@ const projects = [
     description: 'Risk Management with Integrated Management System - IMS',
     technologies: ['Figma', 'Next.js', 'Typescript', 'OpenAI'],
     githubLink: 'https://github.com/DiegoCstyles/Check',
-    linkedinLink: 'https://www.linkedin.com/in/diegoerc/',
   },
   {
     title: 'BeachLord',
@@ -86,7 +84,6 @@ const projects = [
     description: 'Based on a game for resort tycoon (Work in Progress..)',
     technologies: ['Unreal Engine', 'C++'],
     githubLink: 'https://github.com/DiegoCstyles/Beachlord',
-    linkedinLink: 'https://www.linkedin.com/in/diegoerc/',
   },
 ];
 
@@ -154,9 +151,6 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
                           )}
                           {project.githubLink && (
                             <Icon href={project.githubLink} target='_blank' label='Github' classNameIcon='ml-2' classNameLink='group' icon={FaGithub}></Icon>
-                          )}
-                          {project.linkedinLink && (
-                            <Icon href={project.linkedinLink} target='_blank' label='Code' classNameIcon='ml-2' classNameLink='group' icon={FaLinkedin}></Icon>
                           )}
                         </div>
                       </div>
