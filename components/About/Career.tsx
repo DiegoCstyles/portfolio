@@ -14,4 +14,4 @@ const Career = ({ currentLanguage }: CareerProps) => (
     </p>
 );
 
-export default Journey;
+export default Career;
