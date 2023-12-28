@@ -24,7 +24,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
 
             {/* about */}
-            {Journey[currentLanguage]}
+            <Journey currentLanguage={currentLanguage} />
           
             {/* timeline */}
             <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36 font-medium">
