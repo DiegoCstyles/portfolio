@@ -53,14 +53,14 @@ export default function Home() {
         {/* Sections */}
         {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
         {Hero && <Hero currentLanguage={currentLanguage}/>}
-        {AboutSection && (
-          <section id="about">
-            <AboutSection currentLanguage={currentLanguage} />
-          </section>
-        )}
         {ProjectsSection && (
           <section id="projects">
             <ProjectsSection currentLanguage={currentLanguage} />
+          </section>
+        )}
+        {AboutSection && (
+          <section id="about">
+            <AboutSection currentLanguage={currentLanguage} />
           </section>
         )}
         {ContactSection && (
