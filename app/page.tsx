@@ -88,17 +88,18 @@ export default function Home() {
         )}
         {Footer && <Footer currentLanguage={currentLanguage}/>}
         <div
-        ref={cursorRef}
-        className="cursor" // Add this class to your cursor element in your CSS
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '20px',
-          height: '20px',
-          backgroundColor: 'red', // Customize the cursor appearance
-          borderRadius: '50%',
-        }}
+          ref={cursorRef}
+          className="cursor" // Add this class to your cursor element in your CSS
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '20px',
+            height: '20px',
+            backgroundColor: 'red', // Customize the cursor appearance
+            borderRadius: '50%',
+          }}
+        ></div>
       </main>
   )
 }
