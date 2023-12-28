@@ -59,7 +59,7 @@ export default function Home() {
       y: 50,             // Vertical translation
       scrollTrigger: {
         trigger: section as HTMLElement,
-        start: 'top 90%',  // Trigger animation when 90% of the section is visible
+        start: 'top 100%',  // Trigger animation when 90% of the section is visible
         end: 'top 30%',   // Complete the animation when the top of the section is 30% visible
         scrub: true,
         onUpdate: (self) => {
