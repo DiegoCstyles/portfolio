@@ -48,8 +48,8 @@ export default function Home() {
 
   useEffect(() => {
     // Scroll-triggered animations for each section
-    gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section: HTMLElement) => {
-      gsap.from(section, {
+    gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
+      gsap.from(section as HTMLElement, {
         opacity: 0,
         y: 50,
         scrollTrigger: {
