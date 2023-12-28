@@ -69,10 +69,8 @@ export default function Home() {
           // If scroll is between 10% and 70%, fade in
           if (self.progress > 0.1 && self.progress < 0.7) {
             opacityValue = 0; // Scale progress for fade in
-          } else if (self.progress >= 0.7) {
-            opacityValue = self.progress + 0.1 ; // Scale progress for fade out
           } else {
-            opacityValue = 1; // Before 10%, keep it fully transparent
+            opacityValue = self.progress + 0.1; // Before 10%, keep it fully transparent
           }
 
           gsap.set(section as HTMLElement, { opacity: opacityValue });
