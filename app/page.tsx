@@ -68,7 +68,7 @@ export default function Home() {
 
           // If scroll is between 10% and 70%, fade in
           if (self.progress > 0.1 && self.progress < 0.7) {
-            opacityValue = (self.progress - 0.1) / 0.6; // Scale progress for fade in
+            opacityValue = 1; // Scale progress for fade in
           } else if (self.progress >= 0.7) {
             opacityValue = 1 - (self.progress - 0.7) / 0.3; // Scale progress for fade out
           } else {
