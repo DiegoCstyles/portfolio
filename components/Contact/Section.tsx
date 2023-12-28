@@ -1,4 +1,4 @@
-import { memo, useEffect  } from 'react';
+import { memo  } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import Icon from '../Icon';
 import '../../app/styles/fadeIn.css';
@@ -38,29 +38,6 @@ const Section = ({ currentLanguage }: ContactProps) => {
     // Open the user's default email client
     window.location.href = mailtoLink;
   };
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      // Get the vertical scroll position
-      const scrollPosition = window.scrollY;
-      
-      // Calculate the amount of offset for the image (inverted direction)
-      const offsetSection = scrollPosition * 0.1;
-      const offsetImage = scrollPosition * 0.26;
-
-      // Apply the offset to the image using CSS variables
-      document.documentElement.style.setProperty('--section-offset', `${offsetSection}px`);
-      document.documentElement.style.setProperty('--image-offset', `${offsetImage}px`);
-    };
-
-    // Attach the event listener for scroll
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
