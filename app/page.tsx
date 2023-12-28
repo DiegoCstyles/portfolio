@@ -65,7 +65,7 @@ export default function Home() {
             scrub: true,
             onUpdate: (self) => {
               // Update the opacity as the scroll progresses
-              const opacityValue = self.progress * 10; // Scale progress to reach 1 at 90%
+              const opacityValue = self.progress; // Increase opacity as progress increases
               gsap.set(section as HTMLElement, { opacity: opacityValue });
             },
           },
