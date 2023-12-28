@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import './styles/home.css';
+import gsap from 'gsap';
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
@@ -41,6 +42,22 @@ export default function Home() {
     }
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
+  const cursorRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollToPlugin);
+
+    const tl = gsap.timeline();
+
+    // Example animation: move the cursor element
+    tl.to(cursorRef.current, { duration: 0.5, x: cursorPosition.x, y: cursorPosition.y });
+
+    return () => {
+      // Cleanup if needed
+      tl.kill();
+    };
+  }, [cursorPosition]);
+
   const scrollTo = (section: string) => {
     const targetElement = document.getElementById(section);
     if (targetElement) {
@@ -69,6 +86,18 @@ export default function Home() {
           </section>
         )}
         {Footer && <Footer currentLanguage={currentLanguage}/>}
+        <div
+        ref={cursorRef}
+        className="cursor" // Add this class to your cursor element in your CSS
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '20px',
+          height: '20px',
+          backgroundColor: 'red', // Customize the cursor appearance
+          borderRadius: '50%',
+        }}
       </main>
   )
 }
