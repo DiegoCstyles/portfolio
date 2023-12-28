@@ -49,16 +49,18 @@ export default function Home() {
   useEffect(() => {
     // Scroll-triggered animations for each section
     gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
-      gsap.from(section as HTMLElement, {
-        opacity: 0,
-        y: 50,
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%', // Adjust the start position as needed
-          end: 'bottom 60%', // Adjust the end position as needed
-          scrub: true,
-        },
-      });
+      if (section) {
+        gsap.from(section as HTMLElement, {
+          opacity: 0,
+          y: 50,
+          scrollTrigger: {
+            trigger: section as HTMLElement,
+            start: 'top 80%', // Adjust the start position as needed
+            end: 'bottom 60%', // Adjust the end position as needed
+            scrub: true,
+          },
+        });
+      }
     });
   }, []);
 
