@@ -1,8 +1,11 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger'; // Import ScrollTrigger for scroll-based animations
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import './styles/home.css';
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
@@ -45,7 +48,7 @@ export default function Home() {
 
   useEffect(() => {
     // Scroll-triggered animations for each section
-    gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
+    gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section: HTMLElement) => {
       gsap.from(section, {
         opacity: 0,
         y: 50,
