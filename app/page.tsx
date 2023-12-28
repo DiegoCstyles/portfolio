@@ -63,6 +63,11 @@ export default function Home() {
             start: 'top 100%', // Adjust the start position as needed
             end: 'bottom 60%', // Adjust the end position as needed
             scrub: true,
+            onUpdate: (self) => {
+              // Update the opacity as the scroll progresses
+              const opacityValue = self.progress * 10; // Scale progress to reach 1 at 90%
+              gsap.set(section as HTMLElement, { opacity: opacityValue });
+            },
           },
         });
       }
