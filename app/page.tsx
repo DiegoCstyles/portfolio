@@ -17,7 +17,10 @@ const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function Home() {
   const [currentLanguage, setCurrentLanguage] = useState('en');
-
+  const cutCorner = {
+    clipPath: 'polygon(0 2.00em, 2.00em 0, calc(100% - 2.00em) 0, 100% 2.00em, 100% calc(100% - 2.00em), calc(100% - 2.00em) 100%, 2.00em 100%, 0 calc(100% - 2.00em))',
+  };
+  
   const handleLanguageChange = () => {
     // Toggle between 'en' and 'pt-br'
     const newLanguage = currentLanguage === 'en' ? 'pt-br' : 'en';
@@ -90,22 +93,23 @@ export default function Home() {
   };
 
   return (
+    
       <main className="light:ltBackground dark:dkBackground overflow-hidden">
         {/* Sections */}
         {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
         {Hero && <Hero currentLanguage={currentLanguage}/>}
         {ProjectsSection && (
-          <section id="projects">
+          <section id="projects" style={cutCorner}>
             <ProjectsSection currentLanguage={currentLanguage} />
           </section>
         )}
         {AboutSection && (
-          <section id="about">
+          <section id="about" style={cutCorner}>
             <AboutSection currentLanguage={currentLanguage} />
           </section>
         )}
         {ContactSection && (
-          <section id="contact">
+          <section id="contact" style={cutCorner}>
             <ContactSection currentLanguage={currentLanguage} />
           </section>
         )}
