@@ -35,7 +35,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
   return (
       <section className=" hero flex-auto py-24 flex items-center justify-center animate-fade-in bg-fuchsia-500 dark:bg-fuchsia-500">
         
-        <div className="mx-auto max-w-[55rem] text-center">
+        <div className="mx-auto max-w-[80rem] text-center">
             {/* Heading */}
             <div className="flex flex-auto">
               <h1 className="light:text-black dark:text-white mt-3 text-9xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight uppercase font-black">
