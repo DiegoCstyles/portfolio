@@ -47,6 +47,35 @@ export default function Home() {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   useEffect(() => {
+    // Create a GSAP timeline
+    const timeline = gsap.timeline();
+
+    // Hero section animation
+    timeline.from(Hero, {
+      opacity: 0,
+      y: 50,
+    });
+
+    // Projects section animation
+    timeline.to(window, {
+      scrollTo: { y: "#projects", offsetY: 50 },
+      ease: "power3.inOut",
+    });
+
+    // About section animation
+    timeline.from('#about', {
+      opacity: 0,
+      y: 50,
+    });
+
+    // Contact section animation
+    timeline.to(window, {
+      scrollTo: { y: "#contact", offsetY: 50 },
+      ease: "power3.inOut",
+    });
+
+    // You can add more animations as needed
+
     // Scroll-triggered animations for each section
     gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
       if (section) {
