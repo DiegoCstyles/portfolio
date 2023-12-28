@@ -39,9 +39,9 @@ const Icon = ({
 
   return (
     <Link href={href} target={target} rel="noopener noreferrer" aria-label={label} className={classNameLink}>
-      <div className="flex items-center bg-fuchsia-500 rounded" onClick={onClick}>
+      <div className="flex items-center" onClick={onClick}>
         {children}
-        <Icon className={" w-5 h-5 md:w-4 md:h-4 lg:w-4 lg:h-4 opacity-80 group-hover:opacity-100 transition duration-300 " + classNameIcon} style={{ color }} />
+        <Icon className={" w-5 h-5 md:w-4 md:h-4 lg:w-4 lg:h-4 opacity-80 group-hover:opacity-100 transition duration-300  bg-fuchsia-500" + classNameIcon} style={{ color }} />
       </div>
     </Link>
   );
