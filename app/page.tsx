@@ -56,18 +56,25 @@ export default function Home() {
     gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
       if (section) {
         gsap.from(section as HTMLElement, {
-          opacity: 0,
-          y: 50,
-          scrollTrigger: {
-            trigger: section as HTMLElement,
-            start: 'top 100%', // Adjust the start position as needed
-            end: 'bottom 60%', // Adjust the end position as needed
-            scrub: true,
-            onUpdate: (self) => {
-              // Update the opacity as the scroll progresses
-              const opacityValue = self.progress; // Increase opacity as progress increases
-              gsap.set(section as HTMLElement, { opacity: opacityValue });
-            },
+          trigger: section as HTMLElement,
+          start: 'top 90%',  // Trigger animation when 90% of the section is visible
+          end: 'top 30%',   // Complete the animation when the top of the section is 30% visible
+          scrub: true,
+          onUpdate: (self) => {
+          // Update the opacity as the scroll progresses
+          let opacityValue;
+
+          // If scroll is between 10% and 70%, fade in
+          if (self.progress > 0.1 && self.progress < 0.7) {
+            opacityValue = (self.progress - 0.1) / 0.6; // Scale progress for fade in
+          } else if (self.progress >= 0.7) {
+            opacityValue = 1 - (self.progress - 0.7) / 0.3; // Scale progress for fade out
+          } else {
+            opacityValue = 0; // Before 10%, keep it fully transparent
+          }
+
+          gsap.set(section as HTMLElement, { opacity: opacityValue });
+        },
           },
         });
       }
