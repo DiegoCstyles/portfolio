@@ -1,4 +1,4 @@
-import { memo, useEffect, useState  } from 'react';
+import { memo, useState  } from 'react';
 import translations from './Translations';
 
 interface AboutProps {
@@ -10,27 +10,6 @@ const Section = ({ currentLanguage }: AboutProps) => {
   const handleSpanHover = (spanName: string | null) => {
     setHoveredSpan(spanName);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Get the vertical scroll position
-      const scrollPosition = window.scrollY;
-      
-      // Calculate the amount of offset for the image (inverted direction)
-      const offsetTimeline = scrollPosition * (-0.10);
-
-      // Apply the offset to the image using CSS variables
-      document.documentElement.style.setProperty('--timeline-offset', `${offsetTimeline}px`);
-    };
-
-    // Attach the event listener for scroll
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
       <section className=" hero flex-auto py-24 flex items-center justify-center animate-fade-in bg-fuchsia-500 dark:bg-fuchsia-500">
