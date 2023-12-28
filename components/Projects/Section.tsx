@@ -57,7 +57,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
   }, []);
   return (
     <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
-      <div className="mx-auto max-w-[44rem] text-center">
+      <div className="mx-auto max-w-[80rem] text-center">
 
         {/* timeline */}
         <div className="mt-20 justify-center items-center">
