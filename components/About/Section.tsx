@@ -44,24 +44,24 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
 
             {/* about */}
-            <div className="text-sm tracking-tight font-medium leading-relaxed text-white dark:text-white">
+            <div className="text-sm tracking-tight font-medium leading-relaxed text-white dark:text-black">
               <p className="mt-10">
                 {translations[currentLanguage].journeyP1}
-                <strong className="text-black dark:text-fuchsia-600 uppercase">
+                <strong className="text-black dark:text-white uppercase">
                   {translations[currentLanguage].journeyP2}
                 </strong>
                 {translations[currentLanguage].journeyP3}
               </p>
               <p className="mt-3">
                 {translations[currentLanguage].careerP1}
-                <strong className="text-black dark:text-fuchsia-600 uppercase">
+                <strong className="text-black dark:text-white uppercase">
                   {translations[currentLanguage].careerP2}
                 </strong>
                 {translations[currentLanguage].careerP3}
               </p>
               <p className="mt-3">
                 {translations[currentLanguage].freeTimeP1}
-                <strong className="text-black dark:text-fuchsia-600 uppercase">
+                <strong className="text-black dark:text-white uppercase">
                   {translations[currentLanguage].freeTimeP2}
                 </strong>
                 {translations[currentLanguage].freeTimeP3}
@@ -81,8 +81,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].firstCareerTitle}</p>
                   </div>
-                  <p className="mt-1 text-xs font-medium text-center text-white">AtendeiTi</p>
-                  <p className="mt-1 text-xs font-medium text-center text-white">2022 - 2023</p>
+                  <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">AtendeiTi</p>
+                  <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">2022 - 2023</p>
                 </div>
                 {hoveredSpan === 'firstSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   <strong className="text-black dark:text-white">
@@ -97,8 +97,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                     <p className="border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].secondCareerTitle}</p>
                     
                   </div>
-                    <p className="mt-1 text-xs font-medium text-center text-white">Objetivo Lorena</p>
-                    <p className="mt-1 text-xs font-medium text-center text-white">2021 - 2022</p>                 
+                    <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">Objetivo Lorena</p>
+                    <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">2021 - 2022</p>                 
                 </div> 
                 {hoveredSpan === 'secondSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].secondCareerP1}
@@ -123,8 +123,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <div className='flex'>
                     <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].firstAcademicTitle}</p>
                   </div>
-                  <p className="mt-1 text-xs font-medium text-center text-white">{translations[currentLanguage].firstAcademict}</p>
-                  <p className="mt-1 text-xs font-medium text-center text-white">2019 - 2023</p>
+                  <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">{translations[currentLanguage].firstAcademict}</p>
+                  <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">2019 - 2023</p>
                 </div>
                 {hoveredSpan === 'thirdSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].firstAcademicP1}
@@ -145,8 +145,8 @@ const Section = ({ currentLanguage }: AboutProps) => {
                     <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-96"> • {translations[currentLanguage].secondAcademicTitle}</p>
 
                   </div>
-                  <p className="mt-1 text-xs font-medium text-center text-white">{translations[currentLanguage].secondAcademic}</p>
-                  <p className="mt-1 text-xs font-medium text-center text-white">2016 - 2018</p>
+                  <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">{translations[currentLanguage].secondAcademic}</p>
+                  <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">2016 - 2018</p>
                 </div>
                 {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify p-2'>
                   {translations[currentLanguage].secondAcademicP1}
