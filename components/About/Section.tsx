@@ -148,7 +148,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
                   <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">{translations[currentLanguage].secondAcademic}</p>
                   <p className="mt-1 text-xs font-medium text-center text-white dark:text-black">2016 - 2018</p>
                 </div>
-                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify p-2'>
+                {hoveredSpan === 'fourthSpan' && <span className='ml-10 text-xs text-justify p-2 light:text-black dark:text-white'>
                   {translations[currentLanguage].secondAcademicP1}
                   
                   <strong className="text-black dark:text-white">
