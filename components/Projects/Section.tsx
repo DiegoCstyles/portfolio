@@ -1,4 +1,4 @@
-import { memo, useEffect } from 'react';
+import { memo } from 'react';
 import { FaSteamSquare, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import Icon from '../Icon';
@@ -35,26 +35,6 @@ const projects = [
 ];
 
 const Section = ({ currentLanguage }: ProjectsProps) => {
-  useEffect(() => {
-    const handleScroll = () => {
-      // Get the vertical scroll position
-      const scrollPosition = window.scrollY;
-      
-      // Calculate the amount of offset for the image (inverted direction)
-      const offsetProjects = scrollPosition * (-0.15);
-
-      // Apply the offset to the image using CSS variables
-      document.documentElement.style.setProperty('--projects-offset', `${offsetProjects}px`);
-    };
-
-    // Attach the event listener for scroll
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   return (
     <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
       <div className="mx-auto max-w-[80rem] text-center">
