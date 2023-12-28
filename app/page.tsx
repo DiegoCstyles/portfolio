@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import './styles/home.css';
 import gsap from 'gsap';
 
