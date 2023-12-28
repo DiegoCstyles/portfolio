@@ -70,7 +70,7 @@ export default function Home() {
           if (self.progress > 0.1 && self.progress < 0.7) {
             opacityValue = 0; // Scale progress for fade in
           } else if (self.progress >= 0.7) {
-            opacityValue = self.progress + 0.2 ; // Scale progress for fade out
+            opacityValue = self.progress + 0.1 ; // Scale progress for fade out
           } else {
             opacityValue = 1; // Before 10%, keep it fully transparent
           }
