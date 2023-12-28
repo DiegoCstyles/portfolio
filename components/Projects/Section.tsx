@@ -1,10 +1,8 @@
 import { memo, useEffect } from 'react';
-import { FaSteamSquare, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaSteamSquare, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import Icon from '../Icon';
 import '../../app/styles/fadeIn.css';
-import ContactImage from './code.png';
-import Image from 'next/image';
 import translations from './Translations';
 
 interface ProjectsProps {
@@ -59,11 +57,6 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
   }, []);
   return (
     <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
-      <div className="zoom-effect mx-auto ">
-        <div className=" w-full h-full relative rounded-md overflow-hidden">
-            <Image src={ContactImage} alt="me" className="object-cover bg-transparent opacity-70 dark:opacity-40" width={400} height={300} />
-        </div>
-      </div>
       <div className="mx-auto max-w-[44rem] text-center">
 
         {/* timeline */}
