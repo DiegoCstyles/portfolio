@@ -35,19 +35,19 @@ export default function Home() {
     });
 
     // Projects section animation
-    timeline.from('#projects', {
+    timeline.from(ProjectsSection, {
       opacity: 0,
       y: 50,
     });
 
     // About section animation
-    timeline.from('#about', {
+    timeline.from(AboutSection, {
       opacity: 0,
       y: 50,
     });
 
     // Contact section animation
-    timeline.from('#contact', {
+    timeline.from(ContactSection, {
       opacity: 0,
       y: 50,
     });
@@ -60,7 +60,7 @@ export default function Home() {
           y: 50,
           scrollTrigger: {
             trigger: section as HTMLElement,
-            start: 'top 80%', // Adjust the start position as needed
+            start: 'top 90%', // Adjust the start position as needed
             end: 'bottom 60%', // Adjust the end position as needed
             scrub: true,
           },
