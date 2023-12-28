@@ -1,11 +1,10 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import './styles/home.css';
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
@@ -36,9 +35,9 @@ export default function Home() {
     });
 
     // Projects section animation
-    timeline.to(window, {
-      scrollTo: { y: "#projects", offsetY: 50 },
-      ease: "power3.inOut",
+    timeline.from('#projects', {
+      opacity: 0,
+      y: 50,
     });
 
     // About section animation
@@ -48,9 +47,9 @@ export default function Home() {
     });
 
     // Contact section animation
-    timeline.to(window, {
-      scrollTo: { y: "#contact", offsetY: 50 },
-      ease: "power3.inOut",
+    timeline.from('#contact', {
+      opacity: 0,
+      y: 50,
     });
 
     // Scroll-triggered animations for each section
