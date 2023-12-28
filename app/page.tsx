@@ -60,7 +60,7 @@ export default function Home() {
           y: 50,
           scrollTrigger: {
             trigger: section as HTMLElement,
-            start: 'top 90%', // Adjust the start position as needed
+            start: 'top 100%', // Adjust the start position as needed
             end: 'bottom 60%', // Adjust the end position as needed
             scrub: true,
           },
