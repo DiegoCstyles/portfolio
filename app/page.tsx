@@ -63,7 +63,8 @@ export default function Home() {
     });
 
     // About section animation
-    timeline.from('#about', {
+    timeline.from(window, {
+      scrollTo: { y: "#about", offsetY: 50 },
       opacity: 0,
       y: 50,
     });
