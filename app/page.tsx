@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import './styles/home.css';
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger'; // Import ScrollTrigger for scroll-based animations
+import './styles/home.css';
 
 // Check if 'window' is defined before importing components that may use it
 const isBrowser = typeof window !== 'undefined';
@@ -43,21 +43,21 @@ export default function Home() {
     }
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
-  const cursorRef = useRef(null);
-
   useEffect(() => {
-    gsap.registerPlugin(ScrollToPlugin);
-
-    const tl = gsap.timeline();
-
-    // Example animation: move the cursor element
-    tl.to(cursorRef.current, { duration: 0.5, x: cursorPosition.x, y: cursorPosition.y });
-
-    return () => {
-      // Cleanup if needed
-      tl.kill();
-    };
-  }, [cursorPosition]);
+    // Scroll-triggered animations for each section
+    gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%', // Adjust the start position as needed
+          end: 'bottom 60%', // Adjust the end position as needed
+          scrub: true,
+        },
+      });
+    });
+  }, []);
 
   const scrollTo = (section: string) => {
     const targetElement = document.getElementById(section);
@@ -87,19 +87,6 @@ export default function Home() {
           </section>
         )}
         {Footer && <Footer currentLanguage={currentLanguage}/>}
-        <div
-          ref={cursorRef}
-          className="cursor" // Add this class to your cursor element in your CSS
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '20px',
-            height: '20px',
-            backgroundColor: 'red', // Customize the cursor appearance
-            borderRadius: '50%',
-          }}
-        ></div>
       </main>
   )
 }
