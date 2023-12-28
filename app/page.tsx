@@ -52,15 +52,17 @@ export default function Home() {
       y: 50,
     });
 
-    // Scroll-triggered animations for each section
     gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
-      if (section) {
-        gsap.from(section as HTMLElement, {
-          trigger: section as HTMLElement,
-          start: 'top 90%',  // Trigger animation when 90% of the section is visible
-          end: 'top 30%',   // Complete the animation when the top of the section is 30% visible
-          scrub: true,
-          onUpdate: (self) => {
+  if (section) {
+    gsap.from(section as HTMLElement, {
+      opacity: 0,        // Initial opacity (completely transparent)
+      y: 50,             // Vertical translation
+      scrollTrigger: {
+        trigger: section as HTMLElement,
+        start: 'top 90%',  // Trigger animation when 90% of the section is visible
+        end: 'top 30%',   // Complete the animation when the top of the section is 30% visible
+        scrub: true,
+        onUpdate: (self) => {
           // Update the opacity as the scroll progresses
           let opacityValue;
 
@@ -75,10 +77,11 @@ export default function Home() {
 
           gsap.set(section as HTMLElement, { opacity: opacityValue });
         },
-          },
-        });
-      }
+      },
     });
+  }
+});
+
   }, []);
 
   const scrollTo = (section: string) => {
