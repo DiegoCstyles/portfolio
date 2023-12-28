@@ -53,7 +53,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
           <div className="group">
             {projects.map((project, index) => (
               
-              <div key={index} className="mt-3 text-sm justify-center items-center ">
+              <div key={index} className="mt-3 text-sm justify-center items-center h-32">
                 <ol className="relative border-l border-black dark:border-gray-700">
                   <span className="absolute flex items-center justify-center w-6 h-6 bg-white dark:bg-white rounded-full -left-3 ring-8 ring-white/5 dark:ring-gray-900/5">
                       <svg className="w-2.5 h-2.5 text-fuchsia-500 dark:text-fuchsia-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
