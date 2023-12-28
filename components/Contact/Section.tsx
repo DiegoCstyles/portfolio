@@ -116,7 +116,7 @@ const Section = ({ currentLanguage }: ContactProps) => {
                 required
               ></textarea>
 
-              <button type="submit" className="flex flex-col items-center justify-center zoom-effect bg-fuchsia-500/60 dark:bg-fuchsia-500/60 text-black dark:text-white hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400 px-6 py-3 font-lg">
+              <button type="submit" className="flex flex-col items-center justify-center zoom-effect bg-fuchsia-500 dark:bg-fuchsia-500 text-black dark:text-white hover:visible pb-[2px] pt-1 text-xs uppercase leading-normal transition delay-100 duration-200 ease-in active:text-gray-400 px-6 py-3 font-lg">
                 <span className="text-center">{translations[currentLanguage].send}</span>
               </button>
 
