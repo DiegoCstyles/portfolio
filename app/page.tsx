@@ -17,7 +17,6 @@ const ContactSection = isBrowser ? require('@/components').ContactSection : null
 const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function Home() {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [currentLanguage, setCurrentLanguage] = useState('en');
 
   const handleLanguageChange = () => {
@@ -25,26 +24,6 @@ export default function Home() {
     const newLanguage = currentLanguage === 'en' ? 'pt-br' : 'en';
     setCurrentLanguage(newLanguage);
   };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    setCursorPosition({ x: e.pageX, y: e.pageY });
-  };
-
-  useEffect(() => {
-    // Set up event listener when component mounts
-    const mouseMoveListener = (e: MouseEvent) => {
-        const event = e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>;
-        handleMouseMove(event); 
-    };
-    if (isBrowser) {
-      window.addEventListener('mousemove', mouseMoveListener);
-
-      // Clean up event listener when component unmounts
-      return () => {
-        window.removeEventListener('mousemove', mouseMoveListener);
-      };
-    }
-  }, []); // Empty dependency array ensures the effect runs only once on mount
 
   useEffect(() => {
     // Create a GSAP timeline
@@ -63,8 +42,7 @@ export default function Home() {
     });
 
     // About section animation
-    timeline.from(window, {
-      scrollTo: { y: "#about", offsetY: 50 },
+    timeline.from('#about', {
       opacity: 0,
       y: 50,
     });
@@ -74,8 +52,6 @@ export default function Home() {
       scrollTo: { y: "#contact", offsetY: 50 },
       ease: "power3.inOut",
     });
-
-    // You can add more animations as needed
 
     // Scroll-triggered animations for each section
     gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
@@ -102,7 +78,7 @@ export default function Home() {
   };
 
   return (
-      <main className="light:ltBackground dark:dkBackground overflow-hidden" onMouseMove={handleMouseMove}>
+      <main className="light:ltBackground dark:dkBackground overflow-hidden">
         {/* Sections */}
         {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
         {Hero && <Hero currentLanguage={currentLanguage}/>}
