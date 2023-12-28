@@ -1,6 +1,8 @@
 import { memo, useState  } from 'react';
 import translations from './Translations';
 import Journey from './Journey';
+import Career from './Career';
+import FreeTime from './FreeTime';
 
 interface AboutProps {
   currentLanguage: string;
@@ -24,8 +26,12 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
 
             {/* about */}
-            <Journey currentLanguage={currentLanguage} />
-          
+            <div className="text-sm tracking-tight font-medium leading-relaxed text-white dark:text-black">
+              <Journey currentLanguage={currentLanguage} />
+              <Career currentLanguage={currentLanguage} />
+              <FreeTime currentLanguage={currentLanguage} />
+            </div>
+              
             {/* timeline */}
             <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36 font-medium">
               
