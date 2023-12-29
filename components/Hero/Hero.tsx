@@ -13,7 +13,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
   const isMobile = useMediaQuery({ maxWidth: 1024 });
 
   return (
-    <section className="relative hero min-h-screen flex-auto py-24 flex items-center justify-center light:bg-white dark:bg-black">
+    <section className="min-h-screen flex-auto py-24 flex items-center justify-center light:bg-white dark:bg-black">
       
       <div className="mx-auto max-w-[80rem] text-center animate-fade-in">
         {/* Heading and Contact Icons */}
