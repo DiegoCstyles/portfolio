@@ -42,7 +42,6 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
               </li>
               <NavbarPage page={"about"} currentLanguage={currentLanguage}/>
               <NavbarPage page={"projects"} currentLanguage={currentLanguage}/>
-              <NavbarPage page={"contact"} currentLanguage={currentLanguage}/>
               <SetTheme />
             </ul>
           </div>
