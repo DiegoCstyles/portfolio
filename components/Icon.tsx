@@ -44,7 +44,7 @@ const Icon = ({
     <Link href={href} target={target} rel="noopener noreferrer" aria-label={label} className={classNameLink}>
       <div className="flex items-center" onClick={onClick}>
         {children}
-        <Icon className={" w-5 h-5 opacity-80 group-hover:opacity-100 transition duration-300" + classNameIcon} style={{ color }} />
+        <Icon className={" w-4 h-4 opacity-80 group-hover:opacity-100 transition duration-300" + classNameIcon} style={{ color }} />
       </div>
     </Link>
   );
