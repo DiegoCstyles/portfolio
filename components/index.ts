@@ -10,7 +10,6 @@ import Hero from "./Hero/Hero";
 {/* Section and subcomponents */}
 import AboutSection from "./About/Section";
 import ProjectsSection from "./Projects/Section";
-import ContactSection from "./Contact/Section";
 
 {/* Footer and subcomponents */}
 import Footer from "./Footer/Footer";
@@ -27,7 +26,6 @@ export{
     Hero,
     AboutSection,
     ProjectsSection,
-    ContactSection,
     Footer,
     FooterIcons, 
     Icon
