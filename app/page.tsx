@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     
-      <main className="light:ltBackground dark:dkBackground overflow-hidden">
+      <main className="light:ltBackground dark:dkBackground overflow-hidden antialiased">
         {/* Sections */}
         {Navbar && <Navbar currentLanguage={currentLanguage} onLanguageChange={handleLanguageChange}/>}
         {Hero && <Hero currentLanguage={currentLanguage}/>}
