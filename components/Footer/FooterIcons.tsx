@@ -96,8 +96,8 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
       </button>
 
       <div className='p-3 flex flex-row'>
-          <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameIcon="p-3 mr-2" classNameLink="group" icon={FaLinkedin}></Icon>
-          <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="p-3 ml-2" classNameLink="group" icon={FaGithub}></Icon>  
+          <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameIcon="p-3 mr-2 hover:bg-fuchsia-600" classNameLink="group" icon={FaLinkedin}></Icon>
+          <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="p-3 ml-2 hover:bg-fuchsia-600" classNameLink="group" icon={FaGithub}></Icon>  
       </div>
     </div>
   );
