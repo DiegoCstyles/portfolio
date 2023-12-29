@@ -15,7 +15,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
   const [isNavbarVisible, setNavbarVisible] = useState(true);
 
-  useEffect(() => {
+   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
@@ -38,7 +38,8 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isNavbarVisible]);
+  }, []);
+
   
     return (
       <nav className="nav">
