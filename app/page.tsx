@@ -12,7 +12,6 @@ const Navbar = isBrowser ? require('@/components').Navbar : null;
 const Hero = isBrowser ? require('@/components').Hero : null;
 const AboutSection = isBrowser ? require('@/components').AboutSection : null;
 const ProjectsSection = isBrowser ? require('@/components').ProjectsSection : null;
-const ContactSection = isBrowser ? require('@/components').ContactSection : null;
 const Footer = isBrowser ? require('@/components').Footer : null;
 
 export default function Home() {
@@ -48,14 +47,8 @@ export default function Home() {
       opacity: 0,
       y: 50,
     });
-
-    // Contact section animation
-    timeline.from(ContactSection, {
-      opacity: 0,
-      y: 50,
-    });
-
-    gsap.utils.toArray(['#projects', '#about', '#contact']).forEach((section) => {
+    
+    gsap.utils.toArray(['#projects', '#about']).forEach((section) => {
   if (section) {
     gsap.from(section as HTMLElement, {
       opacity: 0,        // Initial opacity (completely transparent)
@@ -106,11 +99,6 @@ export default function Home() {
         {AboutSection && (
           <section id="about" style={cutCorner}>
             <AboutSection currentLanguage={currentLanguage} />
-          </section>
-        )}
-        {ContactSection && (
-          <section id="contact" style={cutCorner}>
-            <ContactSection currentLanguage={currentLanguage} />
           </section>
         )}
         {Footer && <Footer currentLanguage={currentLanguage}/>}
