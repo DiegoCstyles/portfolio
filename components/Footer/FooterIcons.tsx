@@ -5,6 +5,9 @@ import React, { memo } from 'react';
 import { RiFileCopyFill } from 'react-icons/ri';
 import '../../app/styles/fadeIn.css';
 
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Icon from '../Icon';
+
 interface FooterIconsProps {
     currentLanguage: string;
 }
@@ -91,7 +94,9 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
         <TfiEmail className="lg:w-[1rem] lg:h-[1rem] md:w-[1rem] md:h-[1rem] sm:w-[1rem] sm:h-[1rem] w-[1rem] h-[1rem] transition-colors duration-200" />
         <span className="ml-1">{translations[currentLanguage].mail}</span>
       </button>
-        
+
+      <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameLink="group" icon={FaLinkedin}></Icon>
+      <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="ml-2  " classNameLink="group" icon={FaGithub}></Icon>  
     </div>
   );
 };
