@@ -1,6 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import './styles/globals.css'
-import { Lora } from 'next/font/google'
+import { Lora } from 'next/font';
 import Head from 'next/head'
 import Providers from "./providers";
 
@@ -23,8 +23,9 @@ export default function RootLayout({
         <Head>
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />
+          {lora.styles}
         </Head>
-        <body className={lora.className} > 
+        <body style={{ fontFamily: 'Lora, serif' }} > 
           <Providers>{children}</Providers> 
         </body>
       </html>
