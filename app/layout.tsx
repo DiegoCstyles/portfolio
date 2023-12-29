@@ -1,10 +1,10 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import './styles/globals.css'
-import { Orbitron } from 'next/font/google'
+import { Lora } from 'next/font/google'
 import Head from 'next/head'
 import Providers from "./providers";
 
-const orbitron = Orbitron({ subsets: ['latin'] }) // Initialize the Inter font with 'latin' subset
+const lora = Lora({ subsets: ['latin'] }) // Initialize the Inter font with 'latin' subset
 
 // Define metadata for the page
 const metadata = {
@@ -24,7 +24,7 @@ export default function RootLayout({
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />
         </Head>
-        <body className={orbitron.className} > 
+        <body className={lora.className} > 
           <Providers>{children}</Providers> 
         </body>
       </html>
