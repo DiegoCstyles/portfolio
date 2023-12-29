@@ -26,58 +26,6 @@ export default function Home() {
     setCurrentLanguage(newLanguage);
   };
 
-  useEffect(() => {
-    // Create a GSAP timeline
-    const timeline = gsap.timeline();
-
-    // Hero section animation
-    timeline.from(Hero, {
-      opacity: 0,
-      y: 50,
-    });
-
-    // Projects section animation
-    timeline.from(ProjectsSection, {
-      opacity: 0,
-      y: 50,
-    });
-
-    // About section animation
-    timeline.from(AboutSection, {
-      opacity: 0,
-      y: 50,
-    });
-    
-    gsap.utils.toArray(['#projects', '#about']).forEach((section) => {
-  if (section) {
-    gsap.from(section as HTMLElement, {
-      opacity: 0,        // Initial opacity (completely transparent)
-      y: 50,             // Vertical translation
-      scrollTrigger: {
-        trigger: section as HTMLElement,
-        start: 'top 100%',  // Trigger animation when 90% of the section is visible
-        end: 'top 30%',   // Complete the animation when the top of the section is 30% visible
-        scrub: true,
-        onUpdate: (self) => {
-          // Update the opacity as the scroll progresses
-          let opacityValue;
-
-          // If scroll is between 10% and 70%, fade in
-          if (self.progress > 0.1 && self.progress < 0.7) {
-            opacityValue = 0; // Scale progress for fade in
-          } else {
-            opacityValue = self.progress + 0.1; // Before 10%, keep it fully transparent
-          }
-
-          gsap.set(section as HTMLElement, { opacity: opacityValue });
-        },
-      },
-    });
-  }
-});
-
-  }, []);
-
   const scrollTo = (section: string) => {
     const targetElement = document.getElementById(section);
     if (targetElement) {
