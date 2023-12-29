@@ -40,8 +40,8 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
               >
                 {currentLanguage.toUpperCase()}
               </li>
-              <NavbarPage page={"about"} currentLanguage={currentLanguage}/>
               <NavbarPage page={"projects"} currentLanguage={currentLanguage}/>
+              <NavbarPage page={"about"} currentLanguage={currentLanguage}/> 
               <SetTheme />
             </ul>
           </div>
