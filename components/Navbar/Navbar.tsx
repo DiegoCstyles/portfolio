@@ -23,7 +23,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
       if (currentScrollPos > prevScrollPos) {
         // Scrolling down, hide the navbar
         if (isNavbarVisible) {
-          gsap.to('.nav', { top: '-50%', duration: 0.5, ease: 'power2.inOut' });
+          gsap.to('.nav', { top: '-10%', duration: 0.5, ease: 'power2.inOut' });
           setNavbarVisible(false);
         }
       } else {
