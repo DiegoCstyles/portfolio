@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavbarTitle } from '@/components'
 import { NavbarPage } from '@/components'
 import { SetTheme } from '@/components'
