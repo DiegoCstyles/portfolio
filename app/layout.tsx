@@ -23,12 +23,8 @@ export default function RootLayout({
         <Head>
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Telegraf:wght@400;700&display=swap"
-          />
         </Head>
-        <body style={{ fontFamily: 'Telegraf, sans-serif' }} > 
+        <body className={orbitron.className} > 
           <Providers>{children}</Providers> 
         </body>
       </html>
