@@ -8,15 +8,6 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        blendedCyan: 'rgb(156, 226, 148)',
-      },
-      fontFamily: {
-        'futura-pt': ['Futura PT', 'sans-serif'],
-      },
-      cursor: {
-        circular: 'circular-cursor',
-      },
       animation: {
         text: 'text 5s ease infinite',
       },
@@ -31,11 +22,6 @@ module.exports = {
             'background-position': 'right center',
           },
         },
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-        'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
