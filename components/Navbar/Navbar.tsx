@@ -16,7 +16,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-   useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
 
@@ -28,10 +28,8 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
         }
       } else {
         // Scrolling up, show the navbar
-        if (!isNavbarVisible) {
-          gsap.to('.nav', { top: '0', duration: 0.5, ease: 'power2.inOut' });
-          setNavbarVisible(true);
-        }
+        gsap.to('.nav', { top: '0', duration: 0.5, ease: 'power2.inOut' });
+        setNavbarVisible(true);
       }
 
       setPrevScrollPos(currentScrollPos);
