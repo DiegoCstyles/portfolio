@@ -1,10 +1,10 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import './styles/globals.css'
-import { Lora } from 'next/font';
+import { Montserrat } from 'next/font/google'
 import Head from 'next/head'
 import Providers from "./providers";
 
-const lora = Lora({ subsets: ['latin'] }) // Initialize the Inter font with 'latin' subset
+const montserrat = Montserrat({ subsets: ['latin'] }) // Initialize the Inter font with 'latin' subset
 
 // Define metadata for the page
 const metadata = {
@@ -23,9 +23,8 @@ export default function RootLayout({
         <Head>
           <title>{metadata.title}</title>
           <meta name="description" content={metadata.description} />
-          {lora.styles}
         </Head>
-        <body style={{ fontFamily: 'Lora, serif' }} > 
+        <body className={montserrat.className}> 
           <Providers>{children}</Providers> 
         </body>
       </html>
