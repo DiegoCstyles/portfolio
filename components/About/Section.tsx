@@ -15,7 +15,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
   };
 
   return (
-      <section className="flex-auto py-24 flex items-center justify-center animate-fade-in bg-fuchsia-500 dark:bg-fuchsia-500">
+      <section className="py-24 items-center justify-center bg-fuchsia-500 dark:bg-fuchsia-500">
         
         <div className="mx-auto max-w-[80rem] text-center">
             {/* Heading */}
