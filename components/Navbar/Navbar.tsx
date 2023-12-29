@@ -4,6 +4,7 @@ import { NavbarPage } from '@/components'
 import { SetTheme } from '@/components'
 import { memo } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { gsap } from 'gsap';
 
 interface NavbarProps {
   currentLanguage: string;
@@ -12,9 +13,35 @@ interface NavbarProps {
 
 const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
+  const [isNavbarVisible, setNavbarVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > 100) {
+        // If the user has scrolled down, hide the navbar
+        if (isNavbarVisible) {
+          gsap.to('.nav', { top: '-100%', duration: 0.5, ease: 'power2.inOut' });
+          setNavbarVisible(false);
+        }
+      } else {
+        // If the user has scrolled to the top, show the navbar
+        if (!isNavbarVisible) {
+          gsap.to('.nav', { top: '0', duration: 0.5, ease: 'power2.inOut' });
+          setNavbarVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isNavbarVisible]);
   
     return (
-      <nav>
+      <nav className="nav">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
           <NavbarTitle />
 
