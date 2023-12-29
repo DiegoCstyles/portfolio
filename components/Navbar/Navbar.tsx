@@ -14,31 +14,34 @@ interface NavbarProps {
 const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
   const [isNavbarVisible, setNavbarVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
    useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
+      const currentScrollPos = window.scrollY;
 
-      if (scrollTop > 100) {
-        // If the user has scrolled down, hide the navbar
+      if (currentScrollPos > prevScrollPos) {
+        // Scrolling down, hide the navbar
         if (isNavbarVisible) {
           gsap.to('.nav', { top: '-100%', duration: 0.5, ease: 'power2.inOut' });
           setNavbarVisible(false);
         }
       } else {
-        // If the user has scrolled to the top, show the navbar
+        // Scrolling up, show the navbar
         if (!isNavbarVisible) {
           gsap.to('.nav', { top: '0', duration: 0.5, ease: 'power2.inOut' });
           setNavbarVisible(true);
         }
       }
+
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isNavbarVisible, prevScrollPos]);
 
   
     return (
