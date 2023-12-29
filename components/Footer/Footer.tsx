@@ -10,7 +10,7 @@ interface FooterProps {
 const Footer = ({ currentLanguage }: FooterProps) => {
   
   return (
-    <div className="max-w-screen-xl flex flex-wrap items-center mx-auto p-0.5 justify-center ">
+    <div className="max-w-screen-xl flex flex-wrap items-center mx-auto p-3 justify-center ">
       
       <div className="typewriter text-black dark:text-white text-sm mr-4">
         <h1>{translations[currentLanguage].h1}</h1>
