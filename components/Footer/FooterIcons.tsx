@@ -95,7 +95,7 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
         <span className="ml-1">{translations[currentLanguage].mail}</span>
       </button>
 
-      <div className='flex flex-row'>
+      <div className='p-3 flex flex-row'>
           <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameIcon="p-3 hover:bg-fuchsia-600" classNameLink="group" icon={FaLinkedin}></Icon>
           <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="p-3 hover:bg-fuchsia-600" classNameLink="group" icon={FaGithub}></Icon>  
       </div>
