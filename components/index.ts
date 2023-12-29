@@ -15,7 +15,6 @@ import ContactSection from "./Contact/Section";
 {/* Footer and subcomponents */}
 import Footer from "./Footer/Footer";
 import FooterIcons from "./Footer/FooterIcons";
-import FooterActions from "./Footer/FooterActions";
 
 {/* Icon */}
 import Icon from "./Icon";
@@ -31,6 +30,5 @@ export{
     ContactSection,
     Footer,
     FooterIcons, 
-    FooterActions,
     Icon
 }
