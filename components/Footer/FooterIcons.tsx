@@ -95,8 +95,10 @@ const FooterIcons = ({currentLanguage }: FooterIconsProps) => {
         <span className="ml-1">{translations[currentLanguage].mail}</span>
       </button>
 
-      <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameIcon="p-3" classNameLink="group" icon={FaLinkedin}></Icon>
-      <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="p-3" classNameLink="group" icon={FaGithub}></Icon>  
+      <div className='p-6'>
+          <Icon href="https://www.linkedin.com/in/diegoerc/" target="_blank" label="Instagram" classNameLink="group" icon={FaLinkedin}></Icon>
+          <Icon href="https://github.com/DiegoCstyles" target="_blank" label="Linkedin" classNameIcon="ml-2" classNameLink="group" icon={FaGithub}></Icon>  
+      </div>
     </div>
   );
 };
