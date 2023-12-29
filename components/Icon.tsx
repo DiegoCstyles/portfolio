@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { IconType } from 'react-icons';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
@@ -23,20 +24,22 @@ const Icon = ({
   onClick,
   children,
 }: IconProps) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const darkThemeColor = 'rgb(255, 255, 255)';
   const lightThemeColor = 'rgb(0, 0, 0)';
-  let color;
+  const [color, setColor] = useState(lightThemeColor);
 
-  // Validate theme and set color accordingly
-  if (theme === 'dark') {
-    color = darkThemeColor;
-  } else if (theme === 'light') {
-    color = lightThemeColor;
-  } else {
-    color = lightThemeColor; // Default to light theme if the provided theme is invalid
-  }
-
+  useEffect(() => {
+    // Update color based on the resolved theme
+    if (resolvedTheme === 'dark') {
+      setColor(darkThemeColor);
+    } else if (resolvedTheme === 'light') {
+      setColor(lightThemeColor);
+    } else {
+      setColor(lightThemeColor); // Default to light theme if the provided theme is invalid
+    }
+  }, [resolvedTheme]);
+    
   return (
     <Link href={href} target={target} rel="noopener noreferrer" aria-label={label} className={classNameLink}>
       <div className="flex items-center" onClick={onClick}>
