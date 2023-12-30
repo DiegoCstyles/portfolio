@@ -17,6 +17,10 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  const cutCorner = {
+    clipPath: 'polygon(0 2.00em, 2.00em 0, calc(100% - 2.00em) 0, 100% 2.00em, 100% calc(100% - 2.00em), calc(100% - 2.00em) 100%, 2.00em 100%, 0 calc(100% - 2.00em))',
+  };
+
   const handleMobileMenuToggle = () => {
     setNavbarVisible(!isNavbarVisible);
   };
@@ -62,7 +66,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   }, [isNavbarVisible, prevScrollPos, isSmallScreen]);
 
     return (
-      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full z-40 dark:bg-black/90 bg-white' : 'fixed top-0 w-full z-40 dark:bg-black/90 bg-white/90'}`}>
+      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full z-40 dark:bg-black/90 bg-white' : 'fixed top-0 w-full z-40 dark:bg-black/90 bg-white/90'}`} style={cutCorner}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
           <NavbarTitle />
 
