@@ -25,16 +25,19 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
 
-      if (currentScrollPos > prevScrollPos) {
-        // Scrolling down, hide the navbar with transparency
-        if (isNavbarVisible) {
-          gsap.to('.nav', { opacity: 0, duration: 0.1, ease: 'power2.inOut' });
-          setNavbarVisible(false);
+      if (!isSmallScreen) {
+        // For desktop version
+        if (currentScrollPos > prevScrollPos) {
+          // Scrolling down, hide the navbar with transparency
+          if (isNavbarVisible) {
+            gsap.to('.nav', { opacity: 0, duration: 0.1, ease: 'power2.inOut' });
+            setNavbarVisible(false);
+          }
+        } else {
+          // Scrolling up, show the navbar with gradual opacity
+          gsap.to('.nav', { opacity: 1, duration: 0.25, ease: 'power2.inOut' });
+          setNavbarVisible(true);
         }
-      } else {
-        // Scrolling up, show the navbar with gradual opacity
-        gsap.to('.nav', { opacity: 1, duration: 0.25, ease: 'power2.inOut' });
-        setNavbarVisible(true);
       }
 
       setPrevScrollPos(currentScrollPos);
@@ -46,7 +49,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
       y: '0',
       scrollTrigger: {
         trigger: '.nav',
-        start: 'top top',  
+        start: 'top top',
         end: '+=200', // adjust the end value as needed
         toggleActions: 'play none none reverse',
       },
@@ -56,7 +59,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isNavbarVisible, prevScrollPos]);
+  }, [isNavbarVisible, prevScrollPos, isSmallScreen]);
 
     return (
       <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full' : 'fixed top-0 w-full'}`}>
