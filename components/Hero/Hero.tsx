@@ -18,7 +18,7 @@ const Hero = ({ currentLanguage }: HeroProps) => {
       <div className="mx-auto max-w-[80rem] text-center animate-fade-in">
         {/* Heading and Contact Icons */}
         <div className="flex  flex-auto">
-          <h1 className={`text-fuchsia-600 dark:text-fuchsia-600 ${isMobile ? 'text-5xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl' : 'text-7xl'} leading-[4rem] tracking-tight uppercase font-black mt-3`}>
+          <h1 className={`text-fuchsia-600 dark:text-fuchsia-600 ${isMobile ? 'text-5xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-7xl' : 'text-7xl'} leading-[4rem] tracking-tight uppercase font-black mt-3`}>
             {translations[currentLanguage].title}
           </h1>
         </div>
