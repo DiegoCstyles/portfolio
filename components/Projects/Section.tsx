@@ -36,12 +36,12 @@ const projects = [
 
 const Section = ({ currentLanguage }: ProjectsProps) => {
   return (
-    <section className="hero min-h-screen flex-auto py-24 flex items-center justify-center animate-fade-in">
+    <section className="hero min-h-screen flex-auto py-24 sm:py-16 lg:py-24 flex items-center justify-center animate-fade-in">
       <div className="mx-auto max-w-[80rem] text-center">
 
         {/* timeline */}
-        <div className="mt-20 justify-center items-center">
-          <h1 className="light:text-black dark:text-white mt-3 text-9xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight uppercase font-black">
+        <div className="mt-8 justify-center items-center">
+          <h1 className="light:text-black dark:text-white mt-3 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[4rem] tracking-tight uppercase font-black">
             {translations[currentLanguage].h1}
           </h1>
           
