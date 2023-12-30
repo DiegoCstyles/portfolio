@@ -14,11 +14,10 @@ interface NavbarProps {
 
 const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 }); // Set the breakpoint for small screens
-  const [isNavbarVisible, setNavbarVisible] = useState(true);
+  const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const handleMobileMenuToggle = () => {
-    // Toggle visibility of mobile menu
     setNavbarVisible(!isNavbarVisible);
   };
 
@@ -92,7 +91,10 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
           </div>
 
           {/* Pages */}
-          <div className={`w-full md:w-auto ${isSmallScreen && !isNavbarVisible ? 'hidden' : 'block'}`} id="navbar-default">
+          <div 
+            className={`w-full md:w-auto ${isSmallScreen && !isNavbarVisible ? 'hidden' : 'block'}`} 
+            id="navbar-default"
+          >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
               <li
                 className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600`}
