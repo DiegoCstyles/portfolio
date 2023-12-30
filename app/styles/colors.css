@@ -1,3 +1,8 @@
-.bg-eee7e1 {
+/* colors.css */
+.bg-custom-eee7e1 {
+  background-color: #eee7e1;
+}
+
+.dark .bg-custom-eee7e1 {
   background-color: #eee7e1;
 }
