@@ -55,7 +55,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   }, [isNavbarVisible, prevScrollPos]);
 
     return (
-      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full' : 'relative'}`}>
+      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full' : 'fixed top-0 w-full'}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
           <NavbarTitle />
 
