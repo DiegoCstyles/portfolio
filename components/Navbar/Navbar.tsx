@@ -92,8 +92,23 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
             className={`w-full md:w-auto ${isSmallScreen && !isNavbarVisible ? 'hidden' : 'block'}`} 
             id="navbar-default"
           >
-            {isSmallScreen && (
+            {isSmallScreen ? (
               <div className={isNavbarVisible ? 'bg-black/80' : ''}>
+                <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
+                  <li
+                    className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600`}
+                    onClick={onLanguageChange}
+                  >
+                    {currentLanguage.toUpperCase()}
+                  </li>
+                  <NavbarPage page={"projects"} currentLanguage={currentLanguage}/>
+                  <NavbarPage page={"about"} currentLanguage={currentLanguage}/> 
+                  <SetTheme />
+                </ul>
+              </div>
+            ) : (
+              /* Desktop version */
+              <div className="">
                 <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
                   <li
                     className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600`}
