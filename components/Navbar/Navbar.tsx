@@ -93,7 +93,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
             id="navbar-default"
           >
             {isSmallScreen ? (
-              <div className={isNavbarVisible ? 'bg-black/80' : ''}>
+              <div className={isNavbarVisible ? 'bg-black/95' : ''}>
                 <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
                   <li
                     className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600`}
