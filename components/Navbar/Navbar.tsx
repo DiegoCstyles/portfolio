@@ -62,7 +62,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   }, [isNavbarVisible, prevScrollPos, isSmallScreen]);
 
     return (
-      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full z-40' : 'fixed top-0 w-full z-40'}`}>
+      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full z-40 bg-black/90' : 'fixed top-0 w-full z-40'}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
           <NavbarTitle />
 
@@ -93,7 +93,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
             id="navbar-default"
           >
             {isSmallScreen ? (
-              <div className={isNavbarVisible ? 'bg-black/95' : ''}>
+              <div className={isNavbarVisible ? 'bg-black/90' : ''}>
                 <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
                   <li
                     className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600`}
