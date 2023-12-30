@@ -5,6 +5,7 @@ import { SetTheme } from '@/components'
 import { memo } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 interface NavbarProps {
   currentLanguage: string;
@@ -23,7 +24,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
       if (currentScrollPos > prevScrollPos) {
         // Scrolling down, hide the navbar
         if (isNavbarVisible) {
-          gsap.to('.nav', { top: '-10%', duration: 0.5, ease: 'power2.inOut' });
+          gsap.to('.nav', { top: '-100%', duration: 0.5, ease: 'power2.inOut' });
           setNavbarVisible(false);
         }
       } else {
@@ -31,9 +32,21 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
         gsap.to('.nav', { top: '0', duration: 0.5, ease: 'power2.inOut' });
         setNavbarVisible(true);
       }
-
+      
       setPrevScrollPos(currentScrollPos);
     };
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to('.nav', {
+      y: '0',
+      scrollTrigger: {
+        trigger: '.nav',
+        start: 'top top',
+        end: '+=200', // adjust the end value as needed
+        toggleActions: 'play none none reverse',
+      },
+    });
 
     window.addEventListener('scroll', handleScroll);
     return () => {
