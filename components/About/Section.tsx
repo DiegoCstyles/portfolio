@@ -15,12 +15,12 @@ const Section = ({ currentLanguage }: AboutProps) => {
   };
 
   return (
-      <section className="py-24 items-center justify-center bg-fuchsia-500 dark:bg-fuchsia-500">
+      <section className="py-12 sm:py-16 items-center justify-center bg-fuchsia-500 dark:bg-fuchsia-500">
         
         <div className="mx-auto max-w-[80rem] text-center">
             {/* Heading */}
             <div className="justify-center items-center">
-              <h1 className="light:text-black dark:text-white mt-3 text-9xl sm:text-7xl md:text-7xl lg:text-7xl xl:text-7xl leading-[4rem] tracking-tight uppercase font-black">
+              <h1 className="light:text-black dark:text-white mt-3 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[3rem] tracking-tight uppercase font-black">
                 {translations[currentLanguage].h1}
               </h1>
             </div>
@@ -33,7 +33,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
             </div>
               
             {/* timeline */}
-            <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-36 font-medium">
+            <div style={{ transform: 'translateY(var(--timeline-offset))' }} className="mt-8 sm:mt-12 font-medium">
               
               <div className="flex items-start mt-3 text-base leading-relaxed text-black dark:text-white">
                 <div>
