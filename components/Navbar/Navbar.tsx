@@ -67,12 +67,6 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
           <NavbarTitle />
 
           <div className="flex md:hidden">
-            {isSmallScreen && (
-              <ul className='mt-2 mr-2'>
-                <SetTheme />
-              </ul>
-            )}
-
             {/* Mobile menu */}
             <button
               data-collapse-toggle="navbar-default"
