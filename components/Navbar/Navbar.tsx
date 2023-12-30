@@ -18,7 +18,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const cutCorner = {
-    clipPath: 'polygon(0 2.00em, 2.00em 0, calc(100% - 2.00em) 0, 100% 2.00em, 100% calc(100% - 2.00em), calc(100% - 2.00em) 100%, 2.00em 100%, 0 calc(100% - 2.00em))',
+    clipPath: 'polygon(0 0,100% 0,100% calc(100% - 0.80em),calc(100% - 0.80em) 100%,0 100%,0 0,2px  2px ,2px calc(100% - 2px),calc(100% - 0.80em - 0.83px) calc(100% - 2px),calc(100% - 2px) calc(100% - 0.80em - 0.83px),calc(100% - 2px) 2px,2px 2px)',
   };
 
   const handleMobileMenuToggle = () => {
