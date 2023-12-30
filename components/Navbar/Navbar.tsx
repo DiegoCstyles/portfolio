@@ -62,7 +62,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
   }, [isNavbarVisible, prevScrollPos, isSmallScreen]);
 
     return (
-      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full bg-black/20' : 'fixed top-0 w-full'}`}>
+      <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full' : 'fixed top-0 w-full'}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
           <NavbarTitle />
 
@@ -92,19 +92,21 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
             className={`w-full md:w-auto ${isSmallScreen && !isNavbarVisible ? 'hidden' : 'block'}`} 
             id="navbar-default"
           >
-            <div className="bg-black/40">
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
-                <li
-                  className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600`}
-                  onClick={onLanguageChange}
-                >
-                  {currentLanguage.toUpperCase()}
-                </li>
-                <NavbarPage page={"projects"} currentLanguage={currentLanguage}/>
-                <NavbarPage page={"about"} currentLanguage={currentLanguage}/> 
-                <SetTheme />
-              </ul>
-            </div>
+            {isSmallScreen && (
+              <div className={isNavbarVisible ? 'bg-black/80' : ''}>
+                <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:mt-0">
+                  <li
+                    className={`cursor-pointer block text-sm p-3 dark:text-white transition delay-100 duration-200 ease-in zoom-effect hover:bg-fuchsia-600`}
+                    onClick={onLanguageChange}
+                  >
+                    {currentLanguage.toUpperCase()}
+                  </li>
+                  <NavbarPage page={"projects"} currentLanguage={currentLanguage}/>
+                  <NavbarPage page={"about"} currentLanguage={currentLanguage}/> 
+                  <SetTheme />
+                </ul>
+              </div>
+            )}
           </div>
          
         </div>
