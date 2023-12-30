@@ -43,7 +43,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('firstSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex flex-col sm:flex-row items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 sm:ml-4 sm:mr-4 ${hoveredSpan === 'firstSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96"> • {translations[currentLanguage].firstCareerTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96 p-2"> • {translations[currentLanguage].firstCareerTitle}</p>
                   </div>
                   <p className="mt-1 text-xs sm:text-sm font-medium text-center text-white dark:text-black hidden sm:block">AtendeiTi</p>
                   <p className="mt-1 text-xs sm:text-sm font-medium text-center text-white dark:text-black hidden sm:block">2022 - 2023</p>
@@ -58,7 +58,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('secondSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex flex-col sm:flex-row items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 sm:ml-4 sm:mr-4 ${hoveredSpan === 'secondSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className="border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96"> • {translations[currentLanguage].secondCareerTitle}</p>
+                    <p className="border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96 p-2"> • {translations[currentLanguage].secondCareerTitle}</p>
                     
                   </div>
                     <p className="mt-1 text-xs sm:text-sm font-medium text-center text-white dark:text-black hidden sm:block">Objetivo Lorena</p>
@@ -85,7 +85,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('thirdSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex flex-col sm:flex-row items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 sm:ml-4 sm:mr-4 ${hoveredSpan === 'thirdSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96"> • {translations[currentLanguage].firstAcademicTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96 p-2"> • {translations[currentLanguage].firstAcademicTitle}</p>
                   </div>
                   <p className="mt-1 text-xs sm:text-sm font-medium text-center text-white dark:text-black hidden sm:block">{translations[currentLanguage].firstAcademict}</p>
                   <p className="mt-1 text-xs sm:text-sm font-medium text-center text-white dark:text-black hidden sm:block">2019 - 2023</p>
@@ -106,7 +106,7 @@ const Section = ({ currentLanguage }: AboutProps) => {
               <div onMouseEnter={() => handleSpanHover('fourthSpan')} onMouseLeave={() => handleSpanHover(null)} className={`zoom-effect flex flex-col sm:flex-row items-start mt-3 text-base leading-relaxed text-black dark:text-black p-1.5 sm:ml-4 sm:mr-4 ${hoveredSpan === 'fourthSpan' ? 'active' : ''}`}>
                 <div className='text-left'>
                   <div className='flex'>
-                    <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96"> • {translations[currentLanguage].secondAcademicTitle}</p>
+                    <p className=" border border-black dark:border-white rounded-md text-center light:text-black dark:text-white w-full sm:w-96 p-2"> • {translations[currentLanguage].secondAcademicTitle}</p>
 
                   </div>
                   <p className="mt-1 text-xs sm:text-sm font-medium text-center text-white dark:text-black hidden sm:block">{translations[currentLanguage].secondAcademic}</p>
