@@ -47,17 +47,17 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
           
           <div className=" mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
             <div>
-              <h2 className="text-left text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2} /&gt;</h2>
+              <h2 className="text-left text-xl sm:text-2xl leading-relaxed text-black dark:text-white">{translations[currentLanguage].h2} /&gt;</h2>
             </div>
           </div>
           <div className="group">
             {projects.map((project, index) => (
               
-              <div key={index} className="mt-3 text-sm justify-center items-center">
+              <div key={index} className="mt-6 sm:mt-8 text-sm justify-center items-center">
                 <ol className="relative border-l border-black dark:border-gray-700">
-                  <div className='zoom-effect text-start flex p-2 w-80 dark:hover:bg-opacity-5 dark:hover:bg-white dark:border-white leading-relaxed text-slate-600 dark:text-slate-400 h-96'>
+                  <div className='zoom-effect text-start flex p-2 w-full dark:hover:bg-opacity-5 dark:hover:bg-white dark:border-white leading-relaxed text-slate-600 dark:text-slate-400 sm:w-80 h-auto'>
                     <div className='p-5 flex flex-col'>
-                      <div className='flex  justify-between'>
+                      <div className='flex justify-between'>
                         <p className="text-base text-black dark:text-white transition delay-100 duration-200 ease-in">{translations[currentLanguage].projects[project.title].title}</p>
                         <p className="text-xs mt-1">{project.year}</p>
                         <div className="flex justify-end mt-1 ml-1">
@@ -70,7 +70,7 @@ const Section = ({ currentLanguage }: ProjectsProps) => {
                         </div>
                       </div>
                       {project.description && (
-                        <p className=" text-xs mt-1"> • {translations[currentLanguage].projects[project.title].description}</p>
+                        <p className="text-xs mt-1"> • {translations[currentLanguage].projects[project.title].description}</p>
                       )}
                       {project.technologies.length > 0 && (
                         <div className='flex mt-2'>
