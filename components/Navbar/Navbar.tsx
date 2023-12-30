@@ -24,12 +24,12 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
       if (currentScrollPos > prevScrollPos) {
         // Scrolling down, hide the navbar with transparency
         if (isNavbarVisible) {
-          gsap.to('.nav', { opacity: 0, duration: 0.5, ease: 'power2.inOut' });
+          gsap.to('.nav', { opacity: 0, duration: 0.1, ease: 'power2.inOut' });
           setNavbarVisible(false);
         }
       } else {
         // Scrolling up, show the navbar with gradual opacity
-        gsap.to('.nav', { opacity: 1, duration: 0.5, ease: 'power2.inOut' });
+        gsap.to('.nav', { opacity: 1, duration: 0.1, ease: 'power2.inOut' });
         setNavbarVisible(true);
       }
 
