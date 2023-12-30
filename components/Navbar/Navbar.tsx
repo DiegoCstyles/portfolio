@@ -22,17 +22,17 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
       const currentScrollPos = window.scrollY;
 
       if (currentScrollPos > prevScrollPos) {
-        // Scrolling down, hide the navbar
+        // Scrolling down, hide the navbar with transparency
         if (isNavbarVisible) {
-          gsap.to('.nav', { top: '-100%', duration: 0.5, ease: 'power2.inOut' });
+          gsap.to('.nav', { opacity: 0, duration: 0.5, ease: 'power2.inOut' });
           setNavbarVisible(false);
         }
       } else {
-        // Scrolling up, show the navbar
-        gsap.to('.nav', { top: '0', duration: 0.5, ease: 'power2.inOut' });
+        // Scrolling up, show the navbar with gradual opacity
+        gsap.to('.nav', { opacity: 1, duration: 0.5, ease: 'power2.inOut' });
         setNavbarVisible(true);
       }
-      
+
       setPrevScrollPos(currentScrollPos);
     };
 
@@ -42,7 +42,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
       y: '0',
       scrollTrigger: {
         trigger: '.nav',
-        start: 'top top',
+        start: 'top top',  
         end: '+=200', // adjust the end value as needed
         toggleActions: 'play none none reverse',
       },
@@ -54,7 +54,6 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
     };
   }, [isNavbarVisible, prevScrollPos]);
 
-  
     return (
       <nav className={`nav ${isNavbarVisible ? 'fixed top-0 w-full' : 'relative'}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0.5">
