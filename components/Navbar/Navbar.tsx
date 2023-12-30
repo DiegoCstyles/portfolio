@@ -29,7 +29,7 @@ const Navbar = ({ currentLanguage, onLanguageChange }: NavbarProps) => {
         }
       } else {
         // Scrolling up, show the navbar with gradual opacity
-        gsap.to('.nav', { opacity: 1, duration: 0.1, ease: 'power2.inOut' });
+        gsap.to('.nav', { opacity: 1, duration: 0.25, ease: 'power2.inOut' });
         setNavbarVisible(true);
       }
 
