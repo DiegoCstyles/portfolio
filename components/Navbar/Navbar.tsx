@@ -6,6 +6,7 @@ import { memo } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import '../../app/styles/colors.css';
 
 interface NavbarProps {
   currentLanguage: string;
